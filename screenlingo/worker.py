@@ -71,7 +71,7 @@ class TranslationWorker(QThread):
                         if frame_changed(previous, rgb):
                             self.status.emit(self.generation, "正在识别文字…")
                             from .ocr import detect_document_lines
-                            document_lines = detect_document_lines(bgr) if self.options.get("progressive", True) and self.options.get("provider") != "deepseek" else None
+                            document_lines = detect_document_lines(bgr) if self.options.get("progressive", True) and self.options.get("provider") != "deepseek" and self.options.get("reading_layout") != "manga" else None
                             if document_lines is not None and len(document_lines) >= 6:
                                 from .document import translate_document
                                 document_result = translate_document(self, capture, ocr, translator, bgr, previous_text, started)
@@ -91,7 +91,7 @@ class TranslationWorker(QThread):
                             ocr_ms = (time.perf_counter() - ocr_started) * 1000
                             if self.cancel.is_set():
                                 break
-                            blocks = make_blocks(detected, rgb)
+                            blocks = make_blocks(detected, rgb, self.options.get("reading_layout", "standard"))
                             signature = text_signature(blocks)
                             # Moving scenery behind translucent chat does not invalidate unchanged text.
                             if previous_text is not None and same_text(previous_text, signature):
@@ -117,7 +117,7 @@ class TranslationWorker(QThread):
                                 if frame_changed(rgb, latest):
                                     verify_started = time.perf_counter()
                                     latest_blocks = make_blocks(ocr(latest[:, :, ::-1].copy(), self.cancel.is_set,
-                                                                   source=self.options.get("source", "auto")), latest)
+                                                                   source=self.options.get("source", "auto")), latest, self.options.get("reading_layout", "standard"))
                                     ocr_ms += (time.perf_counter() - verify_started) * 1000
                                     if not same_text(signature, text_signature(latest_blocks)):
                                         self.status.emit(self.generation, "聊天内容已更新，正在翻译最新文字…")

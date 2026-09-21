@@ -64,7 +64,7 @@ def frame_changed(previous, current, threshold=2.0):
     return bool(np.any(totals > threshold * areas))
 
 
-def make_blocks(result, rgb):
+def make_blocks(result, rgb, reading_layout="standard"):
     blocks = []
     height, width = rgb.shape[:2]
     for points, text, confidence in result or []:
@@ -83,13 +83,16 @@ def make_blocks(result, rgb):
         luminance = sum(v * w for v, w in zip(bg, (0.2126, 0.7152, 0.0722)))
         fg = (24, 28, 36) if luminance > 145 else (248, 250, 252)
         blocks.append(TextBlock(x1, y1, x2 - x1, y2 - y1, str(text), background=bg, foreground=fg))
-    return group_vertical_paragraphs(blocks)
+    return group_vertical_paragraphs(blocks, manga=reading_layout == "manga")
 
 
-def group_vertical_paragraphs(blocks):
+def group_vertical_paragraphs(blocks, manga=False):
     """Translate adjacent Japanese vertical columns in reading order as one paragraph."""
     vertical = [b for b in blocks if b.height >= b.width * 1.8 and script_of(b.source) in ("ja", "CJK")]
     if len(vertical) < 2:
+        if manga:
+            from .manga import reading_order
+            return reading_order(blocks)
         return blocks
     remaining = [b for b in blocks if b not in vertical]
     # Cluster spatially before sorting. Columns from another panel at the same X
@@ -104,7 +107,7 @@ def group_vertical_paragraphs(blocks):
                 left, right = sorted((prior, block), key=lambda b: b.x)
                 overlap = min(prior.y + prior.height, block.y + block.height) - max(prior.y, block.y)
                 comparable = min(prior.width, block.width) >= max(prior.width, block.width) * 0.6
-                if (comparable and 0 <= right.x - left.x - left.width <= max(prior.width, block.width) * 1.6
+                if (comparable and (-min(prior.width, block.width) * .2 if manga else 0) <= right.x - left.x - left.width <= max(prior.width, block.width) * (1.0 if manga else 1.6)
                         and abs(prior.y - block.y) <= max(prior.width, block.width) * 1.5
                         and overlap >= min(prior.height, block.height) * 0.4):
                     group.append(block)
@@ -123,6 +126,9 @@ def group_vertical_paragraphs(blocks):
         fg = (24, 28, 36) if luminance > 145 else (248, 250, 252)
         remaining.append(TextBlock(left, top, right - left, bottom - top, "".join(b.source for b in group),
                                    background=bg, foreground=fg))
+    if manga:
+        from .manga import reading_order
+        return reading_order(remaining)
     return remaining
 
 
@@ -137,12 +143,13 @@ class Translator:
     _cooldowns = {}
     _cooldown_lock = threading.Lock()
 
-    def __init__(self, target="zh-CN", provider="free", api_key="", proxy="", session=None, source="auto", app_id="", reasoning_effort="none"):
+    def __init__(self, target="zh-CN", provider="free", api_key="", proxy="", session=None, source="auto", app_id="", reasoning_effort="none", reading_layout="standard"):
         self.target = target
         self.source = source
         self.provider = provider
         prefix = {"baidu": "BAIDU", "youdao": "YOUDAO", "deepseek": "DEEPSEEK"}.get(provider, "GOOGLE_TRANSLATE")
         self.reasoning_effort = reasoning_effort
+        self.reading_layout = reading_layout
         self.ai_context = []
         self.last_usage = {}
         self.api_key = api_key or os.getenv(prefix + "_API_KEY", "")

@@ -106,6 +106,7 @@ class TranslationOverlay(QWidget):
         self.region = None
         self.shade_opacity = 88
         self.display_style = "blend"
+        self.reading_layout = "standard"
         self.message = ""
 
     def prepare(self, region, logical, window_capture=False, shade_opacity=88):
@@ -172,7 +173,11 @@ class TranslationOverlay(QWidget):
             painter.setPen(QColor(*block.foreground) if self.display_style == "blend" else QColor("#ffffff"))
             painter.save()
             painter.setClipRect(rect)
-            painter.drawText(fitted, int(flags), block.translated)
+            if self.reading_layout == "manga":
+                from .manga import draw_vertical
+                draw_vertical(painter, rect, block.translated)
+            else:
+                painter.drawText(fitted, int(flags), block.translated)
             painter.restore()
         if self.message and not any(block.translated for block in self.blocks):
             font = QFont("Microsoft YaHei UI")

@@ -92,7 +92,7 @@ class MainWindow(QMainWindow):
     def load_settings(self):
         for widget, key in [(self.language, "target"), (self.provider, "provider"), (self.source, "source"),
                             (self.ocr_backend, "ocr_backend"), (self.display_style, "display_style"),
-                            (self.reasoning_effort, "reasoning_effort")]:
+                            (self.reasoning_effort, "reasoning_effort"), (self.reading_layout, "reading_layout")]:
             index = widget.findData(self.settings.value(key, widget.itemData(0)))
             widget.setCurrentIndex(max(0, index))
         self.api_key.setEnabled(self.provider.currentData() != "free")
@@ -169,7 +169,8 @@ class MainWindow(QMainWindow):
                 "interval": self.interval.value(), "realtime": self.realtime.isChecked(),
                 "shade_opacity": self.opacity.value(), "source": self.source.currentData(),
                 "app_id": self.app_id.text().strip(), "ocr_backend": self.ocr_backend.currentData(),
-                "display_style": self.display_style.currentData(), "reasoning_effort": self.reasoning_effort.currentData()}
+                "display_style": self.display_style.currentData(), "reasoning_effort": self.reasoning_effort.currentData(),
+                "reading_layout": self.reading_layout.currentData()}
 
     def on_hotkey(self, key):
         if key == 3:
@@ -260,6 +261,7 @@ class MainWindow(QMainWindow):
             return
         self.translation_active = True
         self.overlay.display_style = options.get("display_style", "blend")
+        self.overlay.reading_layout = options.get("reading_layout", "standard")
         options["fast_first_frame"] = exclude_from_capture(self.overlay.winId())
         token = self.generation
         self.worker = TranslationWorker(token, region, options, self)

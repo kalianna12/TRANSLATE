@@ -35,7 +35,7 @@ def translate_document(worker, capture, ocr, translator, bgr, previous_text, sta
         latest = latest_bgr[:, :, ::-1].copy()
         if frame_changed(rgb, latest):
             begin = time.perf_counter()
-            latest_blocks = make_blocks(ocr(latest_bgr, cancelled, source=source), latest)
+            latest_blocks = make_blocks(ocr(latest_bgr, cancelled, source=source), latest, worker.options.get("reading_layout", "standard"))
             verify_ms += (time.perf_counter() - begin) * 1000
             latest_signature = text_signature(latest_blocks)
             compare = latest_signature if final else latest_signature[:len(current_signature)]
@@ -71,7 +71,7 @@ def translate_document(worker, capture, ocr, translator, bgr, previous_text, sta
                     raise error
                 if complete:
                     ocr_ms = duration
-                blocks = make_blocks(detected, rgb)
+                blocks = make_blocks(detected, rgb, worker.options.get("reading_layout", "standard"))
                 signature = text_signature(blocks)
                 unchanged = (previous_text is not None and
                              same_text(signature, previous_text[:len(signature)]))
