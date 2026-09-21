@@ -1,0 +1,42 @@
+[
+  {
+    "fixture": "documents/ja",
+    "parallel": false,
+    "median_ms": 1131.6548000031617
+  },
+  {
+    "fixture": "documents/ja",
+    "parallel": true,
+    "median_ms": 832.5455000158399
+  },
+  {
+    "fixture": "documents/en",
+    "parallel": false,
+    "median_ms": 2179.113900027005
+  },
+  {
+    "fixture": "documents/en",
+    "parallel": true,
+    "median_ms": 1573.096500011161
+  },
+  {
+    "fixture": "documents/ko",
+    "parallel": false,
+    "median_ms": 1909.6183000074234
+  },
+  {
+    "fixture": "documents/ko",
+    "parallel": true,
+    "median_ms": 1364.5952999941073
+  },
+  {
+    "fixture": "manga-bubbles",
+    "parallel": false,
+    "median_ms": 471.72060000593774
+  },
+  {
+    "fixture": "manga-bubbles",
+    "parallel": true,
+    "median_ms": 382.0427999889944
+  }
+]

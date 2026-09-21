@@ -1,0 +1,245 @@
+{
+  "scope": "Transcribed synthetic page layouts; not original user images. No portraits, annotations or manga artwork reproduced.",
+  "rows": [
+    {
+      "language": "ja",
+      "fast_enabled": false,
+      "dimensions": [
+        1340,
+        568
+      ],
+      "progressive": true,
+      "first_chunk_median_ms": 756.6769999975804,
+      "ocr_median_ms": 756.6988999897148,
+      "ocr_runs_ms": [
+        1173.8061999931233,
+        711.0264999937499,
+        756.6988999897148
+      ],
+      "metrics": {
+        "detect_ms": 119.1528999916045,
+        "recognize_ms": 635.6666999927256,
+        "line_cache_hits": 0,
+        "detector": "neural"
+      },
+      "recognized": [
+        "「ただの友達同士なんだから、エドガーと二人きりで街に出掛けても良いわよね?」",
+        "そう言い放つ騎士科の令嬢ミーシャ・ホワイトに気弱なクラリスはいつもロ籠ってしまう。",
+        "常日頃からクラリスの婚約者と「男友達みたいなものだから」と言って仲睦まじくするミーシャにいつも",
+        "気が引けていたのだ。",
+        "「私もクラリスみたいに繊細で可愛い女の子だったら良かったんだけどなあ」",
+        "「そういうところが男の子達に面白がられちゃうんだけど、それはそれで失礼よね?」",
+        "「あーあ、私もクラりスみたいな性格だったら女の子達とうまくやっていけたんだけどなあ」",
+        "しかしそんな折に気弱な令嬢クラリスは前世の記憶を思い出し、ミーシャの行動にふ…"
+      ],
+      "char_errors": 2,
+      "char_count": 271,
+      "line_count": 8,
+      "reference_line_count": 8
+    },
+    {
+      "language": "ja",
+      "fast_enabled": true,
+      "dimensions": [
+        1340,
+        568
+      ],
+      "progressive": true,
+      "first_chunk_median_ms": 66.97990000247955,
+      "ocr_median_ms": 582.0486000011442,
+      "ocr_runs_ms": [
+        851.7390000051819,
+        575.7387999910861,
+        582.0486000011442
+      ],
+      "metrics": {
+        "detect_ms": 5.18999999621883,
+        "recognize_ms": 574.9473000032594,
+        "line_cache_hits": 0,
+        "detector": "projection"
+      },
+      "recognized": [
+        "「ただの友達同士なんだから、エドガーと二人きりで街に出掛けても良いわよね？」",
+        "そう言い放つ騎士科の令嬢ミーシャ・ホワイトに気弱なクラリスはいつもロ籠ってしまう。",
+        "常日頃からクラリスの婚約者と「男友達みたいなものだから」と言って仲睦まじくするミーシャにいつも",
+        "気が引けていたのだ。",
+        "「私もクラリスみたいに繊細で可愛い女の子だったら良かったんだけどなあ」",
+        "「そういうところが男の子達に面白がられちゃうんだけど、それはそれで失礼よね?」",
+        "「あーあ、私もクラリスみたいな性格だったら女の子達とうまくやっていけたんだけどなあ」",
+        "しかしそんな折に気弱な令嬢クラリスは前世の記憶を思い出し、ミーシャの行動にふ…"
+      ],
+      "char_errors": 1,
+      "char_count": 271,
+      "line_count": 8,
+      "reference_line_count": 8
+    },
+    {
+      "language": "en",
+      "fast_enabled": false,
+      "dimensions": [
+        1385,
+        1048
+      ],
+      "progressive": true,
+      "first_chunk_median_ms": 1569.1158999979962,
+      "ocr_median_ms": 1569.4726999936393,
+      "ocr_runs_ms": [
+        2231.4607000007527,
+        1461.4329999894835,
+        1569.4726999936393
+      ],
+      "metrics": {
+        "detect_ms": 247.6124999957392,
+        "recognize_ms": 1315.886500000488,
+        "line_cache_hits": 0,
+        "detector": "neural"
+      },
+      "recognized": [
+        "The lids of the girl's eyes lifted slowly, and she stared at the panel of light in the wall.",
+        "Just at the outset, the act of seeing made not the least impression on her numbed brain.",
+        "For a long time she continued to regard the dim illumination in the wall with the same passive fixity of gaze.",
+        "Apathy still lay upon her crushed spirit. In a vague way, she realized her own inertness, and rested in it",
+        "gratefully, subtly fearful lest she again arouse to the full horror of her plight.",
+        "In a curious subconscious fashion, she was striving to hold on to this deadness of sensation,",
+        "thus to win a little respite from the torture that had exhausted her soul.",
+        "Of a sudden, her eyes noted the black lines that lay across the panel of light.",
+        "And, in that instant, her spirit was quickened once again. The clouds lifted from her brain.",
+        "Vision was clear now. Understanding seized the full import of this hideous thing on which she looked.",
+        "For the panel of light was a window, set high within a wall of stone.",
+        "The rigid lines of black that crossed it were bars--prison bars. It was still true, then:",
+        "She was in a cell of the Tombs.",
+        "The girl, crouching miserably on the narrow bed, maintained fixed watching of the window.",
+        "That window was a symbol of her utter despair. Again, agony wrenched within her.",
+        "She did not weep: long ago she had exhausted the relief of tears."
+      ],
+      "char_errors": 0,
+      "char_count": 1068,
+      "line_count": 16,
+      "reference_line_count": 16
+    },
+    {
+      "language": "en",
+      "fast_enabled": true,
+      "dimensions": [
+        1385,
+        1048
+      ],
+      "progressive": true,
+      "first_chunk_median_ms": 68.64929999574088,
+      "ocr_median_ms": 1205.3664999984903,
+      "ocr_runs_ms": [
+        1696.9115000101738,
+        1205.3664999984903,
+        1202.3479999916162
+      ],
+      "metrics": {
+        "detect_ms": 11.020800011465326,
+        "recognize_ms": 1186.2867000018014,
+        "line_cache_hits": 0,
+        "detector": "projection"
+      },
+      "recognized": [
+        "The lids of the girl's eyes lifted slowly, and she stared at the panel of light in the wall.",
+        "Just at the outset, the act of seeing made not the least impression on her numbed brain.",
+        "For a long time she continued to regard the dim illumination in the wall with the same passive fixity of gaze.",
+        "Apathy still lay upon her crushed spirit. In a vague way, she realized her own inertness, and rested in it",
+        "gratefully, subtly fearful lest she again arouse to the full horror of her plight.",
+        "In a curious subconscious fashion, she was striving to hold on to this deadness of sensation,",
+        "thus to win a little respite from the torture that had exhausted her soul.",
+        "Of a sudden, her eyes noted the black lines that lay across the panel of light.",
+        "And, in that instant, her spirit was quickened once again. The clouds lifted from her brain.",
+        "Vision was clear now. Understanding seized the full import of this hideous thing on which she looked.",
+        "For the panel of light was a window, set high within a wall of stone.",
+        "The rigid lines of black that crossed it were bars--prison bars. It was still true, then:",
+        "She was in a cell of the Tombs.",
+        "The girl, crouching miserably on the narrow bed, maintained fixed watching of the window.",
+        "That window was a symbol of her utter despair. Again, agony wrenched within her.",
+        "She did not weep: long ago she had exhausted the relief of tears."
+      ],
+      "char_errors": 0,
+      "char_count": 1068,
+      "line_count": 16,
+      "reference_line_count": 16
+    },
+    {
+      "language": "ko",
+      "fast_enabled": false,
+      "dimensions": [
+        1340,
+        676
+      ],
+      "progressive": true,
+      "first_chunk_median_ms": 1074.3980999977794,
+      "ocr_median_ms": 1074.4290000002366,
+      "ocr_runs_ms": [
+        1674.0486000053352,
+        1074.4290000002366,
+        1070.951599991531
+      ],
+      "metrics": {
+        "detect_ms": 142.019100007019,
+        "recognize_ms": 925.8269999991171,
+        "line_cache_hits": 0,
+        "detector": "neural"
+      },
+      "recognized": [
+        "그래.이거면 됐어.",
+        "체자레는 걸터앉아 있던 아버지의 옥좌에서 뛰어 내려와 아리아드네의 손을 맞잡았다.",
+        "전달되어 오는 체온에 아리아드네는 그의 기쁨과 애정이 전염되는 것 같아 몸을 부르르 떨었다.",
+        "잘했어.그놈의 목숨만 취하고 나면 나는 당신을 왕국에서 가장 고귀한 여자로 만들 거야.",
+        "아버지는 오들내일하셔.언체 돌아가져도 이상하지 않아.",
+        "늙은 왕이 병석에 누운 지금, 알폰소 왕자마저 실각하고 나니 체자레 데 코모를 막을 수 있는 사람은 이체 아무도 없었다.",
+        "이로써 우리의 시대가 오는 거야.",
+        "그녀는 새 시대에 관심이 없었다.그저 그가 기뻐한다면, 그런 그의 옆에 있을 수 있으면 그것으로 충분했다.",
+        "체자레 데 코모,에트루스칸 왕국의 변경백이자 알폰소 왕자의 사촌인 그는 국왕 레오 3세가 병석에 눕자",
+        "곧바로 국경의 군사를 일으켜 왕성을 점령했다.명분은 알폰소 왕자가 레오 3세를 녹살하려고 했다는 것이었다.",
+        "아무도 그 말을 믿지 않았지만 왕성을 가득 채운 체자레의 사병 앞에서 불만을 토로하는 자는 없었다.",
+        "보라! 알폰소 왕자는 적국과 내통하여 국왕 폐하를 녹살하려 한 왕위에 오르려던 간학한 반역자다!"
+      ],
+      "char_errors": 7,
+      "char_count": 406,
+      "line_count": 12,
+      "reference_line_count": 12
+    },
+    {
+      "language": "ko",
+      "fast_enabled": true,
+      "dimensions": [
+        1340,
+        676
+      ],
+      "progressive": true,
+      "first_chunk_median_ms": 22.228400004678406,
+      "ocr_median_ms": 891.0550000000512,
+      "ocr_runs_ms": [
+        1227.731400009361,
+        891.0550000000512,
+        878.2264000037685
+      ],
+      "metrics": {
+        "detect_ms": 6.997399992542341,
+        "recognize_ms": 868.2055999961449,
+        "line_cache_hits": 0,
+        "detector": "projection"
+      },
+      "recognized": [
+        "그래.이거면 됐어.",
+        "체자레는 걸터앉아 있던 아버지의 옥좌에서 뛰어 내려와 아리아드네의 손을 맞잡았다.",
+        "전달되어 오는 체온에 아리아드네는 그의 기쁨과 애정이 전염되는 것 같아 몸을 부르르 떨었다.",
+        "잘했어.그놈의 목숨만 취하고 나면 나는 당신을 왕국에서 가장 고귀한 여자로 만들 거야.",
+        "아버지는 오늘내일하셔.언제 돌아가셔도 이상하지 않아.",
+        "늙은 왕이 병석에 누운 지금, 알폰소 왕자마저 실각하고 나니 체자레 데 코모를 막을 수 있는 사람은 이제 아무도 없었다.",
+        "이로써 우리의 시대가 오는 거야.",
+        "그녀는 새 시대에 관심이 없었다.그저 그가 기뻐한다면, 그런 그의 옆 에 있을 수 있으면 그것으로 충분했다.",
+        "체자레 데 코모,에트루스칸 왕국의 변경백이자 알폰소 왕자의 사촌인 그는 국왕 레오 3세가 병석에 눕자",
+        "곧바로 국경의 군사를 일으켜 왕성을 점령했다.명분은 알폰소 왕자가 레오 3세를 독살하려고 했다는 것이었다.",
+        "아무도 그 말을 믿 지 않았지만 왕성을 가득 채운 체자레의 사병 앞에서 불만을 토로하는 자는 없었다.",
+        "보라! 알폰소 왕자는 적국과 내통하여 국왕 폐하를 독살하려 한 왕위에 오르려던 간악한 반역자다!"
+      ],
+      "char_errors": 0,
+      "char_count": 406,
+      "line_count": 12,
+      "reference_line_count": 12
+    }
+  ]
+}

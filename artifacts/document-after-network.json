@@ -1,0 +1,329 @@
+{
+  "scope": "Transcribed synthetic page layouts; not original user images. No portraits, annotations or manga artwork reproduced.",
+  "rows": [
+    {
+      "language": "ja",
+      "fast_enabled": false,
+      "dimensions": [
+        1340,
+        568
+      ],
+      "ocr_median_ms": 753.5514000046533,
+      "ocr_runs_ms": [
+        1240.0341000029584,
+        752.2370000078809,
+        753.5514000046533
+      ],
+      "metrics": {
+        "detect_ms": 122.375999999349,
+        "recognize_ms": 628.4053999988828,
+        "line_cache_hits": 0,
+        "detector": "neural"
+      },
+      "recognized": [
+        "「ただの友達同士なんだから、エドガーと二人きりで街に出掛けても良いわよね?」",
+        "そう言い放つ騎士科の令嬢ミーシャ・ホワイトに気弱なクラリスはいつもロ籠ってしまう。",
+        "常日頃からクラリスの婚約者と「男友達みたいなものだから」と言って仲睦まじくするミーシャにいつも",
+        "気が引けていたのだ。",
+        "「私もクラリスみたいに繊細で可愛い女の子だったら良かったんだけどなあ」",
+        "「そういうところが男の子達に面白がられちゃうんだけど、それはそれで失礼よね?」",
+        "「あーあ、私もクラりスみたいな性格だったら女の子達とうまくやっていけたんだけどなあ」",
+        "しかしそんな折に気弱な令嬢クラリスは前世の記憶を思い出し、ミーシャの行動にふ…"
+      ],
+      "char_errors": 2,
+      "char_count": 271,
+      "line_count": 8,
+      "reference_line_count": 8,
+      "translate_ms": 157.382499994128,
+      "translations": [
+        "“既然只是朋友，我和埃德加单独出去逛街也没什么问题吧？”",
+        "当骑士之女米莎·怀特说出这句话时，胆怯的克拉丽丝总是呆在房间里。",
+        "米莎与克拉丽斯的未婚妻一直很友好，她说：“我们就像男性朋友一样。”",
+        "我感到焦虑。",
+        "“我希望我是一个像克拉丽丝那样精致可爱的女孩。”",
+        "“这就是男孩子们觉得有趣的事情，但这不是很粗鲁吗？”",
+        "「啊，如果我有克拉丽丝那样的性格的话，应该能和女孩子们相处得很好吧。」",
+        "然而，就在那时，胆小的克拉丽丝小姐想起了前世的记忆，并被米夏的举动震惊了……"
+      ],
+      "network_calls": 2
+    },
+    {
+      "language": "ja",
+      "fast_enabled": true,
+      "dimensions": [
+        1340,
+        568
+      ],
+      "ocr_median_ms": 555.1572999975178,
+      "ocr_runs_ms": [
+        790.3617999982089,
+        542.7806999941822,
+        555.1572999975178
+      ],
+      "metrics": {
+        "detect_ms": 5.849300010595471,
+        "recognize_ms": 547.1825000131503,
+        "line_cache_hits": 0,
+        "detector": "projection"
+      },
+      "recognized": [
+        "「ただの友達同士なんだから、エドガーと二人きりで街に出掛けても良いわよね？」",
+        "そう言い放つ騎士科の令嬢ミーシャ・ホワイトに気弱なクラリスはいつもロ籠ってしまう。",
+        "常日頃からクラリスの婚約者と「男友達みたいなものだから」と言って仲睦まじくするミーシャにいつも",
+        "気が引けていたのだ。",
+        "「私もクラリスみたいに繊細で可愛い女の子だったら良かったんだけどなあ」",
+        "「そういうところが男の子達に面白がられちゃうんだけど、それはそれで失礼よね?」",
+        "「あーあ、私もクラリスみたいな性格だったら女の子達とうまくやっていけたんだけどなあ」",
+        "しかしそんな折に気弱な令嬢クラリスは前世の記憶を思い出し、ミーシャの行動にふ…"
+      ],
+      "char_errors": 1,
+      "char_count": 271,
+      "line_count": 8,
+      "reference_line_count": 8,
+      "translate_ms": 211.74790000077337,
+      "translations": [
+        "“既然只是朋友，你和埃德加单独出去逛逛也没什么问题吧？”",
+        "当骑士之女米莎·怀特说出这句话时，胆怯的克拉丽丝总是呆在房间里。",
+        "米莎与克拉丽斯的未婚妻一直很友好，她说：“我们就像男性朋友一样。”",
+        "我感到焦虑。",
+        "“我希望我是一个像克拉丽丝那样精致可爱的女孩。”",
+        "“这就是男孩子们觉得有趣的事情，但这不是很粗鲁吗？”",
+        "「啊，如果我有克拉丽丝那样的性格的话，应该能和女孩子们相处得很好吧。」",
+        "然而，就在那时，胆小的克拉丽丝小姐想起了前世的记忆，并被米夏的举动震惊了……"
+      ],
+      "network_calls": 2
+    },
+    {
+      "language": "en",
+      "fast_enabled": false,
+      "dimensions": [
+        1385,
+        1048
+      ],
+      "ocr_median_ms": 1606.876599995303,
+      "ocr_runs_ms": [
+        2153.8509000092745,
+        1393.3900999982143,
+        1606.876599995303
+      ],
+      "metrics": {
+        "detect_ms": 274.4496000086656,
+        "recognize_ms": 1327.200300002005,
+        "line_cache_hits": 0,
+        "detector": "neural"
+      },
+      "recognized": [
+        "The lids of the girl's eyes lifted slowly, and she stared at the panel of light in the wall.",
+        "Just at the outset, the act of seeing made not the least impression on her numbed brain.",
+        "For a long time she continued to regard the dim illumination in the wall with the same passive fixity of gaze.",
+        "Apathy still lay upon her crushed spirit. In a vague way, she realized her own inertness, and rested in it",
+        "gratefully, subtly fearful lest she again arouse to the full horror of her plight.",
+        "In a curious subconscious fashion, she was striving to hold on to this deadness of sensation,",
+        "thus to win a little respite from the torture that had exhausted her soul.",
+        "Of a sudden, her eyes noted the black lines that lay across the panel of light.",
+        "And, in that instant, her spirit was quickened once again. The clouds lifted from her brain.",
+        "Vision was clear now. Understanding seized the full import of this hideous thing on which she looked.",
+        "For the panel of light was a window, set high within a wall of stone.",
+        "The rigid lines of black that crossed it were bars--prison bars. It was still true, then:",
+        "She was in a cell of the Tombs.",
+        "The girl, crouching miserably on the narrow bed, maintained fixed watching of the window.",
+        "That window was a symbol of her utter despair. Again, agony wrenched within her.",
+        "She did not weep: long ago she had exhausted the relief of tears."
+      ],
+      "char_errors": 0,
+      "char_count": 1068,
+      "line_count": 16,
+      "reference_line_count": 16,
+      "translate_ms": 371.94179999642074,
+      "translations": [
+        "少女的眼皮缓缓抬起，盯着墙壁上的光板。",
+        "刚开始的时候，看见的行为就没有给她麻木的大脑留下丝毫印象。",
+        "有很长一段时间，她继续以同样被动、固定的目光注视着墙上昏暗的灯光。",
+        "冷漠仍然笼罩着她那破碎的心灵。她隐隐约约地意识到自己的惰性，并安息在其中。",
+        "感激之余，又隐隐约约地担心，以免她再次对自己的困境感到恐惧。",
+        "以一种奇怪的潜意识方式，她努力保持这种死寂的感觉，",
+        "从而从耗尽她灵魂的折磨中获得一点喘息的机会。",
+        "突然，她的眼睛注意到了光板上的黑色线条。",
+        "而就在这一瞬间，她的精神再次振奋起来。她脑子里的乌云消散了。",
+        "现在视野清晰了。理解力抓住了她所看到的这个可怕事物的全部意义。",
+        "因为光板是一扇窗户，高高地设置在石墙内。",
+        "穿过它的坚硬的黑色线条是栅栏——监狱栅栏。那么，这仍然是事实：",
+        "她在古墓的一间牢房里。",
+        "女孩可怜兮兮地蹲在狭窄的床上，目不转睛地看着窗外。",
+        "那扇窗户象征着她彻底的绝望。痛苦再次折磨着她。",
+        "她没有哭：很久以前她就已经用尽了眼泪。"
+      ],
+      "network_calls": 4
+    },
+    {
+      "language": "en",
+      "fast_enabled": true,
+      "dimensions": [
+        1385,
+        1048
+      ],
+      "ocr_median_ms": 1187.7133999951184,
+      "ocr_runs_ms": [
+        1675.1602000003913,
+        1187.7133999951184,
+        1091.113900009077
+      ],
+      "metrics": {
+        "detect_ms": 10.702100000344217,
+        "recognize_ms": 1075.928499994916,
+        "line_cache_hits": 0,
+        "detector": "projection"
+      },
+      "recognized": [
+        "The lids of the girl's eyes lifted slowly, and she stared at the panel of light in the wall.",
+        "Just at the outset, the act of seeing made not the least impression on her numbed brain.",
+        "For a long time she continued to regard the dim illumination in the wall with the same passive fixity of gaze.",
+        "Apathy still lay upon her crushed spirit. In a vague way, she realized her own inertness, and rested in it",
+        "gratefully, subtly fearful lest she again arouse to the full horror of her plight.",
+        "In a curious subconscious fashion, she was striving to hold on to this deadness of sensation,",
+        "thus to win a little respite from the torture that had exhausted her soul.",
+        "Of a sudden, her eyes noted the black lines that lay across the panel of light.",
+        "And, in that instant, her spirit was quickened once again. The clouds lifted from her brain.",
+        "Vision was clear now. Understanding seized the full import of this hideous thing on which she looked.",
+        "For the panel of light was a window, set high within a wall of stone.",
+        "The rigid lines of black that crossed it were bars--prison bars. It was still true, then:",
+        "She was in a cell of the Tombs.",
+        "The girl, crouching miserably on the narrow bed, maintained fixed watching of the window.",
+        "That window was a symbol of her utter despair. Again, agony wrenched within her.",
+        "She did not weep: long ago she had exhausted the relief of tears."
+      ],
+      "char_errors": 0,
+      "char_count": 1068,
+      "line_count": 16,
+      "reference_line_count": 16,
+      "translate_ms": 328.35399999748915,
+      "translations": [
+        "少女的眼皮缓缓抬起，盯着墙壁上的光板。",
+        "刚开始的时候，看见的行为就没有给她麻木的大脑留下丝毫印象。",
+        "有很长一段时间，她继续以同样被动、固定的目光注视着墙上昏暗的灯光。",
+        "冷漠仍然笼罩着她那破碎的心灵。她隐隐约约地意识到自己的惰性，并安息在其中。",
+        "感激之余，又隐隐约约地担心，以免她再次对自己的困境感到恐惧。",
+        "以一种奇怪的潜意识方式，她努力保持这种死寂的感觉，",
+        "从而从耗尽她灵魂的折磨中获得一点喘息的机会。",
+        "突然，她的眼睛注意到了光板上的黑色线条。",
+        "而就在这一瞬间，她的精神再次振奋起来。她脑子里的乌云消散了。",
+        "现在视野清晰了。理解力抓住了她所看到的这个可怕事物的全部意义。",
+        "因为光板是一扇窗户，高高地设置在石墙内。",
+        "穿过它的坚硬的黑色线条是栅栏——监狱栅栏。那么，这仍然是事实：",
+        "她在古墓的一间牢房里。",
+        "女孩可怜兮兮地蹲在狭窄的床上，目不转睛地看着窗外。",
+        "那扇窗户象征着她彻底的绝望。痛苦再次折磨着她。",
+        "她没有哭：很久以前她就已经用尽了眼泪。"
+      ],
+      "network_calls": 4
+    },
+    {
+      "language": "ko",
+      "fast_enabled": false,
+      "dimensions": [
+        1340,
+        676
+      ],
+      "ocr_median_ms": 1231.1426000087522,
+      "ocr_runs_ms": [
+        1910.2073999965796,
+        1231.1426000087522,
+        1205.2259000047343
+      ],
+      "metrics": {
+        "detect_ms": 162.78759999840986,
+        "recognize_ms": 1039.3023999931756,
+        "line_cache_hits": 0,
+        "detector": "neural"
+      },
+      "recognized": [
+        "그래.이거면 됐어.",
+        "체자레는 걸터앉아 있던 아버지의 옥좌에서 뛰어 내려와 아리아드네의 손을 맞잡았다.",
+        "전달되어 오는 체온에 아리아드네는 그의 기쁨과 애정이 전염되는 것 같아 몸을 부르르 떨었다.",
+        "잘했어.그놈의 목숨만 취하고 나면 나는 당신을 왕국에서 가장 고귀한 여자로 만들 거야.",
+        "아버지는 오들내일하셔.언체 돌아가져도 이상하지 않아.",
+        "늙은 왕이 병석에 누운 지금, 알폰소 왕자마저 실각하고 나니 체자레 데 코모를 막을 수 있는 사람은 이체 아무도 없었다.",
+        "이로써 우리의 시대가 오는 거야.",
+        "그녀는 새 시대에 관심이 없었다.그저 그가 기뻐한다면, 그런 그의 옆에 있을 수 있으면 그것으로 충분했다.",
+        "체자레 데 코모,에트루스칸 왕국의 변경백이자 알폰소 왕자의 사촌인 그는 국왕 레오 3세가 병석에 눕자",
+        "곧바로 국경의 군사를 일으켜 왕성을 점령했다.명분은 알폰소 왕자가 레오 3세를 녹살하려고 했다는 것이었다.",
+        "아무도 그 말을 믿지 않았지만 왕성을 가득 채운 체자레의 사병 앞에서 불만을 토로하는 자는 없었다.",
+        "보라! 알폰소 왕자는 적국과 내통하여 국왕 폐하를 녹살하려 한 왕위에 오르려던 간학한 반역자다!"
+      ],
+      "char_errors": 7,
+      "char_count": 406,
+      "line_count": 12,
+      "reference_line_count": 12,
+      "translate_ms": 960.2598000055877,
+      "translations": [
+        "好吧，这就足够了。",
+        "切萨雷从父亲的王座上跳下来，握住了阿里阿德涅的手。",
+        "阿里亚德涅的身体颤抖着，她感觉到他的喜悦和感情具有感染力。",
+        "干得好。我杀了他之后，我会让你成为王国里最高贵的女人。",
+        "我父亲明天将会有美好的一天。如果他有一天回国，也不会奇怪。",
+        "现在老国王病了，阿方索王子被推翻了，没有人能阻止切萨雷·德·科莫。",
+        "这就是我们的时代到来的时刻。",
+        "她对新时代不感兴趣。如果他幸福，如果她能在他身边，那就足够了。",
+        "切萨雷·德·科莫是伊特鲁里亚王国的侯爵、阿方索亲王的表弟，是国王利奥三世卧床不起时的儿子。",
+        "他立即在边境起兵，占领了王城。理由是阿方索王子试图摧毁利奥三世。",
+        "没有人相信他，但没有人在塞萨尔布满城堡的私人军队面前抱怨。",
+        "紫色的！阿方索王子是一个狡猾的叛徒，他试图通过与敌人密谋摧毁国王陛下来登上王位！"
+      ],
+      "network_calls": 3
+    },
+    {
+      "language": "ko",
+      "fast_enabled": true,
+      "dimensions": [
+        1340,
+        676
+      ],
+      "ocr_median_ms": 1077.8618000040296,
+      "ocr_runs_ms": [
+        1438.2306000043172,
+        1063.955999998143,
+        1077.8618000040296
+      ],
+      "metrics": {
+        "detect_ms": 7.531299997936003,
+        "recognize_ms": 1066.9017000036547,
+        "line_cache_hits": 0,
+        "detector": "projection"
+      },
+      "recognized": [
+        "그래.이거면 됐어.",
+        "체자레는 걸터앉아 있던 아버지의 옥좌에서 뛰어 내려와 아리아드네의 손을 맞잡았다.",
+        "전달되어 오는 체온에 아리아드네는 그의 기쁨과 애정이 전염되는 것 같아 몸을 부르르 떨었다.",
+        "잘했어.그놈의 목숨만 취하고 나면 나는 당신을 왕국에서 가장 고귀한 여자로 만들 거야.",
+        "아버지는 오늘내일하셔.언제 돌아가셔도 이상하지 않아.",
+        "늙은 왕이 병석에 누운 지금, 알폰소 왕자마저 실각하고 나니 체자레 데 코모를 막을 수 있는 사람은 이제 아무도 없었다.",
+        "이로써 우리의 시대가 오는 거야.",
+        "그녀는 새 시대에 관심이 없었다.그저 그가 기뻐한다면, 그런 그의 옆 에 있을 수 있으면 그것으로 충분했다.",
+        "체자레 데 코모,에트루스칸 왕국의 변경백이자 알폰소 왕자의 사촌인 그는 국왕 레오 3세가 병석에 눕자",
+        "곧바로 국경의 군사를 일으켜 왕성을 점령했다.명분은 알폰소 왕자가 레오 3세를 독살하려고 했다는 것이었다.",
+        "아무도 그 말을 믿 지 않았지만 왕성을 가득 채운 체자레의 사병 앞에서 불만을 토로하는 자는 없었다.",
+        "보라! 알폰소 왕자는 적국과 내통하여 국왕 폐하를 독살하려 한 왕위에 오르려던 간악한 반역자다!"
+      ],
+      "char_errors": 0,
+      "char_count": 406,
+      "line_count": 12,
+      "reference_line_count": 12,
+      "translate_ms": 185.9097999986261,
+      "translations": [
+        "好吧，这就足够了。",
+        "切萨雷从父亲的王座上跳下来，握住了阿里阿德涅的手。",
+        "阿里亚德涅的身体颤抖着，她感觉到他的喜悦和感情具有感染力。",
+        "干得好。我杀了他之后，我会让你成为王国里最高贵的女人。",
+        "我的父亲活在今天和明天。他什么时候死并不重要。",
+        "现在老国王病了，阿方索王子也被推翻了，没有人能阻止切萨雷·德·科莫。",
+        "这就是我们的时代到来的时刻。",
+        "她对新时代不感兴趣。如果他幸福，如果她能在他身边，那就足够了。",
+        "切萨雷·德·科莫是伊特鲁里亚王国的侯爵、阿方索亲王的表弟，是国王利奥三世卧床不起时的儿子。",
+        "他立即在边境起兵，占领了城堡。理由是阿方索王子试图毒害利奥三世。",
+        "没有人相信他，但没有人在塞萨尔布满城堡的私人军队面前抱怨。",
+        "紫色的！阿方索王子是一个奸诈的叛徒，他与敌国勾结，企图毒害国王陛下，企图登上王位！"
+      ],
+      "network_calls": 3
+    }
+  ]
+}

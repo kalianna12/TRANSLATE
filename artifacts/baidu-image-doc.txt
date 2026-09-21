@@ -1,0 +1,126 @@
+图片翻译API接入文档
+本文档是百度翻译开放平台图片翻译API的用户指南，描述了图片翻译相关接口的说明。API接入方式对于IOS端、Android端、Web端均适用。新版本不再提供图片翻译SDK服务，已经接入的用户可下拉至本文档末尾查看SDK错误码列表。
+
+
+API接入方式（IOS端、Android端、Web端均适用）
+如何使用图片翻译API
+使用您的百度账号登录百度翻译开放平台；
+注册成为开发者，获得APPID；
+进行开发者认证；
+开通图片翻译API服务：开通链接；
+参考技术文档和Demo编写代码。
+
+接入方式
+图片翻译API HTTPS地址：
+https://fanyi-api.baidu.com/api/trans/sdk/picture
+
+集成指南
+请求url示例
+https://fanyi-api.baidu.com/api/trans/sdk/picture?
+from=zh&to=en&appid=20180905000111111&salt=1435660288&sign=bf7303b9be4191726f62c19115c9a165&cuid=APICUID&mac=mac&version=3
+
+请求方式：
+POST/GET
+
+
+输入参数
+{'html': '<style type="text/css">\n    table.inner-html-table {\n        width: 100%;\n        text-align: left;\n        border: 1px solid #ccc;\n        padding: 6px 13px;\n        border-collapse: collapse;\n        line-height: 2;\n        font-size: 14px;\n    }\n\n    table.inner-html-table td, table.inner-html-table th {\n        border: 1px solid #ccc;\n        padding: 6px 13px;\n    }\n</style>\n<table class="inner-html-table">\n    <thead>\n    <tr style="background-color: #f0f0f0;">\n        <th>字段名</th>\n        <th>类型</th>\n        <th>是否必填</th>\n        <th>描述</th>\n    </tr>\n    </thead>\n    <tbody>\n    <tr>\n        <td>image</td>\n        <td>files</td>\n        <td>是</td>\n        <td>请求翻译的图片数据</td>\n    </tr>\n    <tr>\n        <td>from</td>\n        <td>string</td>\n        <td>是</td>\n        <td>目前源语种方向，参考附录1</td>\n    </tr>\n    <tr>\n        <td>to</td>\n        <td>string</td>\n        <td>是</td>\n        <td>译文语种方向，参考附录2</td>\n    </tr>\n    <tr>\n        <td>appid</td>\n        <td>string</td>\n        <td>是</td>\n        <td>APP ID，可在<a href=\'/manage/developer?fr=bd\'>管理控制台</a>查看</td>\n    </tr>\n    <tr>\n        <td>salt</td>\n        <td>string</td>\n        <td>是</td>\n        <td>随机数</td>\n    </tr>\n    <tr>\n        <td>cuid</td>\n        <td>string</td>\n        <td>是</td>\n        <td>固定值：APICUID</td>\n    </tr>\n    <tr>\n        <td>mac</td>\n        <td>string</td>\n        <td>是</td>\n        <td>固定值：mac</td>\n    </tr>\n    <tr>\n        <td>version</td>\n        <td>integer</td>\n        <td>是</td>\n        <td>固定值：3</td>\n    </tr>\n    <tr>\n        <td>paste</td>\n        <td>integer</td>\n        <td>否</td>\n        <td>图片贴合类型：0 - 关闭文字贴合 1 - 返回整图贴合 2 - 返回块区贴合</td>\n    </tr>\n    <tr>\n        <td>sign</td>\n        <td>string</td>\n        <td>是</td>\n        <td>签名，32位小写</td>\n    </tr>\n    <tr>\n        <td>needIntervene</td>\n        <td>int</td>\n        <td>否</td>\n        <td>判断是否需要使用自定义术语库干预；0-否 1-是</td>\n    </tr>\n    </tbody>\n</table>\n'}
+注：
+1）支持jpg、jpeg、png图片格式，注意均为小写。图片大小不超过4M，最短边至少30px，最长边最大4096px，长宽比3：1以内。
+2）签名规则：sign = md5(appid+md5(image)+salt+cuid+mac+密钥)。
+3）md5(image) 中的image是原始图片数据，不加任何编码，32位小写。
+4）image图片上传Content-Type=multipart/form-data。
+
+
+输出参数
+{'html': '<style type="text/css">\n    table.inner-html-table {\n        width: 100%;\n        text-align: left;\n        border: 1px solid #ccc;\n        padding: 6px 13px;\n        border-collapse: collapse;\n        line-height: 2;\n        font-size: 14px;\n    }\n\n    table.inner-html-table td, table.inner-html-table th {\n        border: 1px solid #ccc;\n        padding: 6px 13px;\n    }\n</style>\n<table class="inner-html-table">\n    <thead>\n    <tr style="background-color: #f0f0f0;">\n        <th>字段名</th>\n        <th>描述</th>\n        <th>备注</th>\n    </tr>\n    </thead>\n    <tbody>\n    <tr>\n        <td>error_code</td>\n        <td>错误码</td>\n        <td>详见错误码列表</td>\n    </tr>\n    <tr>\n        <td>error_msg</td>\n        <td>错误信息</td>\n        <td>以错误码54001为例，其返回的错误信息是Invalid Sign</td>\n    </tr>\n    <tr>\n        <td>data</td>\n        <td>返回数据集合</td>\n        <td>data是一个对象</td>\n    </tr>\n    <tr>\n        <td>from</td>\n        <td>源语种方向</td>\n        <td>参考支持语种列表</td>\n    </tr>\n    <tr>\n        <td>to</td>\n        <td>目标语种方向</td>\n        <td>参考支持语种列表</td>\n    </tr>\n    <tr>\n        <td>content</td>\n        <td>分段内容</td>\n        <td>Content内部是一个数组形式，每个数据格式见下方详细说明</td>\n    </tr>\n    <tr>\n        <td>sumSrc</td>\n        <td>未分段翻译原文</td>\n        <td>接入举例中的“这是一个测试 这是一个例子”</td>\n    </tr>\n    <tr>\n        <td>sumDst</td>\n        <td>未分段翻译译文</td>\n        <td>接入举例中的“This is a test. This is an example.”</td>\n    </tr>\n    <tr>\n        <td>pasteImg</td>\n        <td>图片贴合 (整屏贴合)</td>\n        <td>paste=1有效，base64格式</td>\n    </tr>\n    </tbody>\n</table>'}
+注：Content内部是一个数组形式，详情如下：
+{'html': '<style type="text/css">\n    table.inner-html-table {\n        width: 100%;\n        text-align: left;\n        border: 1px solid #ccc;\n        padding: 6px 13px;\n        border-collapse: collapse;\n        line-height: 2;\n        font-size: 14px;\n        font-weight: 400;\n    }\n\n    table.inner-html-table td, table.inner-html-table th {\n        border: 1px solid #ccc;\n        padding: 6px 13px;\n    }\n</style>\n<table class="inner-html-table">\n    <thead>\n    <tr style="background-color: #f0f0f0;">\n        <th>字段名</th>\n        <th>类型</th>\n        <th>描述</th>\n        <th>备注</th>\n    </tr>\n    </thead>\n    <tbody>\n    <tr>\n        <td>src</td>\n        <td>STRING</td>\n        <td>分段翻译的原文</td>\n        <td></td>\n    </tr>\n    <tr>\n        <td>dst</td>\n        <td>STRING</td>\n        <td>分段翻译的译文</td>\n        <td></td>\n    </tr>\n    <tr>\n        <td>rect</td>\n        <td>STRING</td>\n        <td>表示识别出的文字的位置</td>\n        <td>坐标为左上角，依次是left、top、width、height</td>\n    </tr>\n    <tr>\n        <td>lineCount</td>\n        <td>INT</td>\n        <td>表示该分段信息是原文的多少行合并在一起</td>\n        <td></td>\n    </tr>\n    <tr>\n        <td>points</td>\n        <td>ARRAY</td>\n        <td>译文矩形坐标</td>\n        <td>坐标为左上角，坐标顺序左上，右上，右下，左下\n\n格式：\n[\n{"x": 254,"y": 280},\n{"x": 506,"y": 278},\n{"x": 506,"y": 303},\n{"x": 254,"y": 305}\n]</td>\n    </tr>\n    <tr>\n        <td>pasteImg</td>\n        <td>STRING</td>\n        <td>图片贴合 (分块贴合)</td>\n        <td>分段贴合图片，paste=2有效，base64格式</td>\n    </tr>\n    </tbody>\n</table>'}
+
+语种列表
+源语种支持方向：
+{'html': '<style type="text/css">\ntable.inner-html-table {\nwidth: 100%;\ntext-align: left;\nborder: 1px solid #ccc;\npadding: 6px 13px;\nborder-collapse: collapse;\nline-height: 2;\nfont-size: 14px;\n}\n\ntable.inner-html-table td,\ntable.inner-html-table th {\nborder: 1px solid #ccc;\npadding: 6px 13px;\n}\n</style>\n<table class="inner-html-table">\n<thead>\n<tr style="background-color: #f0f0f0;">\n<th> 语言简写 </th>\n<th> 名称 </th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td> auto </td>\n<td> 自动检测 </td>\n</tr>\n<tr>\n<td> zh </td>\n<td> 中文 </td>\n</tr>\n<tr>\n<td> en </td>\n<td> 英语 </td>\n</tr>\n<tr>\n<td> jp </td>\n<td> 日语 </td>\n</tr>\n<tr>\n<td> kor </td>\n<td> 韩语 </td>\n</tr>\n<tr>\n<td> fra </td>\n<td> 法语 </td>\n</tr>\n<tr>\n<td> spa </td>\n<td> 西班牙语 </td>\n</tr>\n<tr>\n<td> ru </td>\n<td> 俄语 </td>\n</tr>\n<tr>\n<td> pt </td>\n<td> 葡萄牙语 </td>\n</tr>\n<tr>\n<td> de </td>\n<td> 德语 </td>\n</tr>\n<tr>\n<td> it </td>\n<td> 意大利语 </td>\n</tr>\n<tr>\n<td> dan </td>\n<td> 丹麦语 </td>\n</tr>\n<tr>\n<td> nl </td>\n<td> 荷兰语 </td>\n</tr>\n<tr>\n<td> may </td>\n<td> 马来语 </td>\n</tr>\n<tr>\n<td> swe </td>\n<td> 瑞典语 </td>\n</tr>\n<tr>\n<td> id </td>\n<td> 印尼语 </td>\n</tr>\n<tr>\n<td> pl </td>\n<td> 波兰语 </td>\n</tr>\n<tr>\n<td> rom </td>\n<td> 罗马尼亚语 </td>\n</tr>\n<tr>\n<td> tr </td>\n<td> 土耳其语 </td>\n</tr>\n<tr>\n<td> el </td>\n<td> 希腊语 </td>\n</tr>\n<tr>\n<td> hu </td>\n<td> 匈牙利语 </td>\n</tr>\n</tbody>\n</table>\n</figure>'}
+目标语种支持方向：
+
+{'html': '<style type="text/css">\ntable.inner-html-table {\nwidth: 100%;\ntext-align: left;\nborder: 1px solid #ccc;\npadding: 6px 13px;\nborder-collapse: collapse;\nline-height: 2;\nfont-size: 14px;\n}\n\ntable.inner-html-table td,\ntable.inner-html-table th {\nborder: 1px solid #ccc;\npadding: 6px 13px;\n}\n</style>\n<table class="inner-html-table">\n<thead>\n<tr style="background-color: #f0f0f0;">\n<th> 语言简写 </th>\n<th> 名称 </th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td> zh </td>\n<td> 中文 </td>\n</tr>\n<tr>\n<td> en </td>\n<td> 英语 </td>\n</tr>\n<tr>\n<td> jp </td>\n<td> 日语 </td>\n</tr>\n<tr>\n<td> kor </td>\n<td> 韩语 </td>\n</tr>\n<tr>\n<td> fra </td>\n<td> 法语 </td>\n</tr>\n<tr>\n<td> spa </td>\n<td> 西班牙语 </td>\n</tr>\n<tr>\n<td> ru </td>\n<td> 俄语 </td>\n</tr>\n<tr>\n<td> pt </td>\n<td> 葡萄牙语 </td>\n</tr>\n<tr>\n<td> de </td>\n<td> 德语 </td>\n</tr>\n<tr>\n<td> it </td>\n<td> 意大利语 </td>\n</tr>\n<tr>\n<td> dan </td>\n<td> 丹麦语 </td>\n</tr>\n<tr>\n<td> nl </td>\n<td> 荷兰语 </td>\n</tr>\n<tr>\n<td> may </td>\n<td> 马来语 </td>\n</tr>\n<tr>\n<td> swe </td>\n<td> 瑞典语 </td>\n</tr>\n<tr>\n<td> id </td>\n<td> 印尼语 </td>\n</tr>\n<tr>\n<td> pl </td>\n<td> 波兰语 </td>\n</tr>\n<tr>\n<td> rom </td>\n<td> 罗马尼亚语 </td>\n</tr>\n<tr>\n<td> tr </td>\n<td> 土耳其语 </td>\n</tr>\n<tr>\n<td> el </td>\n<td> 希腊语 </td>\n</tr>\n<tr>\n<td> hu </td>\n<td> 匈牙利语 </td>\n</tr>\n</tbody>\n</table>\n</figure>'}
+
+错误码列表
+{'html': '<style type="text/css">\ntable.inner-html-table {\nwidth: 100%;\ntext-align: left;\nborder: 1px solid #ccc;\npadding: 6px 13px;\nborder-collapse: collapse;\nline-height: 2;\nfont-size: 14px;\n}\n\ntable.inner-html-table td,\ntable.inner-html-table th {\nborder: 1px solid #ccc;\npadding: 6px 13px;\n}\n</style>\n<table class="inner-html-table">\n<thead>\n<tr style="background-color: #f0f0f0;">\n<th> 错误码 </th>\n<th> 含义 </th>\n<th> 解决方案 </th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td> 0 </td>\n<td> 成功 </td>\n<td></td>\n</tr>\n<tr>\n<td> 52001 </td>\n<td> 请求超时 </td>\n<td> 请重试 </td>\n</tr>\n<tr>\n<td> 52002 </td>\n<td> 服务端系统错误 </td>\n<td> 请重试 </td>\n</tr>\n<tr>\n<td> 52003 </td>\n<td> 未授权用户 </td>\n<td> 请检查appid是否正确或者服务是否开通 </td>\n</tr>\n<tr>\n<td> 52010 </td>\n<td> 开放设备授权容量不足 </td>\n<td> 联系管理员扩增容量 </td>\n</tr>\n<tr>\n<td> 54000 </td>\n<td> 必填参数为空或固定参数有误 </td>\n<td> 检查参数是否误传 </td>\n</tr>\n<tr>\n<td> 54001 </td>\n<td> 签名错误 </td>\n<td> 请检查您的签名生成方法 </td>\n</tr>\n<tr>\n<td> 54003 </td>\n<td> 访问频率受限 </td>\n<td> 请降低您的调用频率 </td>\n</tr>\n<tr>\n<td> 54004 </td>\n<td> 账户余额不足 </td>\n<td> 请前往管理控制平台为账户充值 </td>\n</tr>\n<tr>\n<td> 54005 </td>\n<td> 长query请求频繁 </td>\n<td> 请降低长query的发送频率，3s后再试 </td>\n</tr>\n<tr>\n<td> 58000 </td>\n<td> 客户端IP非法 </td>\n<td> 检查个人资料里填写的IP地址是否正确可前往管理控制平台修改，IP限制，IP可留空 </td>\n</tr>\n<tr>\n<td> 58001 </td>\n<td> 译文语言方向不支持 </td>\n<td> 检查译文语言是否在语言列表里 </td>\n</tr>\n<tr>\n<td> 69001 </td>\n<td> 上传图片数据有误 </td>\n<td> 检查图片是否有问题 </td>\n</tr>\n<tr>\n<td> 69002 </td>\n<td> 图片识别超时 </td>\n<td> 请重试 </td>\n</tr>\n<tr>\n<td> 69003 </td>\n<td> 内容识别失败 </td>\n<td> 检查图片是否存在内容后重试 </td>\n</tr>\n<tr>\n<td> 69004 </td>\n<td> 识别内容为空 </td>\n<td> 检查图片是否存在内容后重试 </td>\n</tr>\n<tr>\n<td> 69005 </td>\n<td> 图片大小超限（超过4M） </td>\n<td> 请上传符合图片大小要求的图片 </td>\n</tr>\n<tr>\n<td> 69006 </td>\n<td> 图片尺寸不符合标准（最短边至少30px，最长边最大4096px） </td>\n<td> 请上传符合图片尺寸要求的图片 </td>\n</tr>\n<tr>\n<td> 69007 </td>\n<td> 图片格式不支持（png/jpg） </td>\n<td> 请上传png或jpg格式的图片 </td>\n</tr>\n<tr>\n<td> 69008 </td>\n<td> 设备号为空 </td>\n<td> 检查cuid参数 </td>\n</tr>\n<tr>\n<td> 69012 </td>\n<td> 文字贴合参数异常 </td>\n<td> 请检查参数 paste，枚举示例：0-关闭文字贴合  1-返回整图贴合  2-返回块区贴合 </td>\n</tr>\n</tbody>\n</table>\n</figure>'}
+
+举例：（以下为传入的图片）
+{'image': 'https://fanyiapp.cdn.bcebos.com/cms/oldimage/00e93901213fb80e633b03b939d12f2eb83894f1.jpg'}
+返回内容如下：
+{
+    "error_code":"0",
+    "error_msg":"success",
+    "data":{
+        "from":"zh",
+        "to":"en",
+        "content":[
+            {
+                "src":"这是一个测试 ",
+                "dst":"This is a test.",
+                "rect":"79 23 246 43",
+                "lineCount":1,
+                "pasteImg":"xxx",
+                "points":[
+                    {
+                        "x":0,
+                        "y":0
+                    },
+                    {
+                        "x":0,
+                        "y":0
+                    },
+                    {
+                        "x":20,
+                        "y":20
+                    },
+                    {
+                        "x":10,
+                        "y":10
+                    }
+                ]
+            },
+            {
+                "src":"这是一个例子 ",
+                "dst":"This is an example.",
+                "rect":"79 122 201 37",
+                "lineCount":1,
+                "pasteImg":"xxx",
+                "points":[
+                    {
+                        "x":50,
+                        "y":50
+                    },
+                    {
+                        "x":50,
+                        "y":50
+                    },
+                    {
+                        "x":20,
+                        "y":20
+                    },
+                    {
+                        "x":10,
+                        "y":10
+                    }
+                ]
+            }
+        ],
+        "sumSrc":"这是一个测试 这是一个例子 ",
+        "sumDst":"This is a test. This is an example.",
+        "pasteImg":"xxx"
+    }
+}
+
+
+
+各语言DEMO
+PHP 版（点击下载）
+IOS版（点击下载）
+JS版（点击下载）
+Python版（点击下载）
+Java版（点击下载）
+
+

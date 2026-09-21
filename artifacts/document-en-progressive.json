@@ -1,0 +1,19 @@
+{
+  "passed": false,
+  "error": "翻译请求过于频繁，请增大刷新间隔或检查服务配额。",
+  "messages": [
+    "正在识别文字…",
+    "正在分段翻译正文：已识别 1 行…"
+  ],
+  "latency_ms": null,
+  "blocks": null,
+  "paint_latency_ms": null,
+  "metrics": [],
+  "full_paint_latency_ms": null,
+  "progressive": true,
+  "char_errors": null,
+  "char_count": null,
+  "source_mode": "en",
+  "prewarmed": true,
+  "fixture": "Synthetic en in isolated Edge app window, not the user's original image."
+}

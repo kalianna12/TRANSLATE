@@ -1,0 +1,16 @@
+{
+  "passed": false,
+  "error": "Browser fixture has not rendered the image marker",
+  "messages": [],
+  "latency_ms": null,
+  "blocks": null,
+  "paint_latency_ms": null,
+  "metrics": [],
+  "full_paint_latency_ms": null,
+  "progressive": true,
+  "char_errors": null,
+  "char_count": null,
+  "source_mode": "en",
+  "prewarmed": false,
+  "fixture": "Synthetic en in isolated Edge app window, not the user's original image."
+}

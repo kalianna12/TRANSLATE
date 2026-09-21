@@ -1,0 +1,32 @@
+[
+  {
+    "language": "ja",
+    "source": "思えば高一のとき三者面談でいきなり東大を目指しだして以来",
+    "translated": [
+      "回想起来自从高一的时候在三方面谈中突然以东大为目标以来"
+    ],
+    "detected": "ja2zh-CHS",
+    "elapsed_ms": 551.5590999857523,
+    "chars": 28
+  },
+  {
+    "language": "en",
+    "source": "Enemy spotted at the entrance.",
+    "translated": [
+      "入口处发现敌人。"
+    ],
+    "detected": "en2zh-CHS",
+    "elapsed_ms": 57.87300001247786,
+    "chars": 30
+  },
+  {
+    "language": "ko",
+    "source": "입구에 적이 있어요.",
+    "translated": [
+      "门口有敌人。"
+    ],
+    "detected": "ko2zh-CHS",
+    "elapsed_ms": 62.436999985948205,
+    "chars": 11
+  }
+]

@@ -1,0 +1,182 @@
+[
+  {
+    "file": "han1.jpg",
+    "sha256": "b1f00e0bac7e22107d22b67e4fd67cdf6eb5ff9c34f68dfb9278993b63577e97",
+    "dimensions": [
+      2099,
+      1740
+    ],
+    "model": "glm-full-image",
+    "run": 0,
+    "repeat_penalty": 1.1,
+    "elapsed_ms": 3574.7962999739684,
+    "error": "RuntimeError: prediction aborted, token repeat limit reached",
+    "text": "21화 미꼬 (1)\n2023.12.21.\n\n이번 단전의 출현 문스터는 코북트었다.\n\n그동안 상대해 온 고북린보다는 명빛히 전투력이 강한 과수중.\n\n[날은 코북트: 5마리]\n\n칼리아 대류에서 상대해 본 적이 없는 중이지만, 이러적으로는 잡 알고 있다.\n\n성인 남성 정도 되는 사이즈에 피부 가족이 질김 것이 대표적인 특징.\n\n나를 지능도 같추 데다 내구력이 뒤어나 너석들이기에 E급 단전에서 나오는 문스터치고는 근대로운 폴이지만, 개체 수가 많지는 악기에 큰 부담은 없었다.\n\n“형은 나서지 말고 구경만 해.”\n\n“알고 있다. 코북트 따위에 내가 나설 이유는 없지만.”\n\n오늘 그의 역할은 나의 해원검법이 실전에서 어떻게 적용되는지를 평가하는 것.\n\n이라고 서지원은 알고 있지만 사실은 더 중요한 게 있다.\n\n나중에 등장할 살수를 제앞하는 일. 그게 메인이다.\n\n“오빠, 저는요?”\n\n“내가 써을 잡을 거고 네 몸은 두 마리. 불만 없지만?”\n\n“워, 이 단전은 해원검가에서 일찍을 따버 것이니까요.”\n\n오늘 중요한 건 단전 보상이 아니니, 앞면 데에 함을 다 빛 이루는 없다.\n\n서지원이 있긴 하지만 혹시 모를 상황에 대비해 마나를 비추해 놓을 편요도 있고.\n\n“모자나 돌바로 써.”\n\n“알겠어요! 그런데 도대체 이 모자가 뭐라고.”\n\n한에지를 이끼 파티에 넣는 건 그리 어려지 않았다.",
+    "first_text_ms": 310.70570001611486,
+    "complete": false
+  },
+  {
+    "file": "han2.jpg",
+    "sha256": "efd8478115a23ecf136ab60386f43914b602f90f536d0f9009695cadb7ede959",
+    "dimensions": [
+      852,
+      1823
+    ],
+    "model": "glm-full-image",
+    "run": 0,
+    "repeat_penalty": 1.1,
+    "load_duration": 31569700,
+    "prompt_eval_duration": 4946000,
+    "eval_duration": 13085973000,
+    "prompt_eval_count": 1962,
+    "eval_count": 3072,
+    "done_reason": "length",
+    "first_text_ms": 220.72519996436313,
+    "complete": false,
+    "elapsed_ms": 13322.346600005403,
+    "text": "이 여자는 박서정.\n나와는 고등학생 때부터\n알던 사이다.\n\n피하\n\n현재는 남자친구에게\n천만 원 가랑의 돈을 들기고\n잡수 이때 당한 상태.\n\n수진아. 너도\n생각 좀 해 밖.\n\n내가 아블한테\n뭐라고 말해야 적당히\n넘어같 수 있을까?\n```markdown\n\n이 여자는 박서정.\n나와는 고등학생 때부터\n알던 사이다.\n\n피하\n\n현재는 남자친구에게\n천만 원 가랑의 돈을 들기고\n잡수 이때 당한 상태.\n\n수진아. 너도\n생각 좀 해 밖.\n\n내가 아블한테\n뭐라고 말해야 적당히\n넘어같 수 있을까?\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```",
+    "loaded_models": {
+      "models": [
+        {
+          "name": "glm-ocr:latest",
+          "model": "glm-ocr:latest",
+          "size": 2300995173,
+          "digest": "6effedd0dc8aec66ad86c94b8099395376e212f22c87a9d7147c422f7e447be4",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "glmocr",
+            "families": [
+              "glmocr"
+            ],
+            "parameter_size": "1.1B",
+            "quantization_level": "F16"
+          },
+          "expires_at": "2026-09-21T12:16:15.7373675+08:00",
+          "size_vram": 2300995173,
+          "context_length": 8192
+        }
+      ]
+    }
+  },
+  {
+    "file": "ri1.jpg",
+    "sha256": "64d4c66372ccad9065a29add9d3e7d4a2d7656361fbf4198faac29c415ab5ce6",
+    "dimensions": [
+      1459,
+      1459
+    ],
+    "model": "glm-full-image",
+    "run": 0,
+    "repeat_penalty": 1.1,
+    "load_duration": 33630300,
+    "prompt_eval_duration": 4986000,
+    "eval_duration": 13482257000,
+    "prompt_eval_count": 2716,
+    "eval_count": 3072,
+    "done_reason": "length",
+    "first_text_ms": 250.8637999999337,
+    "complete": false,
+    "elapsed_ms": 13753.277399984654,
+    "text": "俺のスキルは《会員》\n《剣聖》になった弟に追放された俺のスキルは《会員》で\nした ～ハズレスキルだと思っていたら、ポイントで好きな\n能力を買えるらしい～\n\n作者：アカメノコバチ\n最新エピソード掲載日：2026/09/20\n\n十五歳の「授与の儀」。\n\n騎士の名門・ヴァルディス侯爵家の長男アレンが授かったのは、誰も聞いたことのない固有スキル《会\n員》だった。\n\n一方、双子の弟カイルが授かったのは、剣士なら誰もが憧れる最高位の固有スキル《剣聖》。\n\n昨日まで一度も負けたこと的なかった弟に、アレンは手も足も出ず敗北する。\n\n次期当主の座を奪われ、父から告げられたのは、「今日中に屋敷を出ろ」という言葉だった。\n\n傷だらけの身体で家を追い出され、街道で倒れたアレン。\n\nそこで初めて、《会員》の本当の力が発動する。\n\n【会員登録が完了しました】\n【初回登録特典：100P】\n【筋力強化 30P】\n【耐久強化 30P】\n【敏捷強化 …>>続きを読む\n```\n俺のスキルは《会員》\n《剣聖》になった弟に追放された俺のスキルは《会員》で\nした ～ハズレスキルだと思っていたら、ポイントで好きな\n能力を買えるらしい～\n\n作者：アカメノコバチ\n最新エピソード掲載日：2026/09/20\n\n十五歳の「授与の儀」。\n\n騎士の名門・ヴァルディス侯爵家の長男アレンが授かったのは、誰も聞いたことのない固有スキル《会\n員》だった。\n\n一方、双子の弟カイルが授かったのは、剣士なら誰もが憧れる最高位の固有スキル《剣聖》。\n\n昨日まで一度も負けたこと的なかった弟に、アレンは手も足も出ず敗北する。\n\n次期当主の座を奪われ、父から告げられたのは、「今日中に屋敷を出ろ」という言葉だった。\n\n傷だらけの身体で家を追い出され、街道で倒れたアレン。\n\nそこで初めて、《会員》の本当の力が発動する。\n\n【会員登録が完了しました】\n【初回登録特典：100P】\n【筋力強化 30P】\n【耐久強化 30P】\n【敏捷強化 …>>続きを読む\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```",
+    "loaded_models": {
+      "models": [
+        {
+          "name": "glm-ocr:latest",
+          "model": "glm-ocr:latest",
+          "size": 2300995173,
+          "digest": "6effedd0dc8aec66ad86c94b8099395376e212f22c87a9d7147c422f7e447be4",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "glmocr",
+            "families": [
+              "glmocr"
+            ],
+            "parameter_size": "1.1B",
+            "quantization_level": "F16"
+          },
+          "expires_at": "2026-09-21T12:16:29.5464887+08:00",
+          "size_vram": 2300995173,
+          "context_length": 8192
+        }
+      ]
+    }
+  },
+  {
+    "file": "ri2.jpg",
+    "sha256": "068edef068c48fdd813b689189b17a95c5374ed3412eb5562c99e687a58765a3",
+    "dimensions": [
+      2154,
+      1529
+    ],
+    "model": "glm-full-image",
+    "run": 0,
+    "repeat_penalty": 1.1,
+    "elapsed_ms": 1767.4208999960683,
+    "error": "RuntimeError: prediction aborted, token repeat limit reached",
+    "text": "やっぱいです\n\nあ\n\nマグロ漁船って\nヤバイやっと\nつながってるって\n言われてるよ\n\n借金した\n男どもがムリヤリ\n詰め込まれ\n狭くてキツくて\n臭くて\n\n使えない奴は\n海に\n捨てられて\n\n何\n言ってるんだ\nお前!?\n\nサメの\nエサに\nされるん\nだから…!!\n\n一貫性の\nない奴だな\nこれだから\n最近の\n若エ奴はつ\n\n漁労長!!\nごめんなさい\nごめんなさい\nサメのエサは\nちょっと\n\n※この物語はフィクションです。实在する企業、团体、人物等とは一切関係ありません。\nラボ漁船の\nラボさ…!!",
+    "first_text_ms": 450.42649999959394,
+    "complete": false
+  },
+  {
+    "file": "ying1.jpg",
+    "sha256": "e5d1d3991ad1fc532c8e16a0e10b67a546791cee144658ecb85229296b30addb",
+    "dimensions": [
+      1592,
+      1435
+    ],
+    "model": "glm-full-image",
+    "run": 0,
+    "repeat_penalty": 1.1,
+    "elapsed_ms": 2869.626600004267,
+    "error": "RuntimeError: prediction aborted, token repeat limit reached",
+    "text": "Daddy Tyl's cottage was the poorest of the countryside; and it seemed even more wretched because it stood opposite a splendid hall in which rich children lived. From the windows of the cottage you could see what went on inside the Hall when the dining-room and drawing-rooms were lit up in the evening. And, in the daytime, you saw the little children playing on the terraces, in the gardens and in the hot-houses which people came all the way from town to visit because they were always filled with the rarest flowers.\nNow, one evening which was not like other evenings, for it was Christmas Eve, Mummy Tyl put her little ones to bed and kissed them even more lovingly than usual. She felt a little sad, because owing to the stormy weather, Daddy Tyl was not able to go to work in the forest; and so she had no money to buy presents with which to fill Tyltyl and Mytyl's stockings. The Children soon fell asleep, everything was still and silent and not a sound was heard but the purring of the cat, the snoring of the dog and the ticking of the great grandfather's clock. But suddenly a light as bright as day crept through the shutters $ ^{11} $ , the lamp upon the table lit again of itself and the two Children awoke, yawned, rubbed their eyes, stretched out their arms in bed and Tyltyl, in a cautious voice called:\n\"Mytyl?\"\n\"Yes, Tyltyl?\" was the answer. \"Are you asleep?\"\n\"Are you?'\n\"No,\" said Tyltyl. \"How can I be asleep, when I'm talking to you?\"\n\"I say, is this Christmas Day?\" asked his sister.\n\"Not yet; not till to-morrow. But Father Christmas won't bring us anything this year.\"\n\"Why not?\"\n\"I heard Mummy say that she couldn't go to town to tell him. But he will come next year.\"\n\"Is next year far off?\"\n\"A good long while,\" said the boy. \"But he will come to the rich children to-night.\"\n\"Really?\"\n\"Hullo!\" cried Tyltyl of a sudden. \"Mummy's forgotten to put out the lamp!... I've an idea!\"\n\"What?\"\n\"Let's get up.\"",
+    "first_text_ms": 260.1157000171952,
+    "complete": false
+  },
+  {
+    "file": "ying2.jpg",
+    "sha256": "ff9dc8fd2e1433e1d3a2fd859054bc86a97b4f12b9afba5b2937de58b1110e58",
+    "dimensions": [
+      800,
+      1233
+    ],
+    "model": "glm-full-image",
+    "run": 0,
+    "repeat_penalty": 1.1,
+    "load_duration": 53089000,
+    "prompt_eval_duration": 4844000,
+    "eval_duration": 12794160000,
+    "prompt_eval_count": 1288,
+    "eval_count": 3072,
+    "done_reason": "length",
+    "first_text_ms": 230.56190001079813,
+    "complete": false,
+    "elapsed_ms": 13041.392199986149,
+    "text": "OH, NOTHING...\n\nI'M NOT ANGRY AT ALL THAT IT'S YOUR FAULT MY FATHER...\n\nWHAT ARE YOU MADE ABOUT, RAN?\n\nLOOK AT YOU, ACTING LIKE SUCH A DORK...\n\nMOURI RAN TEITAN HIGH JUNIOR\n\nWHAT? YOUR DAD'S STILL A DETECTIVE?\n\nBEE da!\n\nCAN'T GET ANY WORK!!\n\nHO HO HO...\n\nBUT IT'S NOT MY FAULT HE'S NOT GETTING ANY WORK, IT'S BECAUSE HE SUCKS AT IT...\n\nT, THAT'S THE CAPTAIN OF THE KARATE TEAM FOR YOU...\n\nHo ho ho!\n\nI SAID, I'M NOT MAD ABOUT ANYTHING!!\n知乎 @平安语点点事\nwangareader.net\n```markdown\n\nOH, NOTHING...\n\nI'M NOT ANGRY AT ALL THAT IT'S YOUR FAULT MY FATHER...\n\nWHAT ARE YOU MADE ABOUT, RAN?\n\nLOOK AT YOU, ACTING LIKE SUCH A DORK...\n\nMOURI RAN TEITAN HIGH JUNIOR\n\nWHAT? YOUR DAD'S STILL A DETECTIVE?\n\nBEE da!\n\nCAN'T GET ANY WORK!!\n\nHO HO HO...\n\nBUT IT'S NOT MY FAULT HE'S NOT GETTING ANY WORK, IT'S BECAUSE HE SUCKS AT IT...\n\nT, THAT'S THE CAPTAIN OF THE KARATE TEAM FOR YOU...\n\nI SAID, I'M NOT MAD ABOUT ANYTHING!!\n```\n```\n```\n知乎 @平安语点点事\nwangareader.net\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```",
+    "loaded_models": {
+      "models": [
+        {
+          "name": "glm-ocr:latest",
+          "model": "glm-ocr:latest",
+          "size": 2300995173,
+          "digest": "6effedd0dc8aec66ad86c94b8099395376e212f22c87a9d7147c422f7e447be4",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "glmocr",
+            "families": [
+              "glmocr"
+            ],
+            "parameter_size": "1.1B",
+            "quantization_level": "F16"
+          },
+          "expires_at": "2026-09-21T12:16:47.6107229+08:00",
+          "size_vram": 2300995173,
+          "context_length": 8192
+        }
+      ]
+    }
+  }
+]

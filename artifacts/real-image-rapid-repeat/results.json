@@ -1,0 +1,6968 @@
+[
+  {
+    "file": "han1.jpg",
+    "sha256": "b1f00e0bac7e22107d22b67e4fd67cdf6eb5ff9c34f68dfb9278993b63577e97",
+    "dimensions": [
+      2099,
+      1740
+    ],
+    "model": "rapid-auto",
+    "run": 0,
+    "repeat_penalty": 1.0,
+    "blocks": [
+      {
+        "x": 38,
+        "y": 37,
+        "width": 192,
+        "height": 41,
+        "source": "21화 미끼(1)"
+      },
+      {
+        "x": 38,
+        "y": 78,
+        "width": 104,
+        "height": 24,
+        "source": "2023.12.21."
+      },
+      {
+        "x": 40,
+        "y": 148,
+        "width": 479,
+        "height": 36,
+        "source": "이번 던전의 출현 몬스터는 코볼트였다."
+      },
+      {
+        "x": 38,
+        "y": 228,
+        "width": 751,
+        "height": 36,
+        "source": "그동안 상대해 온 고블린보다는 명백히 전투력이 강한 괴수종."
+      },
+      {
+        "x": 39,
+        "y": 349,
+        "width": 250,
+        "height": 38,
+        "source": "[남은 코볼트: 5마리]"
+      },
+      {
+        "x": 39,
+        "y": 470,
+        "width": 918,
+        "height": 36,
+        "source": "칼리아 대륙에서 상대해 본 적이 없는 종이지만, 이론적으로는 잘 알고 있다."
+      },
+      {
+        "x": 39,
+        "y": 550,
+        "width": 832,
+        "height": 36,
+        "source": "성인 남성 정도 되는 사이즈에 피부 가죽이 질긴 것이 대표적인 특징."
+      },
+      {
+        "x": 40,
+        "y": 631,
+        "width": 1848,
+        "height": 37,
+        "source": "나름 지능도 갖춘 데다 내구력이 뛰어난 녀석들이기에 E급 던전에서 나오는 몬스터치고는 까다로운 편이지만,개체 수가 많지는 않기에 큰 부담은 없었다."
+      },
+      {
+        "x": 38,
+        "y": 711,
+        "width": 367,
+        "height": 36,
+        "source": "\"형은 나서지 말고 구경만 해.\""
+      },
+      {
+        "x": 38,
+        "y": 792,
+        "width": 616,
+        "height": 36,
+        "source": "\"알고 있다.코볼트 따위에 내가 나설 이유는 없지.\""
+      },
+      {
+        "x": 38,
+        "y": 872,
+        "width": 958,
+        "height": 36,
+        "source": "오늘 그의 역할은 나의 해원검법이 실전에서 어떻게 적용되는지를 평가하는 것."
+      },
+      {
+        "x": 40,
+        "y": 953,
+        "width": 678,
+        "height": 36,
+        "source": "이라고 서지원은 알고 있지만 사실은 더 중요한 게 있다."
+      },
+      {
+        "x": 40,
+        "y": 1033,
+        "width": 611,
+        "height": 36,
+        "source": "나중에 등장할 살수를 제압하는 일.그게 메인이다."
+      },
+      {
+        "x": 38,
+        "y": 1114,
+        "width": 190,
+        "height": 36,
+        "source": "\"오빠,저는요?\""
+      },
+      {
+        "x": 38,
+        "y": 1195,
+        "width": 615,
+        "height": 36,
+        "source": "\"내가 셋을 잡을 거고 네 몫은 두 마리.불만 없지?\""
+      },
+      {
+        "x": 38,
+        "y": 1275,
+        "width": 660,
+        "height": 36,
+        "source": "\"뭐, 이 던전은 해원검가에서 입찰을 따낸 것이니까요.\""
+      },
+      {
+        "x": 38,
+        "y": 1356,
+        "width": 858,
+        "height": 36,
+        "source": "오늘 중요한 건 던전 보상이 아니니, 애먼 데에 힘을 다 뺄 이유는 없다."
+      },
+      {
+        "x": 38,
+        "y": 1436,
+        "width": 976,
+        "height": 36,
+        "source": "서지원이 있긴 하지만 혹시 모를 상황에 대비해 마나를 비축해 놓을 필요도 있고."
+      },
+      {
+        "x": 38,
+        "y": 1517,
+        "width": 241,
+        "height": 36,
+        "source": "“모자나 똑바로 써.\""
+      },
+      {
+        "x": 38,
+        "y": 1597,
+        "width": 546,
+        "height": 36,
+        "source": "\"알겠어요! 그런데 도대체 이 모자가 뭐라고.\""
+      },
+      {
+        "x": 38,
+        "y": 1678,
+        "width": 590,
+        "height": 36,
+        "source": "한예지를 이 파티에 넣는 건 그리 어렵지 않았다."
+      }
+    ],
+    "stages": {
+      "crop_ms": 2.8639999800361693,
+      "multilingual_preprocess_ms": 12.567099998705089,
+      "korean_preprocess_ms": 10.084600071422756,
+      "korean_inference_ms": 1653.0146999866702,
+      "korean_decode_ms": 17.78830011608079,
+      "multilingual_inference_ms": 1679.9032999551855,
+      "multilingual_decode_ms": 31.164399930275977
+    },
+    "metrics": {
+      "detect_ms": 38.20180002367124,
+      "recognize_ms": 1743.426000000909,
+      "line_cache_hits": 0,
+      "detector": "projection"
+    },
+    "elapsed_ms": 1787.8002999932505,
+    "text": "21화 미끼(1)\n2023.12.21.\n이번 던전의 출현 몬스터는 코볼트였다.\n그동안 상대해 온 고블린보다는 명백히 전투력이 강한 괴수종.\n[남은 코볼트: 5마리]\n칼리아 대륙에서 상대해 본 적이 없는 종이지만, 이론적으로는 잘 알고 있다.\n성인 남성 정도 되는 사이즈에 피부 가죽이 질긴 것이 대표적인 특징.\n나름 지능도 갖춘 데다 내구력이 뛰어난 녀석들이기에 E급 던전에서 나오는 몬스터치고는 까다로운 편이지만,개체 수가 많지는 않기에 큰 부담은 없었다.\n\"형은 나서지 말고 구경만 해.\"\n\"알고 있다.코볼트 따위에 내가 나설 이유는 없지.\"\n오늘 그의 역할은 나의 해원검법이 실전에서 어떻게 적용되는지를 평가하는 것.\n이라고 서지원은 알고 있지만 사실은 더 중요한 게 있다.\n나중에 등장할 살수를 제압하는 일.그게 메인이다.\n\"오빠,저는요?\"\n\"내가 셋을 잡을 거고 네 몫은 두 마리.불만 없지?\"\n\"뭐, 이 던전은 해원검가에서 입찰을 따낸 것이니까요.\"\n오늘 중요한 건 던전 보상이 아니니, 애먼 데에 힘을 다 뺄 이유는 없다.\n서지원이 있긴 하지만 혹시 모를 상황에 대비해 마나를 비축해 놓을 필요도 있고.\n“모자나 똑바로 써.\"\n\"알겠어요! 그런데 도대체 이 모자가 뭐라고.\"\n한예지를 이 파티에 넣는 건 그리 어렵지 않았다."
+  },
+  {
+    "file": "han1.jpg",
+    "sha256": "b1f00e0bac7e22107d22b67e4fd67cdf6eb5ff9c34f68dfb9278993b63577e97",
+    "dimensions": [
+      2099,
+      1740
+    ],
+    "model": "rapid-fixed",
+    "run": 0,
+    "repeat_penalty": 1.0,
+    "blocks": [
+      {
+        "x": 38,
+        "y": 37,
+        "width": 192,
+        "height": 41,
+        "source": "21화 미끼(1)"
+      },
+      {
+        "x": 38,
+        "y": 78,
+        "width": 104,
+        "height": 24,
+        "source": "2023.12.21."
+      },
+      {
+        "x": 40,
+        "y": 148,
+        "width": 479,
+        "height": 36,
+        "source": "이번 던전의 출현 몬스터는 코볼트였다."
+      },
+      {
+        "x": 38,
+        "y": 228,
+        "width": 751,
+        "height": 36,
+        "source": "그동안 상대해 온 고블린보다는 명백히 전투력이 강한 괴수종."
+      },
+      {
+        "x": 39,
+        "y": 349,
+        "width": 250,
+        "height": 38,
+        "source": "[남은 코볼트: 5마리]"
+      },
+      {
+        "x": 39,
+        "y": 470,
+        "width": 918,
+        "height": 36,
+        "source": "칼리아 대륙에서 상대해 본 적이 없는 종이지만, 이론적으로는 잘 알고 있다."
+      },
+      {
+        "x": 39,
+        "y": 550,
+        "width": 832,
+        "height": 36,
+        "source": "성인 남성 정도 되는 사이즈에 피부 가죽이 질긴 것이 대표적인 특징."
+      },
+      {
+        "x": 40,
+        "y": 631,
+        "width": 1848,
+        "height": 37,
+        "source": "나름 지능도 갖춘 데다 내구력이 뛰어난 녀석들이기에 E급 던전에서 나오는 몬스터치고는 까다로운 편이지만,개체 수가 많지는 않기에 큰 부담은 없었다."
+      },
+      {
+        "x": 38,
+        "y": 711,
+        "width": 367,
+        "height": 36,
+        "source": "\"형은 나서지 말고 구경만 해.\""
+      },
+      {
+        "x": 38,
+        "y": 792,
+        "width": 616,
+        "height": 36,
+        "source": "\"알고 있다.코볼트 따위에 내가 나설 이유는 없지.\""
+      },
+      {
+        "x": 38,
+        "y": 872,
+        "width": 958,
+        "height": 36,
+        "source": "오늘 그의 역할은 나의 해원검법이 실전에서 어떻게 적용되는지를 평가하는 것."
+      },
+      {
+        "x": 40,
+        "y": 953,
+        "width": 678,
+        "height": 36,
+        "source": "이라고 서지원은 알고 있지만 사실은 더 중요한 게 있다."
+      },
+      {
+        "x": 40,
+        "y": 1033,
+        "width": 611,
+        "height": 36,
+        "source": "나중에 등장할 살수를 제압하는 일.그게 메인이다."
+      },
+      {
+        "x": 38,
+        "y": 1114,
+        "width": 190,
+        "height": 36,
+        "source": "\"오빠,저는요?\""
+      },
+      {
+        "x": 38,
+        "y": 1195,
+        "width": 615,
+        "height": 36,
+        "source": "\"내가 셋을 잡을 거고 네 몫은 두 마리.불만 없지?\""
+      },
+      {
+        "x": 38,
+        "y": 1275,
+        "width": 660,
+        "height": 36,
+        "source": "\"뭐, 이 던전은 해원검가에서 입찰을 따낸 것이니까요.\""
+      },
+      {
+        "x": 38,
+        "y": 1356,
+        "width": 858,
+        "height": 36,
+        "source": "오늘 중요한 건 던전 보상이 아니니, 애먼 데에 힘을 다 뺄 이유는 없다."
+      },
+      {
+        "x": 38,
+        "y": 1436,
+        "width": 976,
+        "height": 36,
+        "source": "서지원이 있긴 하지만 혹시 모를 상황에 대비해 마나를 비축해 놓을 필요도 있고."
+      },
+      {
+        "x": 38,
+        "y": 1517,
+        "width": 241,
+        "height": 36,
+        "source": "“모자나 똑바로 써.\""
+      },
+      {
+        "x": 38,
+        "y": 1597,
+        "width": 546,
+        "height": 36,
+        "source": "\"알겠어요! 그런데 도대체 이 모자가 뭐라고.\""
+      },
+      {
+        "x": 38,
+        "y": 1678,
+        "width": 590,
+        "height": 36,
+        "source": "한예지를 이 파티에 넣는 건 그리 어렵지 않았다."
+      }
+    ],
+    "stages": {
+      "crop_ms": 1.9973000162281096,
+      "korean_preprocess_ms": 9.907800005748868,
+      "korean_inference_ms": 891.9920999906026,
+      "korean_decode_ms": 16.27659995574504
+    },
+    "metrics": {
+      "detect_ms": 24.928700004238635,
+      "recognize_ms": 931.8853999720886,
+      "line_cache_hits": 0,
+      "detector": "projection"
+    },
+    "elapsed_ms": 961.9195000268519,
+    "text": "21화 미끼(1)\n2023.12.21.\n이번 던전의 출현 몬스터는 코볼트였다.\n그동안 상대해 온 고블린보다는 명백히 전투력이 강한 괴수종.\n[남은 코볼트: 5마리]\n칼리아 대륙에서 상대해 본 적이 없는 종이지만, 이론적으로는 잘 알고 있다.\n성인 남성 정도 되는 사이즈에 피부 가죽이 질긴 것이 대표적인 특징.\n나름 지능도 갖춘 데다 내구력이 뛰어난 녀석들이기에 E급 던전에서 나오는 몬스터치고는 까다로운 편이지만,개체 수가 많지는 않기에 큰 부담은 없었다.\n\"형은 나서지 말고 구경만 해.\"\n\"알고 있다.코볼트 따위에 내가 나설 이유는 없지.\"\n오늘 그의 역할은 나의 해원검법이 실전에서 어떻게 적용되는지를 평가하는 것.\n이라고 서지원은 알고 있지만 사실은 더 중요한 게 있다.\n나중에 등장할 살수를 제압하는 일.그게 메인이다.\n\"오빠,저는요?\"\n\"내가 셋을 잡을 거고 네 몫은 두 마리.불만 없지?\"\n\"뭐, 이 던전은 해원검가에서 입찰을 따낸 것이니까요.\"\n오늘 중요한 건 던전 보상이 아니니, 애먼 데에 힘을 다 뺄 이유는 없다.\n서지원이 있긴 하지만 혹시 모를 상황에 대비해 마나를 비축해 놓을 필요도 있고.\n“모자나 똑바로 써.\"\n\"알겠어요! 그런데 도대체 이 모자가 뭐라고.\"\n한예지를 이 파티에 넣는 건 그리 어렵지 않았다."
+  },
+  {
+    "file": "han2.jpg",
+    "sha256": "efd8478115a23ecf136ab60386f43914b602f90f536d0f9009695cadb7ede959",
+    "dimensions": [
+      852,
+      1823
+    ],
+    "model": "rapid-auto",
+    "run": 0,
+    "repeat_penalty": 1.0,
+    "blocks": [
+      {
+        "x": 253,
+        "y": 108,
+        "width": 218,
+        "height": 38,
+        "source": "이 여자는 백서정."
+      },
+      {
+        "x": 217,
+        "y": 146,
+        "width": 291,
+        "height": 40,
+        "source": "나와는 고등학생 때부터"
+      },
+      {
+        "x": 283,
+        "y": 185,
+        "width": 159,
+        "height": 42,
+        "source": "알던사이다."
+      },
+      {
+        "x": 388,
+        "y": 1164,
+        "width": 261,
+        "height": 42,
+        "source": "현재는 남자친구에게"
+      },
+      {
+        "x": 353,
+        "y": 1205,
+        "width": 330,
+        "height": 40,
+        "source": "천만 원 가량의 돈을 뜯기고"
+      },
+      {
+        "x": 391,
+        "y": 1244,
+        "width": 254,
+        "height": 40,
+        "source": "잠수 이별 당한 상태."
+      },
+      {
+        "x": 215,
+        "y": 1456,
+        "width": 162,
+        "height": 42,
+        "source": "수진아.너도"
+      },
+      {
+        "x": 211,
+        "y": 1495,
+        "width": 170,
+        "height": 41,
+        "source": "생각좀해봐"
+      },
+      {
+        "x": 373,
+        "y": 1607,
+        "width": 178,
+        "height": 41,
+        "source": "내가 아빠한테"
+      },
+      {
+        "x": 329,
+        "y": 1647,
+        "width": 266,
+        "height": 40,
+        "source": "뭐라고 말해야 적당히"
+      },
+      {
+        "x": 348,
+        "y": 1686,
+        "width": 226,
+        "height": 41,
+        "source": "넘어갈 수 있을까?"
+      }
+    ],
+    "stages": {
+      "detection_inference_ms": 569.0955999889411,
+      "detection_postprocess_ms": 6.8937999894842505,
+      "crop_ms": 0.8775000460445881,
+      "korean_preprocess_ms": 2.1781998802907765,
+      "multilingual_preprocess_ms": 2.053700154647231,
+      "korean_inference_ms": 299.6288999565877,
+      "korean_decode_ms": 5.454200028907508,
+      "multilingual_inference_ms": 313.55500005884096,
+      "multilingual_decode_ms": 5.611100001260638
+    },
+    "metrics": {
+      "detect_ms": 622.3529999842867,
+      "recognize_ms": 326.21169998310506,
+      "line_cache_hits": 0,
+      "detector": "neural"
+    },
+    "elapsed_ms": 951.3092000270262,
+    "text": "이 여자는 백서정.\n나와는 고등학생 때부터\n알던사이다.\n현재는 남자친구에게\n천만 원 가량의 돈을 뜯기고\n잠수 이별 당한 상태.\n수진아.너도\n생각좀해봐\n내가 아빠한테\n뭐라고 말해야 적당히\n넘어갈 수 있을까?"
+  },
+  {
+    "file": "han2.jpg",
+    "sha256": "efd8478115a23ecf136ab60386f43914b602f90f536d0f9009695cadb7ede959",
+    "dimensions": [
+      852,
+      1823
+    ],
+    "model": "rapid-fixed",
+    "run": 0,
+    "repeat_penalty": 1.0,
+    "blocks": [
+      {
+        "x": 253,
+        "y": 108,
+        "width": 218,
+        "height": 38,
+        "source": "이 여자는 백서정."
+      },
+      {
+        "x": 217,
+        "y": 146,
+        "width": 291,
+        "height": 40,
+        "source": "나와는 고등학생 때부터"
+      },
+      {
+        "x": 283,
+        "y": 185,
+        "width": 159,
+        "height": 42,
+        "source": "알던사이다."
+      },
+      {
+        "x": 388,
+        "y": 1164,
+        "width": 261,
+        "height": 42,
+        "source": "현재는 남자친구에게"
+      },
+      {
+        "x": 353,
+        "y": 1205,
+        "width": 330,
+        "height": 40,
+        "source": "천만 원 가량의 돈을 뜯기고"
+      },
+      {
+        "x": 391,
+        "y": 1244,
+        "width": 254,
+        "height": 40,
+        "source": "잠수 이별 당한 상태."
+      },
+      {
+        "x": 215,
+        "y": 1456,
+        "width": 162,
+        "height": 42,
+        "source": "수진아.너도"
+      },
+      {
+        "x": 211,
+        "y": 1495,
+        "width": 170,
+        "height": 41,
+        "source": "생각좀해봐"
+      },
+      {
+        "x": 373,
+        "y": 1607,
+        "width": 178,
+        "height": 41,
+        "source": "내가 아빠한테"
+      },
+      {
+        "x": 329,
+        "y": 1647,
+        "width": 266,
+        "height": 40,
+        "source": "뭐라고 말해야 적당히"
+      },
+      {
+        "x": 348,
+        "y": 1686,
+        "width": 226,
+        "height": 41,
+        "source": "넘어갈 수 있을까?"
+      }
+    ],
+    "stages": {
+      "detection_inference_ms": 227.3259999928996,
+      "detection_postprocess_ms": 6.497299997135997,
+      "crop_ms": 1.2320000096224248,
+      "korean_preprocess_ms": 1.7793001024983823,
+      "korean_inference_ms": 124.81180002214387,
+      "korean_decode_ms": 3.1707999878562987
+    },
+    "metrics": {
+      "detect_ms": 281.129700015299,
+      "recognize_ms": 132.61039997451007,
+      "line_cache_hits": 0,
+      "detector": "neural"
+    },
+    "elapsed_ms": 416.2631999934092,
+    "text": "이 여자는 백서정.\n나와는 고등학생 때부터\n알던사이다.\n현재는 남자친구에게\n천만 원 가량의 돈을 뜯기고\n잠수 이별 당한 상태.\n수진아.너도\n생각좀해봐\n내가 아빠한테\n뭐라고 말해야 적당히\n넘어갈 수 있을까?"
+  },
+  {
+    "file": "ri1.jpg",
+    "sha256": "64d4c66372ccad9065a29add9d3e7d4a2d7656361fbf4198faac29c415ab5ce6",
+    "dimensions": [
+      1459,
+      1459
+    ],
+    "model": "rapid-auto",
+    "run": 0,
+    "repeat_penalty": 1.0,
+    "blocks": [
+      {
+        "x": 511,
+        "y": 9,
+        "width": 275,
+        "height": 39,
+        "source": "俺のスキルは《会員》"
+      },
+      {
+        "x": 58,
+        "y": 79,
+        "width": 1223,
+        "height": 53,
+        "source": "《剣聖》になった弟に追放された俺のスキルは《会員》で"
+      },
+      {
+        "x": 34,
+        "y": 155,
+        "width": 1250,
+        "height": 46,
+        "source": "した〜ハズレスキルだと思っていたら、ポイントで好きな"
+      },
+      {
+        "x": 416,
+        "y": 225,
+        "width": 476,
+        "height": 50,
+        "source": "能力を買えるらしい～"
+      },
+      {
+        "x": 1026,
+        "y": 327,
+        "width": 274,
+        "height": 34,
+        "source": "作者：アカメノコバチ"
+      },
+      {
+        "x": 853,
+        "y": 381,
+        "width": 449,
+        "height": 32,
+        "source": "最新ピソド掲載：2026/09/20"
+      },
+      {
+        "x": 10,
+        "y": 461,
+        "width": 286,
+        "height": 36,
+        "source": "五歳の「授与の儀」。"
+      },
+      {
+        "x": 9,
+        "y": 559,
+        "width": 1256,
+        "height": 36,
+        "source": "騎士の名門・ヴァルディス侯爵家の長男アレンが授かったのは、誰も聞いたことのない固有スキル《会"
+      },
+      {
+        "x": 8,
+        "y": 604,
+        "width": 156,
+        "height": 40,
+        "source": "員》だった。"
+      },
+      {
+        "x": 11,
+        "y": 707,
+        "width": 1126,
+        "height": 32,
+        "source": "方、双子の弟カイルが授かったのは、剣士なら誰もが憧れる最高位の固有スキル《剣聖》。"
+      },
+      {
+        "x": 10,
+        "y": 805,
+        "width": 940,
+        "height": 33,
+        "source": "昨日まで一度も負けたことのなかった弟に、アレンは手も足も出ず敗北する。"
+      },
+      {
+        "x": 10,
+        "y": 903,
+        "width": 1130,
+        "height": 33,
+        "source": "次期当主の座を奪われ、父から告げられたのは、「今日中に屋敷を出ろ」という言葉だった。"
+      },
+      {
+        "x": 10,
+        "y": 1000,
+        "width": 695,
+        "height": 35,
+        "source": "傷だらけの身体で家を追い出され、街道で倒れたアレン。"
+      },
+      {
+        "x": 10,
+        "y": 1097,
+        "width": 587,
+        "height": 35,
+        "source": "そこで初めて、《会員》の本当の力が発動する。"
+      },
+      {
+        "x": 26,
+        "y": 1196,
+        "width": 327,
+        "height": 31,
+        "source": "【会員登録が完了しました】"
+      },
+      {
+        "x": 25,
+        "y": 1243,
+        "width": 283,
+        "height": 36,
+        "source": "【初回登録特典：100P】"
+      },
+      {
+        "x": 25,
+        "y": 1291,
+        "width": 218,
+        "height": 37,
+        "source": "【筋強化30P】"
+      },
+      {
+        "x": 25,
+        "y": 1340,
+        "width": 217,
+        "height": 38,
+        "source": "【耐久強化30P】"
+      },
+      {
+        "x": 24,
+        "y": 1390,
+        "width": 357,
+        "height": 35,
+        "source": "【敏捷強化>>続きを読む"
+      }
+    ],
+    "stages": {
+      "detection_inference_ms": 739.4112999900244,
+      "detection_postprocess_ms": 8.260200032964349,
+      "crop_ms": 1.6749000060372055,
+      "multilingual_preprocess_ms": 12.208600179292262,
+      "korean_preprocess_ms": 14.566299971193075,
+      "korean_inference_ms": 1474.612099933438,
+      "korean_decode_ms": 17.56460004253313,
+      "multilingual_inference_ms": 1514.2636000528,
+      "multilingual_decode_ms": 25.761800061445683
+    },
+    "metrics": {
+      "detect_ms": 810.5205000028946,
+      "recognize_ms": 1569.394399994053,
+      "line_cache_hits": 0,
+      "detector": "neural"
+    },
+    "elapsed_ms": 2385.285299969837,
+    "text": "俺のスキルは《会員》\n《剣聖》になった弟に追放された俺のスキルは《会員》で\nした〜ハズレスキルだと思っていたら、ポイントで好きな\n能力を買えるらしい～\n作者：アカメノコバチ\n最新ピソド掲載：2026/09/20\n五歳の「授与の儀」。\n騎士の名門・ヴァルディス侯爵家の長男アレンが授かったのは、誰も聞いたことのない固有スキル《会\n員》だった。\n方、双子の弟カイルが授かったのは、剣士なら誰もが憧れる最高位の固有スキル《剣聖》。\n昨日まで一度も負けたことのなかった弟に、アレンは手も足も出ず敗北する。\n次期当主の座を奪われ、父から告げられたのは、「今日中に屋敷を出ろ」という言葉だった。\n傷だらけの身体で家を追い出され、街道で倒れたアレン。\nそこで初めて、《会員》の本当の力が発動する。\n【会員登録が完了しました】\n【初回登録特典：100P】\n【筋強化30P】\n【耐久強化30P】\n【敏捷強化>>続きを読む"
+  },
+  {
+    "file": "ri1.jpg",
+    "sha256": "64d4c66372ccad9065a29add9d3e7d4a2d7656361fbf4198faac29c415ab5ce6",
+    "dimensions": [
+      1459,
+      1459
+    ],
+    "model": "rapid-fixed",
+    "run": 0,
+    "repeat_penalty": 1.0,
+    "blocks": [
+      {
+        "x": 511,
+        "y": 9,
+        "width": 275,
+        "height": 39,
+        "source": "俺のスキルは《会員》"
+      },
+      {
+        "x": 58,
+        "y": 79,
+        "width": 1223,
+        "height": 53,
+        "source": "《剣聖》になった弟に追放された俺のスキルは《会員》で"
+      },
+      {
+        "x": 34,
+        "y": 155,
+        "width": 1250,
+        "height": 46,
+        "source": "した〜ハズレスキルだと思っていたら、ポイントで好きな"
+      },
+      {
+        "x": 416,
+        "y": 225,
+        "width": 476,
+        "height": 50,
+        "source": "能力を買えるらしい～"
+      },
+      {
+        "x": 1026,
+        "y": 327,
+        "width": 274,
+        "height": 34,
+        "source": "作者：アカメノコバチ"
+      },
+      {
+        "x": 853,
+        "y": 381,
+        "width": 449,
+        "height": 32,
+        "source": "最新ピソド掲載：2026/09/20"
+      },
+      {
+        "x": 10,
+        "y": 461,
+        "width": 286,
+        "height": 36,
+        "source": "五歳の「授与の儀」。"
+      },
+      {
+        "x": 9,
+        "y": 559,
+        "width": 1256,
+        "height": 36,
+        "source": "騎士の名門・ヴァルディス侯爵家の長男アレンが授かったのは、誰も聞いたことのない固有スキル《会"
+      },
+      {
+        "x": 8,
+        "y": 604,
+        "width": 156,
+        "height": 40,
+        "source": "員》だった。"
+      },
+      {
+        "x": 11,
+        "y": 707,
+        "width": 1126,
+        "height": 32,
+        "source": "方、双子の弟カイルが授かったのは、剣士なら誰もが憧れる最高位の固有スキル《剣聖》。"
+      },
+      {
+        "x": 10,
+        "y": 805,
+        "width": 940,
+        "height": 33,
+        "source": "昨日まで一度も負けたことのなかった弟に、アレンは手も足も出ず敗北する。"
+      },
+      {
+        "x": 10,
+        "y": 903,
+        "width": 1130,
+        "height": 33,
+        "source": "次期当主の座を奪われ、父から告げられたのは、「今日中に屋敷を出ろ」という言葉だった。"
+      },
+      {
+        "x": 10,
+        "y": 1000,
+        "width": 695,
+        "height": 35,
+        "source": "傷だらけの身体で家を追い出され、街道で倒れたアレン。"
+      },
+      {
+        "x": 10,
+        "y": 1097,
+        "width": 587,
+        "height": 35,
+        "source": "そこで初めて、《会員》の本当の力が発動する。"
+      },
+      {
+        "x": 26,
+        "y": 1196,
+        "width": 327,
+        "height": 31,
+        "source": "【会員登録が完了しました】"
+      },
+      {
+        "x": 25,
+        "y": 1243,
+        "width": 283,
+        "height": 36,
+        "source": "【初回登録特典：100P】"
+      },
+      {
+        "x": 25,
+        "y": 1291,
+        "width": 218,
+        "height": 37,
+        "source": "【筋強化30P】"
+      },
+      {
+        "x": 25,
+        "y": 1340,
+        "width": 217,
+        "height": 38,
+        "source": "【耐久強化30P】"
+      },
+      {
+        "x": 24,
+        "y": 1390,
+        "width": 357,
+        "height": 35,
+        "source": "【敏捷強化>>続きを読む"
+      }
+    ],
+    "stages": {
+      "detection_inference_ms": 287.1189000434242,
+      "detection_postprocess_ms": 9.312300011515617,
+      "crop_ms": 1.9521000212989748,
+      "multilingual_preprocess_ms": 8.659300045110285,
+      "multilingual_inference_ms": 780.3534000413492,
+      "multilingual_decode_ms": 27.24410005612299
+    },
+    "metrics": {
+      "detect_ms": 359.00440003024414,
+      "recognize_ms": 830.1204000017606,
+      "line_cache_hits": 0,
+      "detector": "neural"
+    },
+    "elapsed_ms": 1194.2202000063844,
+    "text": "俺のスキルは《会員》\n《剣聖》になった弟に追放された俺のスキルは《会員》で\nした〜ハズレスキルだと思っていたら、ポイントで好きな\n能力を買えるらしい～\n作者：アカメノコバチ\n最新ピソド掲載：2026/09/20\n五歳の「授与の儀」。\n騎士の名門・ヴァルディス侯爵家の長男アレンが授かったのは、誰も聞いたことのない固有スキル《会\n員》だった。\n方、双子の弟カイルが授かったのは、剣士なら誰もが憧れる最高位の固有スキル《剣聖》。\n昨日まで一度も負けたことのなかった弟に、アレンは手も足も出ず敗北する。\n次期当主の座を奪われ、父から告げられたのは、「今日中に屋敷を出ろ」という言葉だった。\n傷だらけの身体で家を追い出され、街道で倒れたアレン。\nそこで初めて、《会員》の本当の力が発動する。\n【会員登録が完了しました】\n【初回登録特典：100P】\n【筋強化30P】\n【耐久強化30P】\n【敏捷強化>>続きを読む"
+  },
+  {
+    "file": "ri2.jpg",
+    "sha256": "068edef068c48fdd813b689189b17a95c5374ed3412eb5562c99e687a58765a3",
+    "dimensions": [
+      2154,
+      1529
+    ],
+    "model": "rapid-auto",
+    "run": 0,
+    "repeat_penalty": 1.0,
+    "blocks": [
+      {
+        "x": 1130,
+        "y": 556,
+        "width": 516,
+        "height": 208,
+        "source": "Qno"
+      },
+      {
+        "x": 1049,
+        "y": 1169,
+        "width": 635,
+        "height": 360,
+        "source": "うわさ"
+      },
+      {
+        "x": 887,
+        "y": 590,
+        "width": 39,
+        "height": 39,
+        "source": "何"
+      },
+      {
+        "x": 850,
+        "y": 99,
+        "width": 91,
+        "height": 92,
+        "source": "あ"
+      },
+      {
+        "x": 90,
+        "y": 1014,
+        "width": 41,
+        "height": 59,
+        "source": "!!"
+      },
+      {
+        "x": 132,
+        "y": 83,
+        "width": 61,
+        "height": 385,
+        "source": "やいいす"
+      },
+      {
+        "x": 1785,
+        "y": 110,
+        "width": 175,
+        "height": 283,
+        "source": "マグロ漁船てヤバイフとつながてるて言われてるよ"
+      },
+      {
+        "x": 1301,
+        "y": 290,
+        "width": 213,
+        "height": 281,
+        "source": "借金した男どもがムリヤリ詰め込まれ狭くてキツくて臭くて"
+      },
+      {
+        "x": 799,
+        "y": 587,
+        "width": 47,
+        "height": 110,
+        "source": "お前!?"
+      },
+      {
+        "x": 845,
+        "y": 588,
+        "width": 41,
+        "height": 211,
+        "source": "言てるんだ"
+      },
+      {
+        "x": 1811,
+        "y": 642,
+        "width": 164,
+        "height": 266,
+        "source": "使えない奴は捨てられて"
+      },
+      {
+        "x": 1869,
+        "y": 647,
+        "width": 52,
+        "height": 95,
+        "source": "海に"
+      },
+      {
+        "x": 981,
+        "y": 782,
+        "width": 32,
+        "height": 650,
+        "source": "物語は実在す企業体人物等とは一切関ん"
+      },
+      {
+        "x": 746,
+        "y": 927,
+        "width": 218,
+        "height": 208,
+        "source": "一貫性のない奴だなこれだから最近の若工奴はつ"
+      },
+      {
+        "x": 305,
+        "y": 940,
+        "width": 156,
+        "height": 179,
+        "source": "ちっと漁労長！"
+      },
+      {
+        "x": 1180,
+        "y": 950,
+        "width": 184,
+        "height": 244,
+        "source": "エサにだから……"
+      },
+      {
+        "x": 1243,
+        "y": 953,
+        "width": 173,
+        "height": 197,
+        "source": "サメのされるん"
+      },
+      {
+        "x": 455,
+        "y": 986,
+        "width": 40,
+        "height": 141,
+        "source": "…ちょっと"
+      },
+      {
+        "x": 485,
+        "y": 1277,
+        "width": 109,
+        "height": 175,
+        "source": "ごめんなさいちと"
+      },
+      {
+        "x": 518,
+        "y": 1279,
+        "width": 104,
+        "height": 173,
+        "source": "ごんなさいサメのエサは"
+      }
+    ],
+    "stages": {
+      "detection_inference_ms": 950.6587000214495,
+      "detection_postprocess_ms": 13.450500031467527,
+      "crop_ms": 4.627700021956116,
+      "multilingual_preprocess_ms": 7.54660036182031,
+      "korean_preprocess_ms": 6.541300215758383,
+      "korean_inference_ms": 800.4857999039814,
+      "multilingual_inference_ms": 821.9022999983281,
+      "korean_decode_ms": 14.810700144153088,
+      "multilingual_decode_ms": 24.101900053210557
+    },
+    "metrics": {
+      "detect_ms": 1052.874899993185,
+      "recognize_ms": 867.0897000120021,
+      "line_cache_hits": 0,
+      "detector": "neural"
+    },
+    "elapsed_ms": 1940.5620999750681,
+    "text": "Qno\nうわさ\n何\nあ\n!!\nやいいす\nマグロ漁船てヤバイフとつながてるて言われてるよ\n借金した男どもがムリヤリ詰め込まれ狭くてキツくて臭くて\nお前!?\n言てるんだ\n使えない奴は捨てられて\n海に\n物語は実在す企業体人物等とは一切関ん\n一貫性のない奴だなこれだから最近の若工奴はつ\nちっと漁労長！\nエサにだから……\nサメのされるん\n…ちょっと\nごめんなさいちと\nごんなさいサメのエサは"
+  },
+  {
+    "file": "ri2.jpg",
+    "sha256": "068edef068c48fdd813b689189b17a95c5374ed3412eb5562c99e687a58765a3",
+    "dimensions": [
+      2154,
+      1529
+    ],
+    "model": "rapid-fixed",
+    "run": 0,
+    "repeat_penalty": 1.0,
+    "blocks": [
+      {
+        "x": 1130,
+        "y": 556,
+        "width": 516,
+        "height": 208,
+        "source": "Qno"
+      },
+      {
+        "x": 1049,
+        "y": 1169,
+        "width": 635,
+        "height": 360,
+        "source": "うわさ"
+      },
+      {
+        "x": 887,
+        "y": 590,
+        "width": 39,
+        "height": 39,
+        "source": "何"
+      },
+      {
+        "x": 850,
+        "y": 99,
+        "width": 91,
+        "height": 92,
+        "source": "あ"
+      },
+      {
+        "x": 90,
+        "y": 1014,
+        "width": 41,
+        "height": 59,
+        "source": "!!"
+      },
+      {
+        "x": 132,
+        "y": 83,
+        "width": 61,
+        "height": 385,
+        "source": "やいいす"
+      },
+      {
+        "x": 1785,
+        "y": 110,
+        "width": 175,
+        "height": 283,
+        "source": "マグロ漁船てヤバイフとつながてるて言われてるよ"
+      },
+      {
+        "x": 1301,
+        "y": 290,
+        "width": 213,
+        "height": 281,
+        "source": "借金した男どもがムリヤリ詰め込まれ狭くてキツくて臭くて"
+      },
+      {
+        "x": 799,
+        "y": 587,
+        "width": 47,
+        "height": 110,
+        "source": "お前!?"
+      },
+      {
+        "x": 845,
+        "y": 588,
+        "width": 41,
+        "height": 211,
+        "source": "言てるんだ"
+      },
+      {
+        "x": 1811,
+        "y": 642,
+        "width": 164,
+        "height": 266,
+        "source": "使えない奴は捨てられて"
+      },
+      {
+        "x": 1869,
+        "y": 647,
+        "width": 52,
+        "height": 95,
+        "source": "海に"
+      },
+      {
+        "x": 981,
+        "y": 782,
+        "width": 32,
+        "height": 650,
+        "source": "物語は実在す企業体人物等とは一切関ん"
+      },
+      {
+        "x": 746,
+        "y": 927,
+        "width": 218,
+        "height": 208,
+        "source": "一貫性のない奴だなこれだから最近の若工奴はつ"
+      },
+      {
+        "x": 305,
+        "y": 940,
+        "width": 156,
+        "height": 179,
+        "source": "ちっと漁労長！"
+      },
+      {
+        "x": 1180,
+        "y": 950,
+        "width": 184,
+        "height": 244,
+        "source": "エサにだから……"
+      },
+      {
+        "x": 1243,
+        "y": 953,
+        "width": 173,
+        "height": 197,
+        "source": "サメのされるん"
+      },
+      {
+        "x": 455,
+        "y": 986,
+        "width": 40,
+        "height": 141,
+        "source": "…ちょっと"
+      },
+      {
+        "x": 485,
+        "y": 1277,
+        "width": 109,
+        "height": 175,
+        "source": "ごめんなさいちと"
+      },
+      {
+        "x": 518,
+        "y": 1279,
+        "width": 104,
+        "height": 173,
+        "source": "ごんなさいサメのエサは"
+      }
+    ],
+    "stages": {
+      "detection_inference_ms": 381.96279999101534,
+      "detection_postprocess_ms": 15.126299986150116,
+      "crop_ms": 3.745199996046722,
+      "multilingual_preprocess_ms": 5.351200059521943,
+      "multilingual_inference_ms": 561.4074000623077,
+      "multilingual_decode_ms": 17.12130004307255
+    },
+    "metrics": {
+      "detect_ms": 487.766099977307,
+      "recognize_ms": 595.7332000252791,
+      "line_cache_hits": 0,
+      "detector": "neural"
+    },
+    "elapsed_ms": 1101.650599972345,
+    "text": "Qno\nうわさ\n何\nあ\n!!\nやいいす\nマグロ漁船てヤバイフとつながてるて言われてるよ\n借金した男どもがムリヤリ詰め込まれ狭くてキツくて臭くて\nお前!?\n言てるんだ\n使えない奴は捨てられて\n海に\n物語は実在す企業体人物等とは一切関ん\n一貫性のない奴だなこれだから最近の若工奴はつ\nちっと漁労長！\nエサにだから……\nサメのされるん\n…ちょっと\nごめんなさいちと\nごんなさいサメのエサは"
+  },
+  {
+    "file": "ying1.jpg",
+    "sha256": "e5d1d3991ad1fc532c8e16a0e10b67a546791cee144658ecb85229296b30addb",
+    "dimensions": [
+      1592,
+      1435
+    ],
+    "model": "rapid-auto",
+    "run": 0,
+    "repeat_penalty": 1.0,
+    "blocks": [
+      {
+        "x": 0,
+        "y": 1,
+        "width": 1527,
+        "height": 35,
+        "source": "Daddy Tyl's cottage was the poorest of the countryside; and it seemed even more wretched because it stood opposite a splendid"
+      },
+      {
+        "x": 1,
+        "y": 61,
+        "width": 1561,
+        "height": 36,
+        "source": "hall in which rich children lived. From the windows of the cottage you could see what went on inside the Hall when the dining-room"
+      },
+      {
+        "x": 2,
+        "y": 121,
+        "width": 1568,
+        "height": 34,
+        "source": "and drawing-rooms were lit up in the evening. And, in the daytime, you saw the little children playing on the terraces, in the gardens"
+      },
+      {
+        "x": 0,
+        "y": 180,
+        "width": 1503,
+        "height": 36,
+        "source": "and in the hot-houses which people came all the way from town to visit because they were always filled with the rarest flowers."
+      },
+      {
+        "x": 0,
+        "y": 242,
+        "width": 1573,
+        "height": 33,
+        "source": "Now, one evening which was not like other evenings, for it was Christmas Eve, Mummy Tyl put her little ones to bed and kissed them"
+      },
+      {
+        "x": 1,
+        "y": 300,
+        "width": 1531,
+        "height": 36,
+        "source": "even more lovingly than usual. She felt a little sad, because owing to the stormy weather, Daddy TyI was not able to go to work in"
+      },
+      {
+        "x": 0,
+        "y": 358,
+        "width": 1518,
+        "height": 40,
+        "source": "the forest; and so she had no money to buy presents with which to fill Tyltyl and Mytyl's stockings. The Children soon fell asleep,"
+      },
+      {
+        "x": 2,
+        "y": 421,
+        "width": 1527,
+        "height": 34,
+        "source": "everything was still and silent and not a sound was heard but the purring of the cat, the snoring of the dog and the ticking of the"
+      },
+      {
+        "x": 0,
+        "y": 479,
+        "width": 1567,
+        "height": 48,
+        "source": "great grandfather's clock. But suddenly a light as bright as day crept through the shutters 11 , the lamp upon the table lit again of"
+      },
+      {
+        "x": 0,
+        "y": 549,
+        "width": 1540,
+        "height": 33,
+        "source": "itself and the two Children awoke, yawned, rubbed their eyes, stretched out their arms in bed and Tyltyl, in a cautious voice called:"
+      },
+      {
+        "x": 1,
+        "y": 605,
+        "width": 106,
+        "height": 42,
+        "source": "\"Mytyl?\""
+      },
+      {
+        "x": 1,
+        "y": 664,
+        "width": 556,
+        "height": 42,
+        "source": "\"Yes, Tyltyl?\"' was the answer. \"Are you asleep?\""
+      },
+      {
+        "x": 1,
+        "y": 725,
+        "width": 125,
+        "height": 38,
+        "source": "\"Are you?'"
+      },
+      {
+        "x": 2,
+        "y": 785,
+        "width": 765,
+        "height": 38,
+        "source": "\"No,\" said Tyltyl. \"How can I be asleep, when I'm talking to you?\""
+      },
+      {
+        "x": 1,
+        "y": 847,
+        "width": 535,
+        "height": 37,
+        "source": "\"I say, is this Christmas Day?\"asked his sister."
+      },
+      {
+        "x": 2,
+        "y": 906,
+        "width": 990,
+        "height": 38,
+        "source": "\"Not yet; not till to-morrow. But Father Christmas won't bring us anything this year.\""
+      },
+      {
+        "x": 2,
+        "y": 963,
+        "width": 137,
+        "height": 41,
+        "source": "\"Why not?\""
+      },
+      {
+        "x": 1,
+        "y": 1025,
+        "width": 1057,
+        "height": 38,
+        "source": "\"I heard Mummy say that she couldn't go to town to tell him. But he will come next year.\""
+      },
+      {
+        "x": 2,
+        "y": 1085,
+        "width": 251,
+        "height": 39,
+        "source": "\"Is next year far off?\""
+      },
+      {
+        "x": 3,
+        "y": 1147,
+        "width": 967,
+        "height": 37,
+        "source": "\"A good long while,\" said the boy. \"But he will come to the rich children to-night.\""
+      },
+      {
+        "x": 2,
+        "y": 1206,
+        "width": 102,
+        "height": 39,
+        "source": "\"Really?\""
+      },
+      {
+        "x": 2,
+        "y": 1266,
+        "width": 1060,
+        "height": 37,
+        "source": "\"Hullo!\" cried Tyltyl of a sudden. \"Mummy's forgotten to put out the lamp!. I've an idea!\""
+      },
+      {
+        "x": 0,
+        "y": 1323,
+        "width": 103,
+        "height": 42,
+        "source": "\"What?\""
+      },
+      {
+        "x": 0,
+        "y": 1385,
+        "width": 166,
+        "height": 41,
+        "source": "\"Let's get up.\""
+      }
+    ],
+    "stages": {
+      "detection_inference_ms": 793.1714999722317,
+      "detection_postprocess_ms": 10.509799991268665,
+      "crop_ms": 2.5334000238217413,
+      "multilingual_preprocess_ms": 23.653300071600825,
+      "korean_preprocess_ms": 21.59300004132092,
+      "korean_inference_ms": 2736.86110007111,
+      "korean_decode_ms": 32.09009999409318,
+      "multilingual_inference_ms": 2804.982299974654,
+      "multilingual_decode_ms": 53.43849997734651
+    },
+    "metrics": {
+      "detect_ms": 867.9968000506051,
+      "recognize_ms": 2914.577499963343,
+      "line_cache_hits": 0,
+      "detector": "neural"
+    },
+    "elapsed_ms": 3789.557300042361,
+    "text": "Daddy Tyl's cottage was the poorest of the countryside; and it seemed even more wretched because it stood opposite a splendid\nhall in which rich children lived. From the windows of the cottage you could see what went on inside the Hall when the dining-room\nand drawing-rooms were lit up in the evening. And, in the daytime, you saw the little children playing on the terraces, in the gardens\nand in the hot-houses which people came all the way from town to visit because they were always filled with the rarest flowers.\nNow, one evening which was not like other evenings, for it was Christmas Eve, Mummy Tyl put her little ones to bed and kissed them\neven more lovingly than usual. She felt a little sad, because owing to the stormy weather, Daddy TyI was not able to go to work in\nthe forest; and so she had no money to buy presents with which to fill Tyltyl and Mytyl's stockings. The Children soon fell asleep,\neverything was still and silent and not a sound was heard but the purring of the cat, the snoring of the dog and the ticking of the\ngreat grandfather's clock. But suddenly a light as bright as day crept through the shutters 11 , the lamp upon the table lit again of\nitself and the two Children awoke, yawned, rubbed their eyes, stretched out their arms in bed and Tyltyl, in a cautious voice called:\n\"Mytyl?\"\n\"Yes, Tyltyl?\"' was the answer. \"Are you asleep?\"\n\"Are you?'\n\"No,\" said Tyltyl. \"How can I be asleep, when I'm talking to you?\"\n\"I say, is this Christmas Day?\"asked his sister.\n\"Not yet; not till to-morrow. But Father Christmas won't bring us anything this year.\"\n\"Why not?\"\n\"I heard Mummy say that she couldn't go to town to tell him. But he will come next year.\"\n\"Is next year far off?\"\n\"A good long while,\" said the boy. \"But he will come to the rich children to-night.\"\n\"Really?\"\n\"Hullo!\" cried Tyltyl of a sudden. \"Mummy's forgotten to put out the lamp!. I've an idea!\"\n\"What?\"\n\"Let's get up.\""
+  },
+  {
+    "file": "ying1.jpg",
+    "sha256": "e5d1d3991ad1fc532c8e16a0e10b67a546791cee144658ecb85229296b30addb",
+    "dimensions": [
+      1592,
+      1435
+    ],
+    "model": "rapid-fixed",
+    "run": 0,
+    "repeat_penalty": 1.0,
+    "blocks": [
+      {
+        "x": 0,
+        "y": 1,
+        "width": 1527,
+        "height": 35,
+        "source": "Daddy Tyl's cottage was the poorest of the countryside; and it seemed even more wretched because it stood opposite a splendid"
+      },
+      {
+        "x": 1,
+        "y": 61,
+        "width": 1561,
+        "height": 36,
+        "source": "hall in which rich children lived. From the windows of the cottage you could see what went on inside the Hall when the dining-room"
+      },
+      {
+        "x": 2,
+        "y": 121,
+        "width": 1568,
+        "height": 34,
+        "source": "and drawing-rooms were lit up in the evening. And, in the daytime, you saw the little children playing on the terraces, in the gardens"
+      },
+      {
+        "x": 0,
+        "y": 180,
+        "width": 1503,
+        "height": 36,
+        "source": "and in the hot-houses which people came all the way from town to visit because they were always filled with the rarest flowers."
+      },
+      {
+        "x": 0,
+        "y": 242,
+        "width": 1573,
+        "height": 33,
+        "source": "Now, one evening which was not like other evenings, for it was Christmas Eve, Mummy Tyl put her little ones to bed and kissed them"
+      },
+      {
+        "x": 1,
+        "y": 300,
+        "width": 1531,
+        "height": 36,
+        "source": "even more lovingly than usual. She felt a little sad, because owing to the stormy weather, Daddy TyI was not able to go to work in"
+      },
+      {
+        "x": 0,
+        "y": 358,
+        "width": 1518,
+        "height": 40,
+        "source": "the forest; and so she had no money to buy presents with which to fill Tyltyl and Mytyl's stockings. The Children soon fell asleep,"
+      },
+      {
+        "x": 2,
+        "y": 421,
+        "width": 1527,
+        "height": 34,
+        "source": "everything was still and silent and not a sound was heard but the purring of the cat, the snoring of the dog and the ticking of the"
+      },
+      {
+        "x": 0,
+        "y": 479,
+        "width": 1567,
+        "height": 48,
+        "source": "great grandfather's clock. But suddenly a light as bright as day crept through the shutters 11 , the lamp upon the table lit again of"
+      },
+      {
+        "x": 0,
+        "y": 549,
+        "width": 1540,
+        "height": 33,
+        "source": "itself and the two Children awoke, yawned, rubbed their eyes, stretched out their arms in bed and Tyltyl, in a cautious voice called:"
+      },
+      {
+        "x": 1,
+        "y": 605,
+        "width": 106,
+        "height": 42,
+        "source": "\"Mytyl?\""
+      },
+      {
+        "x": 1,
+        "y": 664,
+        "width": 556,
+        "height": 42,
+        "source": "\"Yes, Tyltyl?\"' was the answer. \"Are you asleep?\""
+      },
+      {
+        "x": 1,
+        "y": 725,
+        "width": 125,
+        "height": 38,
+        "source": "\"Are you?'"
+      },
+      {
+        "x": 2,
+        "y": 785,
+        "width": 765,
+        "height": 38,
+        "source": "\"No,\" said Tyltyl. \"How can I be asleep, when I'm talking to you?\""
+      },
+      {
+        "x": 1,
+        "y": 847,
+        "width": 535,
+        "height": 37,
+        "source": "\"I say, is this Christmas Day?\"asked his sister."
+      },
+      {
+        "x": 2,
+        "y": 906,
+        "width": 990,
+        "height": 38,
+        "source": "\"Not yet; not till to-morrow. But Father Christmas won't bring us anything this year.\""
+      },
+      {
+        "x": 2,
+        "y": 963,
+        "width": 137,
+        "height": 41,
+        "source": "\"Why not?\""
+      },
+      {
+        "x": 1,
+        "y": 1025,
+        "width": 1057,
+        "height": 38,
+        "source": "\"I heard Mummy say that she couldn't go to town to tell him. But he will come next year.\""
+      },
+      {
+        "x": 2,
+        "y": 1085,
+        "width": 251,
+        "height": 39,
+        "source": "\"Is next year far off?\""
+      },
+      {
+        "x": 3,
+        "y": 1147,
+        "width": 967,
+        "height": 37,
+        "source": "\"A good long while,\" said the boy. \"But he will come to the rich children to-night.\""
+      },
+      {
+        "x": 2,
+        "y": 1206,
+        "width": 102,
+        "height": 39,
+        "source": "\"Really?\""
+      },
+      {
+        "x": 2,
+        "y": 1266,
+        "width": 1060,
+        "height": 37,
+        "source": "\"Hullo!\" cried Tyltyl of a sudden. \"Mummy's forgotten to put out the lamp!. I've an idea!\""
+      },
+      {
+        "x": 0,
+        "y": 1323,
+        "width": 103,
+        "height": 42,
+        "source": "\"What?\""
+      },
+      {
+        "x": 0,
+        "y": 1385,
+        "width": 166,
+        "height": 41,
+        "source": "\"Let's get up.\""
+      }
+    ],
+    "stages": {
+      "detection_inference_ms": 319.3127000122331,
+      "detection_postprocess_ms": 10.928799980320036,
+      "crop_ms": 3.0158000299707055,
+      "multilingual_preprocess_ms": 19.31689999764785,
+      "multilingual_inference_ms": 1548.4136000159197,
+      "multilingual_decode_ms": 46.21000005863607
+    },
+    "metrics": {
+      "detect_ms": 397.7681000251323,
+      "recognize_ms": 1639.8161000106484,
+      "line_cache_hits": 0,
+      "detector": "neural"
+    },
+    "elapsed_ms": 2044.9189000064507,
+    "text": "Daddy Tyl's cottage was the poorest of the countryside; and it seemed even more wretched because it stood opposite a splendid\nhall in which rich children lived. From the windows of the cottage you could see what went on inside the Hall when the dining-room\nand drawing-rooms were lit up in the evening. And, in the daytime, you saw the little children playing on the terraces, in the gardens\nand in the hot-houses which people came all the way from town to visit because they were always filled with the rarest flowers.\nNow, one evening which was not like other evenings, for it was Christmas Eve, Mummy Tyl put her little ones to bed and kissed them\neven more lovingly than usual. She felt a little sad, because owing to the stormy weather, Daddy TyI was not able to go to work in\nthe forest; and so she had no money to buy presents with which to fill Tyltyl and Mytyl's stockings. The Children soon fell asleep,\neverything was still and silent and not a sound was heard but the purring of the cat, the snoring of the dog and the ticking of the\ngreat grandfather's clock. But suddenly a light as bright as day crept through the shutters 11 , the lamp upon the table lit again of\nitself and the two Children awoke, yawned, rubbed their eyes, stretched out their arms in bed and Tyltyl, in a cautious voice called:\n\"Mytyl?\"\n\"Yes, Tyltyl?\"' was the answer. \"Are you asleep?\"\n\"Are you?'\n\"No,\" said Tyltyl. \"How can I be asleep, when I'm talking to you?\"\n\"I say, is this Christmas Day?\"asked his sister.\n\"Not yet; not till to-morrow. But Father Christmas won't bring us anything this year.\"\n\"Why not?\"\n\"I heard Mummy say that she couldn't go to town to tell him. But he will come next year.\"\n\"Is next year far off?\"\n\"A good long while,\" said the boy. \"But he will come to the rich children to-night.\"\n\"Really?\"\n\"Hullo!\" cried Tyltyl of a sudden. \"Mummy's forgotten to put out the lamp!. I've an idea!\"\n\"What?\"\n\"Let's get up.\""
+  },
+  {
+    "file": "ying2.jpg",
+    "sha256": "ff9dc8fd2e1433e1d3a2fd859054bc86a97b4f12b9afba5b2937de58b1110e58",
+    "dimensions": [
+      800,
+      1233
+    ],
+    "model": "rapid-auto",
+    "run": 0,
+    "repeat_penalty": 1.0,
+    "blocks": [
+      {
+        "x": 167,
+        "y": 159,
+        "width": 81,
+        "height": 24,
+        "source": "NOTHNG.."
+      },
+      {
+        "x": 678,
+        "y": 150,
+        "width": 54,
+        "height": 25,
+        "source": "LOOK"
+      },
+      {
+        "x": 332,
+        "y": 163,
+        "width": 51,
+        "height": 22,
+        "source": "WHAT"
+      },
+      {
+        "x": 671,
+        "y": 165,
+        "width": 65,
+        "height": 25,
+        "source": "AT YOU,"
+      },
+      {
+        "x": 325,
+        "y": 178,
+        "width": 65,
+        "height": 21,
+        "source": "ARE YOU"
+      },
+      {
+        "x": 77,
+        "y": 189,
+        "width": 58,
+        "height": 21,
+        "source": "IMNOT"
+      },
+      {
+        "x": 674,
+        "y": 181,
+        "width": 62,
+        "height": 22,
+        "source": "ACTING"
+      },
+      {
+        "x": 332,
+        "y": 188,
+        "width": 50,
+        "height": 25,
+        "source": "MADE"
+      },
+      {
+        "x": 70,
+        "y": 204,
+        "width": 72,
+        "height": 20,
+        "source": "ANGRY AT"
+      },
+      {
+        "x": 331,
+        "y": 204,
+        "width": 54,
+        "height": 21,
+        "source": "ABOUT,"
+      },
+      {
+        "x": 660,
+        "y": 195,
+        "width": 91,
+        "height": 23,
+        "source": "LIKE SUCH"
+      },
+      {
+        "x": 660,
+        "y": 205,
+        "width": 90,
+        "height": 31,
+        "source": "ADORK."
+      },
+      {
+        "x": 72,
+        "y": 216,
+        "width": 70,
+        "height": 21,
+        "source": "ALL THAT"
+      },
+      {
+        "x": 333,
+        "y": 217,
+        "width": 47,
+        "height": 22,
+        "source": "RAN?"
+      },
+      {
+        "x": 71,
+        "y": 229,
+        "width": 71,
+        "height": 21,
+        "source": "IT'S YOLR"
+      },
+      {
+        "x": 69,
+        "y": 243,
+        "width": 73,
+        "height": 21,
+        "source": "FALLTMY"
+      },
+      {
+        "x": 65,
+        "y": 254,
+        "width": 79,
+        "height": 26,
+        "source": "FATHER..."
+      },
+      {
+        "x": 633,
+        "y": 386,
+        "width": 98,
+        "height": 27,
+        "source": "MOURIRAN"
+      },
+      {
+        "x": 631,
+        "y": 403,
+        "width": 102,
+        "height": 24,
+        "source": "TEITAN HIGH"
+      },
+      {
+        "x": 650,
+        "y": 417,
+        "width": 67,
+        "height": 24,
+        "source": "JUNIOR"
+      },
+      {
+        "x": 145,
+        "y": 478,
+        "width": 97,
+        "height": 24,
+        "source": "WHAT?YOUR"
+      },
+      {
+        "x": 367,
+        "y": 477,
+        "width": 48,
+        "height": 22,
+        "source": "CAN'T"
+      },
+      {
+        "x": 145,
+        "y": 493,
+        "width": 98,
+        "height": 21,
+        "source": "DAD'S STLL A"
+      },
+      {
+        "x": 357,
+        "y": 489,
+        "width": 66,
+        "height": 23,
+        "source": "GET ANY"
+      },
+      {
+        "x": 149,
+        "y": 507,
+        "width": 87,
+        "height": 21,
+        "source": "DETECTNE?"
+      },
+      {
+        "x": 282,
+        "y": 502,
+        "width": 38,
+        "height": 22,
+        "source": "da!"
+      },
+      {
+        "x": 358,
+        "y": 503,
+        "width": 63,
+        "height": 21,
+        "source": "WORK!!"
+      },
+      {
+        "x": 62,
+        "y": 693,
+        "width": 36,
+        "height": 42,
+        "source": "$H$"
+      },
+      {
+        "x": 282,
+        "y": 691,
+        "width": 117,
+        "height": 23,
+        "source": "BUT IT'S NOT MY"
+      },
+      {
+        "x": 283,
+        "y": 705,
+        "width": 116,
+        "height": 21,
+        "source": "FALLTHE'S NOT"
+      },
+      {
+        "x": 57,
+        "y": 719,
+        "width": 45,
+        "height": 28,
+        "source": "HO.."
+      },
+      {
+        "x": 269,
+        "y": 719,
+        "width": 142,
+        "height": 21,
+        "source": "GETTING ANY WORK,"
+      },
+      {
+        "x": 279,
+        "y": 731,
+        "width": 124,
+        "height": 24,
+        "source": "IT'S BECALSE HE"
+      },
+      {
+        "x": 285,
+        "y": 742,
+        "width": 111,
+        "height": 28,
+        "source": "SUCKS ATIT..."
+      },
+      {
+        "x": 185,
+        "y": 881,
+        "width": 72,
+        "height": 27,
+        "source": "T.THATS"
+      },
+      {
+        "x": 176,
+        "y": 898,
+        "width": 91,
+        "height": 21,
+        "source": "THE CAPTAIN"
+      },
+      {
+        "x": 164,
+        "y": 908,
+        "width": 113,
+        "height": 26,
+        "source": "OF THE KARATE"
+      },
+      {
+        "x": 185,
+        "y": 925,
+        "width": 74,
+        "height": 21,
+        "source": "TEAM FOR"
+      },
+      {
+        "x": 195,
+        "y": 935,
+        "width": 52,
+        "height": 26,
+        "source": "YOu...."
+      },
+      {
+        "x": 310,
+        "y": 929,
+        "width": 92,
+        "height": 24,
+        "source": "ISAIDIM"
+      },
+      {
+        "x": 314,
+        "y": 943,
+        "width": 82,
+        "height": 24,
+        "source": "NOT MAD"
+      },
+      {
+        "x": 47,
+        "y": 945,
+        "width": 124,
+        "height": 53,
+        "source": "Hohoho"
+      },
+      {
+        "x": 327,
+        "y": 958,
+        "width": 60,
+        "height": 22,
+        "source": "ABOUT"
+      },
+      {
+        "x": 308,
+        "y": 972,
+        "width": 96,
+        "height": 24,
+        "source": "ANYTHING!!"
+      },
+      {
+        "x": 746,
+        "y": 1213,
+        "width": 54,
+        "height": 18,
+        "source": "ader.net"
+      }
+    ],
+    "stages": {
+      "detection_inference_ms": 381.50350004434586,
+      "detection_postprocess_ms": 8.732799964491278,
+      "crop_ms": 1.6604999545961618,
+      "korean_preprocess_ms": 5.345999845303595,
+      "multilingual_preprocess_ms": 5.163000139873475,
+      "korean_inference_ms": 651.7816000850871,
+      "multilingual_inference_ms": 642.1700000646524,
+      "korean_decode_ms": 15.302499989047647,
+      "multilingual_decode_ms": 18.836299888789654
+    },
+    "metrics": {
+      "detect_ms": 419.69650000100955,
+      "recognize_ms": 684.2184000415727,
+      "line_cache_hits": 0,
+      "detector": "neural"
+    },
+    "elapsed_ms": 1109.8734000115655,
+    "text": "NOTHNG..\nLOOK\nWHAT\nAT YOU,\nARE YOU\nIMNOT\nACTING\nMADE\nANGRY AT\nABOUT,\nLIKE SUCH\nADORK.\nALL THAT\nRAN?\nIT'S YOLR\nFALLTMY\nFATHER...\nMOURIRAN\nTEITAN HIGH\nJUNIOR\nWHAT?YOUR\nCAN'T\nDAD'S STLL A\nGET ANY\nDETECTNE?\nda!\nWORK!!\n$H$\nBUT IT'S NOT MY\nFALLTHE'S NOT\nHO..\nGETTING ANY WORK,\nIT'S BECALSE HE\nSUCKS ATIT...\nT.THATS\nTHE CAPTAIN\nOF THE KARATE\nTEAM FOR\nYOu....\nISAIDIM\nNOT MAD\nHohoho\nABOUT\nANYTHING!!\nader.net"
+  },
+  {
+    "file": "ying2.jpg",
+    "sha256": "ff9dc8fd2e1433e1d3a2fd859054bc86a97b4f12b9afba5b2937de58b1110e58",
+    "dimensions": [
+      800,
+      1233
+    ],
+    "model": "rapid-fixed",
+    "run": 0,
+    "repeat_penalty": 1.0,
+    "blocks": [
+      {
+        "x": 167,
+        "y": 159,
+        "width": 81,
+        "height": 24,
+        "source": "NOTHNG.."
+      },
+      {
+        "x": 678,
+        "y": 150,
+        "width": 54,
+        "height": 25,
+        "source": "LOOK"
+      },
+      {
+        "x": 332,
+        "y": 163,
+        "width": 51,
+        "height": 22,
+        "source": "WHAT"
+      },
+      {
+        "x": 671,
+        "y": 165,
+        "width": 65,
+        "height": 25,
+        "source": "AT YOU,"
+      },
+      {
+        "x": 325,
+        "y": 178,
+        "width": 65,
+        "height": 21,
+        "source": "ARE YOU"
+      },
+      {
+        "x": 77,
+        "y": 189,
+        "width": 58,
+        "height": 21,
+        "source": "IMNOT"
+      },
+      {
+        "x": 674,
+        "y": 181,
+        "width": 62,
+        "height": 22,
+        "source": "ACTING"
+      },
+      {
+        "x": 332,
+        "y": 188,
+        "width": 50,
+        "height": 25,
+        "source": "MADE"
+      },
+      {
+        "x": 70,
+        "y": 204,
+        "width": 72,
+        "height": 20,
+        "source": "ANGRY AT"
+      },
+      {
+        "x": 331,
+        "y": 204,
+        "width": 54,
+        "height": 21,
+        "source": "ABOUT,"
+      },
+      {
+        "x": 660,
+        "y": 195,
+        "width": 91,
+        "height": 23,
+        "source": "LIKE SUCH"
+      },
+      {
+        "x": 660,
+        "y": 205,
+        "width": 90,
+        "height": 31,
+        "source": "ADORK."
+      },
+      {
+        "x": 72,
+        "y": 216,
+        "width": 70,
+        "height": 21,
+        "source": "ALL THAT"
+      },
+      {
+        "x": 333,
+        "y": 217,
+        "width": 47,
+        "height": 22,
+        "source": "RAN?"
+      },
+      {
+        "x": 71,
+        "y": 229,
+        "width": 71,
+        "height": 21,
+        "source": "IT'S YOLR"
+      },
+      {
+        "x": 69,
+        "y": 243,
+        "width": 73,
+        "height": 21,
+        "source": "FALLTMY"
+      },
+      {
+        "x": 65,
+        "y": 254,
+        "width": 79,
+        "height": 26,
+        "source": "FATHER..."
+      },
+      {
+        "x": 633,
+        "y": 386,
+        "width": 98,
+        "height": 27,
+        "source": "MOURIRAN"
+      },
+      {
+        "x": 631,
+        "y": 403,
+        "width": 102,
+        "height": 24,
+        "source": "TEITAN HIGH"
+      },
+      {
+        "x": 650,
+        "y": 417,
+        "width": 67,
+        "height": 24,
+        "source": "JUNIOR"
+      },
+      {
+        "x": 145,
+        "y": 478,
+        "width": 97,
+        "height": 24,
+        "source": "WHAT?YOUR"
+      },
+      {
+        "x": 367,
+        "y": 477,
+        "width": 48,
+        "height": 22,
+        "source": "CAN'T"
+      },
+      {
+        "x": 145,
+        "y": 493,
+        "width": 98,
+        "height": 21,
+        "source": "DAD'S STLL A"
+      },
+      {
+        "x": 357,
+        "y": 489,
+        "width": 66,
+        "height": 23,
+        "source": "GET ANY"
+      },
+      {
+        "x": 149,
+        "y": 507,
+        "width": 87,
+        "height": 21,
+        "source": "DETECTNE?"
+      },
+      {
+        "x": 282,
+        "y": 502,
+        "width": 38,
+        "height": 22,
+        "source": "da!"
+      },
+      {
+        "x": 358,
+        "y": 503,
+        "width": 63,
+        "height": 21,
+        "source": "WORK!!"
+      },
+      {
+        "x": 62,
+        "y": 693,
+        "width": 36,
+        "height": 42,
+        "source": "$H$"
+      },
+      {
+        "x": 282,
+        "y": 691,
+        "width": 117,
+        "height": 23,
+        "source": "BUT IT'S NOT MY"
+      },
+      {
+        "x": 283,
+        "y": 705,
+        "width": 116,
+        "height": 21,
+        "source": "FALLTHE'S NOT"
+      },
+      {
+        "x": 57,
+        "y": 719,
+        "width": 45,
+        "height": 28,
+        "source": "HO.."
+      },
+      {
+        "x": 269,
+        "y": 719,
+        "width": 142,
+        "height": 21,
+        "source": "GETTING ANY WORK,"
+      },
+      {
+        "x": 279,
+        "y": 731,
+        "width": 124,
+        "height": 24,
+        "source": "IT'S BECALSE HE"
+      },
+      {
+        "x": 285,
+        "y": 742,
+        "width": 111,
+        "height": 28,
+        "source": "SUCKS ATIT..."
+      },
+      {
+        "x": 185,
+        "y": 881,
+        "width": 72,
+        "height": 27,
+        "source": "T.THATS"
+      },
+      {
+        "x": 176,
+        "y": 898,
+        "width": 91,
+        "height": 21,
+        "source": "THE CAPTAIN"
+      },
+      {
+        "x": 164,
+        "y": 908,
+        "width": 113,
+        "height": 26,
+        "source": "OF THE KARATE"
+      },
+      {
+        "x": 185,
+        "y": 925,
+        "width": 74,
+        "height": 21,
+        "source": "TEAM FOR"
+      },
+      {
+        "x": 195,
+        "y": 935,
+        "width": 52,
+        "height": 26,
+        "source": "YOu...."
+      },
+      {
+        "x": 310,
+        "y": 929,
+        "width": 92,
+        "height": 24,
+        "source": "ISAIDIM"
+      },
+      {
+        "x": 314,
+        "y": 943,
+        "width": 82,
+        "height": 24,
+        "source": "NOT MAD"
+      },
+      {
+        "x": 47,
+        "y": 945,
+        "width": 124,
+        "height": 53,
+        "source": "Hohoho"
+      },
+      {
+        "x": 327,
+        "y": 958,
+        "width": 60,
+        "height": 22,
+        "source": "ABOUT"
+      },
+      {
+        "x": 308,
+        "y": 972,
+        "width": 96,
+        "height": 24,
+        "source": "ANYTHING!!"
+      },
+      {
+        "x": 746,
+        "y": 1213,
+        "width": 54,
+        "height": 18,
+        "source": "ader.net"
+      }
+    ],
+    "stages": {
+      "detection_inference_ms": 125.6384999724105,
+      "detection_postprocess_ms": 10.062100016511977,
+      "crop_ms": 1.593699969816953,
+      "multilingual_preprocess_ms": 3.9777999045327306,
+      "multilingual_inference_ms": 470.09990009246394,
+      "multilingual_decode_ms": 16.490900015924126
+    },
+    "metrics": {
+      "detect_ms": 165.65889999037609,
+      "recognize_ms": 501.9464999786578,
+      "line_cache_hits": 0,
+      "detector": "neural"
+    },
+    "elapsed_ms": 671.6747999889776,
+    "text": "NOTHNG..\nLOOK\nWHAT\nAT YOU,\nARE YOU\nIMNOT\nACTING\nMADE\nANGRY AT\nABOUT,\nLIKE SUCH\nADORK.\nALL THAT\nRAN?\nIT'S YOLR\nFALLTMY\nFATHER...\nMOURIRAN\nTEITAN HIGH\nJUNIOR\nWHAT?YOUR\nCAN'T\nDAD'S STLL A\nGET ANY\nDETECTNE?\nda!\nWORK!!\n$H$\nBUT IT'S NOT MY\nFALLTHE'S NOT\nHO..\nGETTING ANY WORK,\nIT'S BECALSE HE\nSUCKS ATIT...\nT.THATS\nTHE CAPTAIN\nOF THE KARATE\nTEAM FOR\nYOu....\nISAIDIM\nNOT MAD\nHohoho\nABOUT\nANYTHING!!\nader.net"
+  },
+  {
+    "file": "han1.jpg",
+    "sha256": "b1f00e0bac7e22107d22b67e4fd67cdf6eb5ff9c34f68dfb9278993b63577e97",
+    "dimensions": [
+      2099,
+      1740
+    ],
+    "model": "rapid-auto",
+    "run": 1,
+    "repeat_penalty": 1.0,
+    "blocks": [
+      {
+        "x": 38,
+        "y": 37,
+        "width": 192,
+        "height": 41,
+        "source": "21화 미끼(1)"
+      },
+      {
+        "x": 38,
+        "y": 78,
+        "width": 104,
+        "height": 24,
+        "source": "2023.12.21."
+      },
+      {
+        "x": 40,
+        "y": 148,
+        "width": 479,
+        "height": 36,
+        "source": "이번 던전의 출현 몬스터는 코볼트였다."
+      },
+      {
+        "x": 38,
+        "y": 228,
+        "width": 751,
+        "height": 36,
+        "source": "그동안 상대해 온 고블린보다는 명백히 전투력이 강한 괴수종."
+      },
+      {
+        "x": 39,
+        "y": 349,
+        "width": 250,
+        "height": 38,
+        "source": "[남은 코볼트: 5마리]"
+      },
+      {
+        "x": 39,
+        "y": 470,
+        "width": 918,
+        "height": 36,
+        "source": "칼리아 대륙에서 상대해 본 적이 없는 종이지만, 이론적으로는 잘 알고 있다."
+      },
+      {
+        "x": 39,
+        "y": 550,
+        "width": 832,
+        "height": 36,
+        "source": "성인 남성 정도 되는 사이즈에 피부 가죽이 질긴 것이 대표적인 특징."
+      },
+      {
+        "x": 40,
+        "y": 631,
+        "width": 1848,
+        "height": 37,
+        "source": "나름 지능도 갖춘 데다 내구력이 뛰어난 녀석들이기에 E급 던전에서 나오는 몬스터치고는 까다로운 편이지만,개체 수가 많지는 않기에 큰 부담은 없었다."
+      },
+      {
+        "x": 38,
+        "y": 711,
+        "width": 367,
+        "height": 36,
+        "source": "\"형은 나서지 말고 구경만 해.\""
+      },
+      {
+        "x": 38,
+        "y": 792,
+        "width": 616,
+        "height": 36,
+        "source": "\"알고 있다.코볼트 따위에 내가 나설 이유는 없지.\""
+      },
+      {
+        "x": 38,
+        "y": 872,
+        "width": 958,
+        "height": 36,
+        "source": "오늘 그의 역할은 나의 해원검법이 실전에서 어떻게 적용되는지를 평가하는 것."
+      },
+      {
+        "x": 40,
+        "y": 953,
+        "width": 678,
+        "height": 36,
+        "source": "이라고 서지원은 알고 있지만 사실은 더 중요한 게 있다."
+      },
+      {
+        "x": 40,
+        "y": 1033,
+        "width": 611,
+        "height": 36,
+        "source": "나중에 등장할 살수를 제압하는 일.그게 메인이다."
+      },
+      {
+        "x": 38,
+        "y": 1114,
+        "width": 190,
+        "height": 36,
+        "source": "\"오빠,저는요?\""
+      },
+      {
+        "x": 38,
+        "y": 1195,
+        "width": 615,
+        "height": 36,
+        "source": "\"내가 셋을 잡을 거고 네 몫은 두 마리.불만 없지?\""
+      },
+      {
+        "x": 38,
+        "y": 1275,
+        "width": 660,
+        "height": 36,
+        "source": "\"뭐, 이 던전은 해원검가에서 입찰을 따낸 것이니까요.\""
+      },
+      {
+        "x": 38,
+        "y": 1356,
+        "width": 858,
+        "height": 36,
+        "source": "오늘 중요한 건 던전 보상이 아니니, 애먼 데에 힘을 다 뺄 이유는 없다."
+      },
+      {
+        "x": 38,
+        "y": 1436,
+        "width": 976,
+        "height": 36,
+        "source": "서지원이 있긴 하지만 혹시 모를 상황에 대비해 마나를 비축해 놓을 필요도 있고."
+      },
+      {
+        "x": 38,
+        "y": 1517,
+        "width": 241,
+        "height": 36,
+        "source": "“모자나 똑바로 써.\""
+      },
+      {
+        "x": 38,
+        "y": 1597,
+        "width": 546,
+        "height": 36,
+        "source": "\"알겠어요! 그런데 도대체 이 모자가 뭐라고.\""
+      },
+      {
+        "x": 38,
+        "y": 1678,
+        "width": 590,
+        "height": 36,
+        "source": "한예지를 이 파티에 넣는 건 그리 어렵지 않았다."
+      }
+    ],
+    "stages": {
+      "crop_ms": 2.3077999940142035,
+      "multilingual_preprocess_ms": 12.336799933109432,
+      "korean_preprocess_ms": 12.074499682057649,
+      "multilingual_inference_ms": 1339.4174999557436,
+      "korean_inference_ms": 1326.6192001174204,
+      "korean_decode_ms": 20.701800065580755,
+      "multilingual_decode_ms": 35.441999963950366
+    },
+    "metrics": {
+      "detect_ms": 25.466599967330694,
+      "recognize_ms": 1408.6593000101857,
+      "line_cache_hits": 0,
+      "detector": "projection"
+    },
+    "elapsed_ms": 1439.512399956584,
+    "text": "21화 미끼(1)\n2023.12.21.\n이번 던전의 출현 몬스터는 코볼트였다.\n그동안 상대해 온 고블린보다는 명백히 전투력이 강한 괴수종.\n[남은 코볼트: 5마리]\n칼리아 대륙에서 상대해 본 적이 없는 종이지만, 이론적으로는 잘 알고 있다.\n성인 남성 정도 되는 사이즈에 피부 가죽이 질긴 것이 대표적인 특징.\n나름 지능도 갖춘 데다 내구력이 뛰어난 녀석들이기에 E급 던전에서 나오는 몬스터치고는 까다로운 편이지만,개체 수가 많지는 않기에 큰 부담은 없었다.\n\"형은 나서지 말고 구경만 해.\"\n\"알고 있다.코볼트 따위에 내가 나설 이유는 없지.\"\n오늘 그의 역할은 나의 해원검법이 실전에서 어떻게 적용되는지를 평가하는 것.\n이라고 서지원은 알고 있지만 사실은 더 중요한 게 있다.\n나중에 등장할 살수를 제압하는 일.그게 메인이다.\n\"오빠,저는요?\"\n\"내가 셋을 잡을 거고 네 몫은 두 마리.불만 없지?\"\n\"뭐, 이 던전은 해원검가에서 입찰을 따낸 것이니까요.\"\n오늘 중요한 건 던전 보상이 아니니, 애먼 데에 힘을 다 뺄 이유는 없다.\n서지원이 있긴 하지만 혹시 모를 상황에 대비해 마나를 비축해 놓을 필요도 있고.\n“모자나 똑바로 써.\"\n\"알겠어요! 그런데 도대체 이 모자가 뭐라고.\"\n한예지를 이 파티에 넣는 건 그리 어렵지 않았다."
+  },
+  {
+    "file": "han1.jpg",
+    "sha256": "b1f00e0bac7e22107d22b67e4fd67cdf6eb5ff9c34f68dfb9278993b63577e97",
+    "dimensions": [
+      2099,
+      1740
+    ],
+    "model": "rapid-fixed",
+    "run": 1,
+    "repeat_penalty": 1.0,
+    "blocks": [
+      {
+        "x": 38,
+        "y": 37,
+        "width": 192,
+        "height": 41,
+        "source": "21화 미끼(1)"
+      },
+      {
+        "x": 38,
+        "y": 78,
+        "width": 104,
+        "height": 24,
+        "source": "2023.12.21."
+      },
+      {
+        "x": 40,
+        "y": 148,
+        "width": 479,
+        "height": 36,
+        "source": "이번 던전의 출현 몬스터는 코볼트였다."
+      },
+      {
+        "x": 38,
+        "y": 228,
+        "width": 751,
+        "height": 36,
+        "source": "그동안 상대해 온 고블린보다는 명백히 전투력이 강한 괴수종."
+      },
+      {
+        "x": 39,
+        "y": 349,
+        "width": 250,
+        "height": 38,
+        "source": "[남은 코볼트: 5마리]"
+      },
+      {
+        "x": 39,
+        "y": 470,
+        "width": 918,
+        "height": 36,
+        "source": "칼리아 대륙에서 상대해 본 적이 없는 종이지만, 이론적으로는 잘 알고 있다."
+      },
+      {
+        "x": 39,
+        "y": 550,
+        "width": 832,
+        "height": 36,
+        "source": "성인 남성 정도 되는 사이즈에 피부 가죽이 질긴 것이 대표적인 특징."
+      },
+      {
+        "x": 40,
+        "y": 631,
+        "width": 1848,
+        "height": 37,
+        "source": "나름 지능도 갖춘 데다 내구력이 뛰어난 녀석들이기에 E급 던전에서 나오는 몬스터치고는 까다로운 편이지만,개체 수가 많지는 않기에 큰 부담은 없었다."
+      },
+      {
+        "x": 38,
+        "y": 711,
+        "width": 367,
+        "height": 36,
+        "source": "\"형은 나서지 말고 구경만 해.\""
+      },
+      {
+        "x": 38,
+        "y": 792,
+        "width": 616,
+        "height": 36,
+        "source": "\"알고 있다.코볼트 따위에 내가 나설 이유는 없지.\""
+      },
+      {
+        "x": 38,
+        "y": 872,
+        "width": 958,
+        "height": 36,
+        "source": "오늘 그의 역할은 나의 해원검법이 실전에서 어떻게 적용되는지를 평가하는 것."
+      },
+      {
+        "x": 40,
+        "y": 953,
+        "width": 678,
+        "height": 36,
+        "source": "이라고 서지원은 알고 있지만 사실은 더 중요한 게 있다."
+      },
+      {
+        "x": 40,
+        "y": 1033,
+        "width": 611,
+        "height": 36,
+        "source": "나중에 등장할 살수를 제압하는 일.그게 메인이다."
+      },
+      {
+        "x": 38,
+        "y": 1114,
+        "width": 190,
+        "height": 36,
+        "source": "\"오빠,저는요?\""
+      },
+      {
+        "x": 38,
+        "y": 1195,
+        "width": 615,
+        "height": 36,
+        "source": "\"내가 셋을 잡을 거고 네 몫은 두 마리.불만 없지?\""
+      },
+      {
+        "x": 38,
+        "y": 1275,
+        "width": 660,
+        "height": 36,
+        "source": "\"뭐, 이 던전은 해원검가에서 입찰을 따낸 것이니까요.\""
+      },
+      {
+        "x": 38,
+        "y": 1356,
+        "width": 858,
+        "height": 36,
+        "source": "오늘 중요한 건 던전 보상이 아니니, 애먼 데에 힘을 다 뺄 이유는 없다."
+      },
+      {
+        "x": 38,
+        "y": 1436,
+        "width": 976,
+        "height": 36,
+        "source": "서지원이 있긴 하지만 혹시 모를 상황에 대비해 마나를 비축해 놓을 필요도 있고."
+      },
+      {
+        "x": 38,
+        "y": 1517,
+        "width": 241,
+        "height": 36,
+        "source": "“모자나 똑바로 써.\""
+      },
+      {
+        "x": 38,
+        "y": 1597,
+        "width": 546,
+        "height": 36,
+        "source": "\"알겠어요! 그런데 도대체 이 모자가 뭐라고.\""
+      },
+      {
+        "x": 38,
+        "y": 1678,
+        "width": 590,
+        "height": 36,
+        "source": "한예지를 이 파티에 넣는 건 그리 어렵지 않았다."
+      }
+    ],
+    "stages": {
+      "crop_ms": 2.1302999812178314,
+      "korean_preprocess_ms": 8.304400136694312,
+      "korean_inference_ms": 902.3202000535093,
+      "korean_decode_ms": 16.388499992899597
+    },
+    "metrics": {
+      "detect_ms": 25.828600046224892,
+      "recognize_ms": 941.3902999949642,
+      "line_cache_hits": 0,
+      "detector": "projection"
+    },
+    "elapsed_ms": 972.4180999910459,
+    "text": "21화 미끼(1)\n2023.12.21.\n이번 던전의 출현 몬스터는 코볼트였다.\n그동안 상대해 온 고블린보다는 명백히 전투력이 강한 괴수종.\n[남은 코볼트: 5마리]\n칼리아 대륙에서 상대해 본 적이 없는 종이지만, 이론적으로는 잘 알고 있다.\n성인 남성 정도 되는 사이즈에 피부 가죽이 질긴 것이 대표적인 특징.\n나름 지능도 갖춘 데다 내구력이 뛰어난 녀석들이기에 E급 던전에서 나오는 몬스터치고는 까다로운 편이지만,개체 수가 많지는 않기에 큰 부담은 없었다.\n\"형은 나서지 말고 구경만 해.\"\n\"알고 있다.코볼트 따위에 내가 나설 이유는 없지.\"\n오늘 그의 역할은 나의 해원검법이 실전에서 어떻게 적용되는지를 평가하는 것.\n이라고 서지원은 알고 있지만 사실은 더 중요한 게 있다.\n나중에 등장할 살수를 제압하는 일.그게 메인이다.\n\"오빠,저는요?\"\n\"내가 셋을 잡을 거고 네 몫은 두 마리.불만 없지?\"\n\"뭐, 이 던전은 해원검가에서 입찰을 따낸 것이니까요.\"\n오늘 중요한 건 던전 보상이 아니니, 애먼 데에 힘을 다 뺄 이유는 없다.\n서지원이 있긴 하지만 혹시 모를 상황에 대비해 마나를 비축해 놓을 필요도 있고.\n“모자나 똑바로 써.\"\n\"알겠어요! 그런데 도대체 이 모자가 뭐라고.\"\n한예지를 이 파티에 넣는 건 그리 어렵지 않았다."
+  },
+  {
+    "file": "han2.jpg",
+    "sha256": "efd8478115a23ecf136ab60386f43914b602f90f536d0f9009695cadb7ede959",
+    "dimensions": [
+      852,
+      1823
+    ],
+    "model": "rapid-auto",
+    "run": 1,
+    "repeat_penalty": 1.0,
+    "blocks": [
+      {
+        "x": 253,
+        "y": 108,
+        "width": 218,
+        "height": 38,
+        "source": "이 여자는 백서정."
+      },
+      {
+        "x": 217,
+        "y": 146,
+        "width": 291,
+        "height": 40,
+        "source": "나와는 고등학생 때부터"
+      },
+      {
+        "x": 283,
+        "y": 185,
+        "width": 159,
+        "height": 42,
+        "source": "알던사이다."
+      },
+      {
+        "x": 388,
+        "y": 1164,
+        "width": 261,
+        "height": 42,
+        "source": "현재는 남자친구에게"
+      },
+      {
+        "x": 353,
+        "y": 1205,
+        "width": 330,
+        "height": 40,
+        "source": "천만 원 가량의 돈을 뜯기고"
+      },
+      {
+        "x": 391,
+        "y": 1244,
+        "width": 254,
+        "height": 40,
+        "source": "잠수 이별 당한 상태."
+      },
+      {
+        "x": 215,
+        "y": 1456,
+        "width": 162,
+        "height": 42,
+        "source": "수진아.너도"
+      },
+      {
+        "x": 211,
+        "y": 1495,
+        "width": 170,
+        "height": 41,
+        "source": "생각좀해봐"
+      },
+      {
+        "x": 373,
+        "y": 1607,
+        "width": 178,
+        "height": 41,
+        "source": "내가 아빠한테"
+      },
+      {
+        "x": 329,
+        "y": 1647,
+        "width": 266,
+        "height": 40,
+        "source": "뭐라고 말해야 적당히"
+      },
+      {
+        "x": 348,
+        "y": 1686,
+        "width": 226,
+        "height": 41,
+        "source": "넘어갈 수 있을까?"
+      }
+    ],
+    "stages": {
+      "detection_inference_ms": 208.21700000669807,
+      "detection_postprocess_ms": 6.953600037377328,
+      "crop_ms": 0.8623999892733991,
+      "korean_preprocess_ms": 3.021600074134767,
+      "multilingual_preprocess_ms": 2.450500032864511,
+      "korean_inference_ms": 191.83019996853545,
+      "korean_decode_ms": 5.160700005944818,
+      "multilingual_inference_ms": 196.3156999554485,
+      "multilingual_decode_ms": 5.578899988904595
+    },
+    "metrics": {
+      "detect_ms": 260.57380001293495,
+      "recognize_ms": 207.87270000437275,
+      "line_cache_hits": 0,
+      "detector": "neural"
+    },
+    "elapsed_ms": 470.7559999660589,
+    "text": "이 여자는 백서정.\n나와는 고등학생 때부터\n알던사이다.\n현재는 남자친구에게\n천만 원 가량의 돈을 뜯기고\n잠수 이별 당한 상태.\n수진아.너도\n생각좀해봐\n내가 아빠한테\n뭐라고 말해야 적당히\n넘어갈 수 있을까?"
+  },
+  {
+    "file": "han2.jpg",
+    "sha256": "efd8478115a23ecf136ab60386f43914b602f90f536d0f9009695cadb7ede959",
+    "dimensions": [
+      852,
+      1823
+    ],
+    "model": "rapid-fixed",
+    "run": 1,
+    "repeat_penalty": 1.0,
+    "blocks": [
+      {
+        "x": 253,
+        "y": 108,
+        "width": 218,
+        "height": 38,
+        "source": "이 여자는 백서정."
+      },
+      {
+        "x": 217,
+        "y": 146,
+        "width": 291,
+        "height": 40,
+        "source": "나와는 고등학생 때부터"
+      },
+      {
+        "x": 283,
+        "y": 185,
+        "width": 159,
+        "height": 42,
+        "source": "알던사이다."
+      },
+      {
+        "x": 388,
+        "y": 1164,
+        "width": 261,
+        "height": 42,
+        "source": "현재는 남자친구에게"
+      },
+      {
+        "x": 353,
+        "y": 1205,
+        "width": 330,
+        "height": 40,
+        "source": "천만 원 가량의 돈을 뜯기고"
+      },
+      {
+        "x": 391,
+        "y": 1244,
+        "width": 254,
+        "height": 40,
+        "source": "잠수 이별 당한 상태."
+      },
+      {
+        "x": 215,
+        "y": 1456,
+        "width": 162,
+        "height": 42,
+        "source": "수진아.너도"
+      },
+      {
+        "x": 211,
+        "y": 1495,
+        "width": 170,
+        "height": 41,
+        "source": "생각좀해봐"
+      },
+      {
+        "x": 373,
+        "y": 1607,
+        "width": 178,
+        "height": 41,
+        "source": "내가 아빠한테"
+      },
+      {
+        "x": 329,
+        "y": 1647,
+        "width": 266,
+        "height": 40,
+        "source": "뭐라고 말해야 적당히"
+      },
+      {
+        "x": 348,
+        "y": 1686,
+        "width": 226,
+        "height": 41,
+        "source": "넘어갈 수 있을까?"
+      }
+    ],
+    "stages": {
+      "detection_inference_ms": 212.17289997730404,
+      "detection_postprocess_ms": 6.659899954684079,
+      "crop_ms": 0.9694999898783863,
+      "korean_preprocess_ms": 1.3213999336585402,
+      "korean_inference_ms": 140.33609995385632,
+      "korean_decode_ms": 3.1988000264391303
+    },
+    "metrics": {
+      "detect_ms": 266.04539999971166,
+      "recognize_ms": 147.62679999694228,
+      "line_cache_hits": 0,
+      "detector": "neural"
+    },
+    "elapsed_ms": 416.0408000461757,
+    "text": "이 여자는 백서정.\n나와는 고등학생 때부터\n알던사이다.\n현재는 남자친구에게\n천만 원 가량의 돈을 뜯기고\n잠수 이별 당한 상태.\n수진아.너도\n생각좀해봐\n내가 아빠한테\n뭐라고 말해야 적당히\n넘어갈 수 있을까?"
+  },
+  {
+    "file": "ri1.jpg",
+    "sha256": "64d4c66372ccad9065a29add9d3e7d4a2d7656361fbf4198faac29c415ab5ce6",
+    "dimensions": [
+      1459,
+      1459
+    ],
+    "model": "rapid-auto",
+    "run": 1,
+    "repeat_penalty": 1.0,
+    "blocks": [
+      {
+        "x": 511,
+        "y": 9,
+        "width": 275,
+        "height": 39,
+        "source": "俺のスキルは《会員》"
+      },
+      {
+        "x": 58,
+        "y": 79,
+        "width": 1223,
+        "height": 53,
+        "source": "《剣聖》になった弟に追放された俺のスキルは《会員》で"
+      },
+      {
+        "x": 34,
+        "y": 155,
+        "width": 1250,
+        "height": 46,
+        "source": "した〜ハズレスキルだと思っていたら、ポイントで好きな"
+      },
+      {
+        "x": 416,
+        "y": 225,
+        "width": 476,
+        "height": 50,
+        "source": "能力を買えるらしい～"
+      },
+      {
+        "x": 1026,
+        "y": 327,
+        "width": 274,
+        "height": 34,
+        "source": "作者：アカメノコバチ"
+      },
+      {
+        "x": 853,
+        "y": 381,
+        "width": 449,
+        "height": 32,
+        "source": "最新ピソド掲載：2026/09/20"
+      },
+      {
+        "x": 10,
+        "y": 461,
+        "width": 286,
+        "height": 36,
+        "source": "五歳の「授与の儀」。"
+      },
+      {
+        "x": 9,
+        "y": 559,
+        "width": 1256,
+        "height": 36,
+        "source": "騎士の名門・ヴァルディス侯爵家の長男アレンが授かったのは、誰も聞いたことのない固有スキル《会"
+      },
+      {
+        "x": 8,
+        "y": 604,
+        "width": 156,
+        "height": 40,
+        "source": "員》だった。"
+      },
+      {
+        "x": 11,
+        "y": 707,
+        "width": 1126,
+        "height": 32,
+        "source": "方、双子の弟カイルが授かったのは、剣士なら誰もが憧れる最高位の固有スキル《剣聖》。"
+      },
+      {
+        "x": 10,
+        "y": 805,
+        "width": 940,
+        "height": 33,
+        "source": "昨日まで一度も負けたことのなかった弟に、アレンは手も足も出ず敗北する。"
+      },
+      {
+        "x": 10,
+        "y": 903,
+        "width": 1130,
+        "height": 33,
+        "source": "次期当主の座を奪われ、父から告げられたのは、「今日中に屋敷を出ろ」という言葉だった。"
+      },
+      {
+        "x": 10,
+        "y": 1000,
+        "width": 695,
+        "height": 35,
+        "source": "傷だらけの身体で家を追い出され、街道で倒れたアレン。"
+      },
+      {
+        "x": 10,
+        "y": 1097,
+        "width": 587,
+        "height": 35,
+        "source": "そこで初めて、《会員》の本当の力が発動する。"
+      },
+      {
+        "x": 26,
+        "y": 1196,
+        "width": 327,
+        "height": 31,
+        "source": "【会員登録が完了しました】"
+      },
+      {
+        "x": 25,
+        "y": 1243,
+        "width": 283,
+        "height": 36,
+        "source": "【初回登録特典：100P】"
+      },
+      {
+        "x": 25,
+        "y": 1291,
+        "width": 218,
+        "height": 37,
+        "source": "【筋強化30P】"
+      },
+      {
+        "x": 25,
+        "y": 1340,
+        "width": 217,
+        "height": 38,
+        "source": "【耐久強化30P】"
+      },
+      {
+        "x": 24,
+        "y": 1390,
+        "width": 357,
+        "height": 35,
+        "source": "【敏捷強化>>続きを読む"
+      }
+    ],
+    "stages": {
+      "detection_inference_ms": 302.34110000310466,
+      "detection_postprocess_ms": 8.620699984021485,
+      "crop_ms": 1.7245999770238996,
+      "multilingual_preprocess_ms": 12.183399987407029,
+      "korean_preprocess_ms": 9.678000002168119,
+      "korean_inference_ms": 1054.67799998587,
+      "korean_decode_ms": 20.59569995617494,
+      "multilingual_inference_ms": 1070.066200045403,
+      "multilingual_decode_ms": 32.34919998794794
+    },
+    "metrics": {
+      "detect_ms": 372.09019996225834,
+      "recognize_ms": 1132.6124999905005,
+      "line_cache_hits": 0,
+      "detector": "neural"
+    },
+    "elapsed_ms": 1509.9399999598972,
+    "text": "俺のスキルは《会員》\n《剣聖》になった弟に追放された俺のスキルは《会員》で\nした〜ハズレスキルだと思っていたら、ポイントで好きな\n能力を買えるらしい～\n作者：アカメノコバチ\n最新ピソド掲載：2026/09/20\n五歳の「授与の儀」。\n騎士の名門・ヴァルディス侯爵家の長男アレンが授かったのは、誰も聞いたことのない固有スキル《会\n員》だった。\n方、双子の弟カイルが授かったのは、剣士なら誰もが憧れる最高位の固有スキル《剣聖》。\n昨日まで一度も負けたことのなかった弟に、アレンは手も足も出ず敗北する。\n次期当主の座を奪われ、父から告げられたのは、「今日中に屋敷を出ろ」という言葉だった。\n傷だらけの身体で家を追い出され、街道で倒れたアレン。\nそこで初めて、《会員》の本当の力が発動する。\n【会員登録が完了しました】\n【初回登録特典：100P】\n【筋強化30P】\n【耐久強化30P】\n【敏捷強化>>続きを読む"
+  },
+  {
+    "file": "ri1.jpg",
+    "sha256": "64d4c66372ccad9065a29add9d3e7d4a2d7656361fbf4198faac29c415ab5ce6",
+    "dimensions": [
+      1459,
+      1459
+    ],
+    "model": "rapid-fixed",
+    "run": 1,
+    "repeat_penalty": 1.0,
+    "blocks": [
+      {
+        "x": 511,
+        "y": 9,
+        "width": 275,
+        "height": 39,
+        "source": "俺のスキルは《会員》"
+      },
+      {
+        "x": 58,
+        "y": 79,
+        "width": 1223,
+        "height": 53,
+        "source": "《剣聖》になった弟に追放された俺のスキルは《会員》で"
+      },
+      {
+        "x": 34,
+        "y": 155,
+        "width": 1250,
+        "height": 46,
+        "source": "した〜ハズレスキルだと思っていたら、ポイントで好きな"
+      },
+      {
+        "x": 416,
+        "y": 225,
+        "width": 476,
+        "height": 50,
+        "source": "能力を買えるらしい～"
+      },
+      {
+        "x": 1026,
+        "y": 327,
+        "width": 274,
+        "height": 34,
+        "source": "作者：アカメノコバチ"
+      },
+      {
+        "x": 853,
+        "y": 381,
+        "width": 449,
+        "height": 32,
+        "source": "最新ピソド掲載：2026/09/20"
+      },
+      {
+        "x": 10,
+        "y": 461,
+        "width": 286,
+        "height": 36,
+        "source": "五歳の「授与の儀」。"
+      },
+      {
+        "x": 9,
+        "y": 559,
+        "width": 1256,
+        "height": 36,
+        "source": "騎士の名門・ヴァルディス侯爵家の長男アレンが授かったのは、誰も聞いたことのない固有スキル《会"
+      },
+      {
+        "x": 8,
+        "y": 604,
+        "width": 156,
+        "height": 40,
+        "source": "員》だった。"
+      },
+      {
+        "x": 11,
+        "y": 707,
+        "width": 1126,
+        "height": 32,
+        "source": "方、双子の弟カイルが授かったのは、剣士なら誰もが憧れる最高位の固有スキル《剣聖》。"
+      },
+      {
+        "x": 10,
+        "y": 805,
+        "width": 940,
+        "height": 33,
+        "source": "昨日まで一度も負けたことのなかった弟に、アレンは手も足も出ず敗北する。"
+      },
+      {
+        "x": 10,
+        "y": 903,
+        "width": 1130,
+        "height": 33,
+        "source": "次期当主の座を奪われ、父から告げられたのは、「今日中に屋敷を出ろ」という言葉だった。"
+      },
+      {
+        "x": 10,
+        "y": 1000,
+        "width": 695,
+        "height": 35,
+        "source": "傷だらけの身体で家を追い出され、街道で倒れたアレン。"
+      },
+      {
+        "x": 10,
+        "y": 1097,
+        "width": 587,
+        "height": 35,
+        "source": "そこで初めて、《会員》の本当の力が発動する。"
+      },
+      {
+        "x": 26,
+        "y": 1196,
+        "width": 327,
+        "height": 31,
+        "source": "【会員登録が完了しました】"
+      },
+      {
+        "x": 25,
+        "y": 1243,
+        "width": 283,
+        "height": 36,
+        "source": "【初回登録特典：100P】"
+      },
+      {
+        "x": 25,
+        "y": 1291,
+        "width": 218,
+        "height": 37,
+        "source": "【筋強化30P】"
+      },
+      {
+        "x": 25,
+        "y": 1340,
+        "width": 217,
+        "height": 38,
+        "source": "【耐久強化30P】"
+      },
+      {
+        "x": 24,
+        "y": 1390,
+        "width": 357,
+        "height": 35,
+        "source": "【敏捷強化>>続きを読む"
+      }
+    ],
+    "stages": {
+      "detection_inference_ms": 292.10710001643747,
+      "detection_postprocess_ms": 9.771799959708005,
+      "crop_ms": 2.455800015013665,
+      "multilingual_preprocess_ms": 10.11899980949238,
+      "multilingual_inference_ms": 795.4298999975435,
+      "multilingual_decode_ms": 19.750299979932606
+    },
+    "metrics": {
+      "detect_ms": 364.07269997289404,
+      "recognize_ms": 838.7303999625146,
+      "line_cache_hits": 0,
+      "detector": "neural"
+    },
+    "elapsed_ms": 1208.6655999883078,
+    "text": "俺のスキルは《会員》\n《剣聖》になった弟に追放された俺のスキルは《会員》で\nした〜ハズレスキルだと思っていたら、ポイントで好きな\n能力を買えるらしい～\n作者：アカメノコバチ\n最新ピソド掲載：2026/09/20\n五歳の「授与の儀」。\n騎士の名門・ヴァルディス侯爵家の長男アレンが授かったのは、誰も聞いたことのない固有スキル《会\n員》だった。\n方、双子の弟カイルが授かったのは、剣士なら誰もが憧れる最高位の固有スキル《剣聖》。\n昨日まで一度も負けたことのなかった弟に、アレンは手も足も出ず敗北する。\n次期当主の座を奪われ、父から告げられたのは、「今日中に屋敷を出ろ」という言葉だった。\n傷だらけの身体で家を追い出され、街道で倒れたアレン。\nそこで初めて、《会員》の本当の力が発動する。\n【会員登録が完了しました】\n【初回登録特典：100P】\n【筋強化30P】\n【耐久強化30P】\n【敏捷強化>>続きを読む"
+  },
+  {
+    "file": "ri2.jpg",
+    "sha256": "068edef068c48fdd813b689189b17a95c5374ed3412eb5562c99e687a58765a3",
+    "dimensions": [
+      2154,
+      1529
+    ],
+    "model": "rapid-auto",
+    "run": 1,
+    "repeat_penalty": 1.0,
+    "blocks": [
+      {
+        "x": 1130,
+        "y": 556,
+        "width": 516,
+        "height": 208,
+        "source": "Qno"
+      },
+      {
+        "x": 1049,
+        "y": 1169,
+        "width": 635,
+        "height": 360,
+        "source": "うわさ"
+      },
+      {
+        "x": 887,
+        "y": 590,
+        "width": 39,
+        "height": 39,
+        "source": "何"
+      },
+      {
+        "x": 850,
+        "y": 99,
+        "width": 91,
+        "height": 92,
+        "source": "あ"
+      },
+      {
+        "x": 90,
+        "y": 1014,
+        "width": 41,
+        "height": 59,
+        "source": "!!"
+      },
+      {
+        "x": 132,
+        "y": 83,
+        "width": 61,
+        "height": 385,
+        "source": "やいいす"
+      },
+      {
+        "x": 1785,
+        "y": 110,
+        "width": 175,
+        "height": 283,
+        "source": "マグロ漁船てヤバイフとつながてるて言われてるよ"
+      },
+      {
+        "x": 1301,
+        "y": 290,
+        "width": 213,
+        "height": 281,
+        "source": "借金した男どもがムリヤリ詰め込まれ狭くてキツくて臭くて"
+      },
+      {
+        "x": 799,
+        "y": 587,
+        "width": 47,
+        "height": 110,
+        "source": "お前!?"
+      },
+      {
+        "x": 845,
+        "y": 588,
+        "width": 41,
+        "height": 211,
+        "source": "言てるんだ"
+      },
+      {
+        "x": 1811,
+        "y": 642,
+        "width": 164,
+        "height": 266,
+        "source": "使えない奴は捨てられて"
+      },
+      {
+        "x": 1869,
+        "y": 647,
+        "width": 52,
+        "height": 95,
+        "source": "海に"
+      },
+      {
+        "x": 981,
+        "y": 782,
+        "width": 32,
+        "height": 650,
+        "source": "物語は実在す企業体人物等とは一切関ん"
+      },
+      {
+        "x": 746,
+        "y": 927,
+        "width": 218,
+        "height": 208,
+        "source": "一貫性のない奴だなこれだから最近の若工奴はつ"
+      },
+      {
+        "x": 305,
+        "y": 940,
+        "width": 156,
+        "height": 179,
+        "source": "ちっと漁労長！"
+      },
+      {
+        "x": 1180,
+        "y": 950,
+        "width": 184,
+        "height": 244,
+        "source": "エサにだから……"
+      },
+      {
+        "x": 1243,
+        "y": 953,
+        "width": 173,
+        "height": 197,
+        "source": "サメのされるん"
+      },
+      {
+        "x": 455,
+        "y": 986,
+        "width": 40,
+        "height": 141,
+        "source": "…ちょっと"
+      },
+      {
+        "x": 485,
+        "y": 1277,
+        "width": 109,
+        "height": 175,
+        "source": "ごめんなさいちと"
+      },
+      {
+        "x": 518,
+        "y": 1279,
+        "width": 104,
+        "height": 173,
+        "source": "ごんなさいサメのエサは"
+      }
+    ],
+    "stages": {
+      "detection_inference_ms": 384.1068000183441,
+      "detection_postprocess_ms": 19.31689999764785,
+      "crop_ms": 3.458400024101138,
+      "multilingual_preprocess_ms": 5.801700113806874,
+      "korean_preprocess_ms": 7.28710024850443,
+      "korean_inference_ms": 703.5571999731474,
+      "korean_decode_ms": 16.256399976555258,
+      "multilingual_inference_ms": 730.6075000087731,
+      "multilingual_decode_ms": 21.695299947168678
+    },
+    "metrics": {
+      "detect_ms": 490.7458000234328,
+      "recognize_ms": 772.3414999782108,
+      "line_cache_hits": 0,
+      "detector": "neural"
+    },
+    "elapsed_ms": 1279.0996999829076,
+    "text": "Qno\nうわさ\n何\nあ\n!!\nやいいす\nマグロ漁船てヤバイフとつながてるて言われてるよ\n借金した男どもがムリヤリ詰め込まれ狭くてキツくて臭くて\nお前!?\n言てるんだ\n使えない奴は捨てられて\n海に\n物語は実在す企業体人物等とは一切関ん\n一貫性のない奴だなこれだから最近の若工奴はつ\nちっと漁労長！\nエサにだから……\nサメのされるん\n…ちょっと\nごめんなさいちと\nごんなさいサメのエサは"
+  },
+  {
+    "file": "ri2.jpg",
+    "sha256": "068edef068c48fdd813b689189b17a95c5374ed3412eb5562c99e687a58765a3",
+    "dimensions": [
+      2154,
+      1529
+    ],
+    "model": "rapid-fixed",
+    "run": 1,
+    "repeat_penalty": 1.0,
+    "blocks": [
+      {
+        "x": 1130,
+        "y": 556,
+        "width": 516,
+        "height": 208,
+        "source": "Qno"
+      },
+      {
+        "x": 1049,
+        "y": 1169,
+        "width": 635,
+        "height": 360,
+        "source": "うわさ"
+      },
+      {
+        "x": 887,
+        "y": 590,
+        "width": 39,
+        "height": 39,
+        "source": "何"
+      },
+      {
+        "x": 850,
+        "y": 99,
+        "width": 91,
+        "height": 92,
+        "source": "あ"
+      },
+      {
+        "x": 90,
+        "y": 1014,
+        "width": 41,
+        "height": 59,
+        "source": "!!"
+      },
+      {
+        "x": 132,
+        "y": 83,
+        "width": 61,
+        "height": 385,
+        "source": "やいいす"
+      },
+      {
+        "x": 1785,
+        "y": 110,
+        "width": 175,
+        "height": 283,
+        "source": "マグロ漁船てヤバイフとつながてるて言われてるよ"
+      },
+      {
+        "x": 1301,
+        "y": 290,
+        "width": 213,
+        "height": 281,
+        "source": "借金した男どもがムリヤリ詰め込まれ狭くてキツくて臭くて"
+      },
+      {
+        "x": 799,
+        "y": 587,
+        "width": 47,
+        "height": 110,
+        "source": "お前!?"
+      },
+      {
+        "x": 845,
+        "y": 588,
+        "width": 41,
+        "height": 211,
+        "source": "言てるんだ"
+      },
+      {
+        "x": 1811,
+        "y": 642,
+        "width": 164,
+        "height": 266,
+        "source": "使えない奴は捨てられて"
+      },
+      {
+        "x": 1869,
+        "y": 647,
+        "width": 52,
+        "height": 95,
+        "source": "海に"
+      },
+      {
+        "x": 981,
+        "y": 782,
+        "width": 32,
+        "height": 650,
+        "source": "物語は実在す企業体人物等とは一切関ん"
+      },
+      {
+        "x": 746,
+        "y": 927,
+        "width": 218,
+        "height": 208,
+        "source": "一貫性のない奴だなこれだから最近の若工奴はつ"
+      },
+      {
+        "x": 305,
+        "y": 940,
+        "width": 156,
+        "height": 179,
+        "source": "ちっと漁労長！"
+      },
+      {
+        "x": 1180,
+        "y": 950,
+        "width": 184,
+        "height": 244,
+        "source": "エサにだから……"
+      },
+      {
+        "x": 1243,
+        "y": 953,
+        "width": 173,
+        "height": 197,
+        "source": "サメのされるん"
+      },
+      {
+        "x": 455,
+        "y": 986,
+        "width": 40,
+        "height": 141,
+        "source": "…ちょっと"
+      },
+      {
+        "x": 485,
+        "y": 1277,
+        "width": 109,
+        "height": 175,
+        "source": "ごめんなさいちと"
+      },
+      {
+        "x": 518,
+        "y": 1279,
+        "width": 104,
+        "height": 173,
+        "source": "ごんなさいサメのエサは"
+      }
+    ],
+    "stages": {
+      "detection_inference_ms": 403.69700000155717,
+      "detection_postprocess_ms": 12.774000002536923,
+      "crop_ms": 3.9080000133253634,
+      "multilingual_preprocess_ms": 5.864799779374152,
+      "multilingual_inference_ms": 572.7049998822622,
+      "multilingual_decode_ms": 17.22239999799058
+    },
+    "metrics": {
+      "detect_ms": 506.8673000205308,
+      "recognize_ms": 608.1674000015482,
+      "line_cache_hits": 0,
+      "detector": "neural"
+    },
+    "elapsed_ms": 1132.7184999827296,
+    "text": "Qno\nうわさ\n何\nあ\n!!\nやいいす\nマグロ漁船てヤバイフとつながてるて言われてるよ\n借金した男どもがムリヤリ詰め込まれ狭くてキツくて臭くて\nお前!?\n言てるんだ\n使えない奴は捨てられて\n海に\n物語は実在す企業体人物等とは一切関ん\n一貫性のない奴だなこれだから最近の若工奴はつ\nちっと漁労長！\nエサにだから……\nサメのされるん\n…ちょっと\nごめんなさいちと\nごんなさいサメのエサは"
+  },
+  {
+    "file": "ying1.jpg",
+    "sha256": "e5d1d3991ad1fc532c8e16a0e10b67a546791cee144658ecb85229296b30addb",
+    "dimensions": [
+      1592,
+      1435
+    ],
+    "model": "rapid-auto",
+    "run": 1,
+    "repeat_penalty": 1.0,
+    "blocks": [
+      {
+        "x": 0,
+        "y": 1,
+        "width": 1527,
+        "height": 35,
+        "source": "Daddy Tyl's cottage was the poorest of the countryside; and it seemed even more wretched because it stood opposite a splendid"
+      },
+      {
+        "x": 1,
+        "y": 61,
+        "width": 1561,
+        "height": 36,
+        "source": "hall in which rich children lived. From the windows of the cottage you could see what went on inside the Hall when the dining-room"
+      },
+      {
+        "x": 2,
+        "y": 121,
+        "width": 1568,
+        "height": 34,
+        "source": "and drawing-rooms were lit up in the evening. And, in the daytime, you saw the little children playing on the terraces, in the gardens"
+      },
+      {
+        "x": 0,
+        "y": 180,
+        "width": 1503,
+        "height": 36,
+        "source": "and in the hot-houses which people came all the way from town to visit because they were always filled with the rarest flowers."
+      },
+      {
+        "x": 0,
+        "y": 242,
+        "width": 1573,
+        "height": 33,
+        "source": "Now, one evening which was not like other evenings, for it was Christmas Eve, Mummy Tyl put her little ones to bed and kissed them"
+      },
+      {
+        "x": 1,
+        "y": 300,
+        "width": 1531,
+        "height": 36,
+        "source": "even more lovingly than usual. She felt a little sad, because owing to the stormy weather, Daddy TyI was not able to go to work in"
+      },
+      {
+        "x": 0,
+        "y": 358,
+        "width": 1518,
+        "height": 40,
+        "source": "the forest; and so she had no money to buy presents with which to fill Tyltyl and Mytyl's stockings. The Children soon fell asleep,"
+      },
+      {
+        "x": 2,
+        "y": 421,
+        "width": 1527,
+        "height": 34,
+        "source": "everything was still and silent and not a sound was heard but the purring of the cat, the snoring of the dog and the ticking of the"
+      },
+      {
+        "x": 0,
+        "y": 479,
+        "width": 1567,
+        "height": 48,
+        "source": "great grandfather's clock. But suddenly a light as bright as day crept through the shutters 11 , the lamp upon the table lit again of"
+      },
+      {
+        "x": 0,
+        "y": 549,
+        "width": 1540,
+        "height": 33,
+        "source": "itself and the two Children awoke, yawned, rubbed their eyes, stretched out their arms in bed and Tyltyl, in a cautious voice called:"
+      },
+      {
+        "x": 1,
+        "y": 605,
+        "width": 106,
+        "height": 42,
+        "source": "\"Mytyl?\""
+      },
+      {
+        "x": 1,
+        "y": 664,
+        "width": 556,
+        "height": 42,
+        "source": "\"Yes, Tyltyl?\"' was the answer. \"Are you asleep?\""
+      },
+      {
+        "x": 1,
+        "y": 725,
+        "width": 125,
+        "height": 38,
+        "source": "\"Are you?'"
+      },
+      {
+        "x": 2,
+        "y": 785,
+        "width": 765,
+        "height": 38,
+        "source": "\"No,\" said Tyltyl. \"How can I be asleep, when I'm talking to you?\""
+      },
+      {
+        "x": 1,
+        "y": 847,
+        "width": 535,
+        "height": 37,
+        "source": "\"I say, is this Christmas Day?\"asked his sister."
+      },
+      {
+        "x": 2,
+        "y": 906,
+        "width": 990,
+        "height": 38,
+        "source": "\"Not yet; not till to-morrow. But Father Christmas won't bring us anything this year.\""
+      },
+      {
+        "x": 2,
+        "y": 963,
+        "width": 137,
+        "height": 41,
+        "source": "\"Why not?\""
+      },
+      {
+        "x": 1,
+        "y": 1025,
+        "width": 1057,
+        "height": 38,
+        "source": "\"I heard Mummy say that she couldn't go to town to tell him. But he will come next year.\""
+      },
+      {
+        "x": 2,
+        "y": 1085,
+        "width": 251,
+        "height": 39,
+        "source": "\"Is next year far off?\""
+      },
+      {
+        "x": 3,
+        "y": 1147,
+        "width": 967,
+        "height": 37,
+        "source": "\"A good long while,\" said the boy. \"But he will come to the rich children to-night.\""
+      },
+      {
+        "x": 2,
+        "y": 1206,
+        "width": 102,
+        "height": 39,
+        "source": "\"Really?\""
+      },
+      {
+        "x": 2,
+        "y": 1266,
+        "width": 1060,
+        "height": 37,
+        "source": "\"Hullo!\" cried Tyltyl of a sudden. \"Mummy's forgotten to put out the lamp!. I've an idea!\""
+      },
+      {
+        "x": 0,
+        "y": 1323,
+        "width": 103,
+        "height": 42,
+        "source": "\"What?\""
+      },
+      {
+        "x": 0,
+        "y": 1385,
+        "width": 166,
+        "height": 41,
+        "source": "\"Let's get up.\""
+      }
+    ],
+    "stages": {
+      "detection_inference_ms": 321.0380999953486,
+      "detection_postprocess_ms": 10.373800003435463,
+      "crop_ms": 3.329100029077381,
+      "korean_preprocess_ms": 26.474000071175396,
+      "multilingual_preprocess_ms": 23.232099949382246,
+      "korean_inference_ms": 2282.6397999888286,
+      "korean_decode_ms": 47.12519998429343,
+      "multilingual_inference_ms": 2352.6175998849794,
+      "multilingual_decode_ms": 76.48270000936463
+    },
+    "metrics": {
+      "detect_ms": 393.51989998249337,
+      "recognize_ms": 2484.4389999634586,
+      "line_cache_hits": 0,
+      "detector": "neural"
+    },
+    "elapsed_ms": 2886.427999997977,
+    "text": "Daddy Tyl's cottage was the poorest of the countryside; and it seemed even more wretched because it stood opposite a splendid\nhall in which rich children lived. From the windows of the cottage you could see what went on inside the Hall when the dining-room\nand drawing-rooms were lit up in the evening. And, in the daytime, you saw the little children playing on the terraces, in the gardens\nand in the hot-houses which people came all the way from town to visit because they were always filled with the rarest flowers.\nNow, one evening which was not like other evenings, for it was Christmas Eve, Mummy Tyl put her little ones to bed and kissed them\neven more lovingly than usual. She felt a little sad, because owing to the stormy weather, Daddy TyI was not able to go to work in\nthe forest; and so she had no money to buy presents with which to fill Tyltyl and Mytyl's stockings. The Children soon fell asleep,\neverything was still and silent and not a sound was heard but the purring of the cat, the snoring of the dog and the ticking of the\ngreat grandfather's clock. But suddenly a light as bright as day crept through the shutters 11 , the lamp upon the table lit again of\nitself and the two Children awoke, yawned, rubbed their eyes, stretched out their arms in bed and Tyltyl, in a cautious voice called:\n\"Mytyl?\"\n\"Yes, Tyltyl?\"' was the answer. \"Are you asleep?\"\n\"Are you?'\n\"No,\" said Tyltyl. \"How can I be asleep, when I'm talking to you?\"\n\"I say, is this Christmas Day?\"asked his sister.\n\"Not yet; not till to-morrow. But Father Christmas won't bring us anything this year.\"\n\"Why not?\"\n\"I heard Mummy say that she couldn't go to town to tell him. But he will come next year.\"\n\"Is next year far off?\"\n\"A good long while,\" said the boy. \"But he will come to the rich children to-night.\"\n\"Really?\"\n\"Hullo!\" cried Tyltyl of a sudden. \"Mummy's forgotten to put out the lamp!. I've an idea!\"\n\"What?\"\n\"Let's get up.\""
+  },
+  {
+    "file": "ying1.jpg",
+    "sha256": "e5d1d3991ad1fc532c8e16a0e10b67a546791cee144658ecb85229296b30addb",
+    "dimensions": [
+      1592,
+      1435
+    ],
+    "model": "rapid-fixed",
+    "run": 1,
+    "repeat_penalty": 1.0,
+    "blocks": [
+      {
+        "x": 0,
+        "y": 1,
+        "width": 1527,
+        "height": 35,
+        "source": "Daddy Tyl's cottage was the poorest of the countryside; and it seemed even more wretched because it stood opposite a splendid"
+      },
+      {
+        "x": 1,
+        "y": 61,
+        "width": 1561,
+        "height": 36,
+        "source": "hall in which rich children lived. From the windows of the cottage you could see what went on inside the Hall when the dining-room"
+      },
+      {
+        "x": 2,
+        "y": 121,
+        "width": 1568,
+        "height": 34,
+        "source": "and drawing-rooms were lit up in the evening. And, in the daytime, you saw the little children playing on the terraces, in the gardens"
+      },
+      {
+        "x": 0,
+        "y": 180,
+        "width": 1503,
+        "height": 36,
+        "source": "and in the hot-houses which people came all the way from town to visit because they were always filled with the rarest flowers."
+      },
+      {
+        "x": 0,
+        "y": 242,
+        "width": 1573,
+        "height": 33,
+        "source": "Now, one evening which was not like other evenings, for it was Christmas Eve, Mummy Tyl put her little ones to bed and kissed them"
+      },
+      {
+        "x": 1,
+        "y": 300,
+        "width": 1531,
+        "height": 36,
+        "source": "even more lovingly than usual. She felt a little sad, because owing to the stormy weather, Daddy TyI was not able to go to work in"
+      },
+      {
+        "x": 0,
+        "y": 358,
+        "width": 1518,
+        "height": 40,
+        "source": "the forest; and so she had no money to buy presents with which to fill Tyltyl and Mytyl's stockings. The Children soon fell asleep,"
+      },
+      {
+        "x": 2,
+        "y": 421,
+        "width": 1527,
+        "height": 34,
+        "source": "everything was still and silent and not a sound was heard but the purring of the cat, the snoring of the dog and the ticking of the"
+      },
+      {
+        "x": 0,
+        "y": 479,
+        "width": 1567,
+        "height": 48,
+        "source": "great grandfather's clock. But suddenly a light as bright as day crept through the shutters 11 , the lamp upon the table lit again of"
+      },
+      {
+        "x": 0,
+        "y": 549,
+        "width": 1540,
+        "height": 33,
+        "source": "itself and the two Children awoke, yawned, rubbed their eyes, stretched out their arms in bed and Tyltyl, in a cautious voice called:"
+      },
+      {
+        "x": 1,
+        "y": 605,
+        "width": 106,
+        "height": 42,
+        "source": "\"Mytyl?\""
+      },
+      {
+        "x": 1,
+        "y": 664,
+        "width": 556,
+        "height": 42,
+        "source": "\"Yes, Tyltyl?\"' was the answer. \"Are you asleep?\""
+      },
+      {
+        "x": 1,
+        "y": 725,
+        "width": 125,
+        "height": 38,
+        "source": "\"Are you?'"
+      },
+      {
+        "x": 2,
+        "y": 785,
+        "width": 765,
+        "height": 38,
+        "source": "\"No,\" said Tyltyl. \"How can I be asleep, when I'm talking to you?\""
+      },
+      {
+        "x": 1,
+        "y": 847,
+        "width": 535,
+        "height": 37,
+        "source": "\"I say, is this Christmas Day?\"asked his sister."
+      },
+      {
+        "x": 2,
+        "y": 906,
+        "width": 990,
+        "height": 38,
+        "source": "\"Not yet; not till to-morrow. But Father Christmas won't bring us anything this year.\""
+      },
+      {
+        "x": 2,
+        "y": 963,
+        "width": 137,
+        "height": 41,
+        "source": "\"Why not?\""
+      },
+      {
+        "x": 1,
+        "y": 1025,
+        "width": 1057,
+        "height": 38,
+        "source": "\"I heard Mummy say that she couldn't go to town to tell him. But he will come next year.\""
+      },
+      {
+        "x": 2,
+        "y": 1085,
+        "width": 251,
+        "height": 39,
+        "source": "\"Is next year far off?\""
+      },
+      {
+        "x": 3,
+        "y": 1147,
+        "width": 967,
+        "height": 37,
+        "source": "\"A good long while,\" said the boy. \"But he will come to the rich children to-night.\""
+      },
+      {
+        "x": 2,
+        "y": 1206,
+        "width": 102,
+        "height": 39,
+        "source": "\"Really?\""
+      },
+      {
+        "x": 2,
+        "y": 1266,
+        "width": 1060,
+        "height": 37,
+        "source": "\"Hullo!\" cried Tyltyl of a sudden. \"Mummy's forgotten to put out the lamp!. I've an idea!\""
+      },
+      {
+        "x": 0,
+        "y": 1323,
+        "width": 103,
+        "height": 42,
+        "source": "\"What?\""
+      },
+      {
+        "x": 0,
+        "y": 1385,
+        "width": 166,
+        "height": 41,
+        "source": "\"Let's get up.\""
+      }
+    ],
+    "stages": {
+      "detection_inference_ms": 384.95410000905395,
+      "detection_postprocess_ms": 12.177700002212077,
+      "crop_ms": 4.277899977751076,
+      "multilingual_preprocess_ms": 20.768399990629405,
+      "multilingual_inference_ms": 1802.186599932611,
+      "multilingual_decode_ms": 41.179100051522255
+    },
+    "metrics": {
+      "detect_ms": 478.3881999901496,
+      "recognize_ms": 1891.6485999943689,
+      "line_cache_hits": 0,
+      "detector": "neural"
+    },
+    "elapsed_ms": 2379.757399961818,
+    "text": "Daddy Tyl's cottage was the poorest of the countryside; and it seemed even more wretched because it stood opposite a splendid\nhall in which rich children lived. From the windows of the cottage you could see what went on inside the Hall when the dining-room\nand drawing-rooms were lit up in the evening. And, in the daytime, you saw the little children playing on the terraces, in the gardens\nand in the hot-houses which people came all the way from town to visit because they were always filled with the rarest flowers.\nNow, one evening which was not like other evenings, for it was Christmas Eve, Mummy Tyl put her little ones to bed and kissed them\neven more lovingly than usual. She felt a little sad, because owing to the stormy weather, Daddy TyI was not able to go to work in\nthe forest; and so she had no money to buy presents with which to fill Tyltyl and Mytyl's stockings. The Children soon fell asleep,\neverything was still and silent and not a sound was heard but the purring of the cat, the snoring of the dog and the ticking of the\ngreat grandfather's clock. But suddenly a light as bright as day crept through the shutters 11 , the lamp upon the table lit again of\nitself and the two Children awoke, yawned, rubbed their eyes, stretched out their arms in bed and Tyltyl, in a cautious voice called:\n\"Mytyl?\"\n\"Yes, Tyltyl?\"' was the answer. \"Are you asleep?\"\n\"Are you?'\n\"No,\" said Tyltyl. \"How can I be asleep, when I'm talking to you?\"\n\"I say, is this Christmas Day?\"asked his sister.\n\"Not yet; not till to-morrow. But Father Christmas won't bring us anything this year.\"\n\"Why not?\"\n\"I heard Mummy say that she couldn't go to town to tell him. But he will come next year.\"\n\"Is next year far off?\"\n\"A good long while,\" said the boy. \"But he will come to the rich children to-night.\"\n\"Really?\"\n\"Hullo!\" cried Tyltyl of a sudden. \"Mummy's forgotten to put out the lamp!. I've an idea!\"\n\"What?\"\n\"Let's get up.\""
+  },
+  {
+    "file": "ying2.jpg",
+    "sha256": "ff9dc8fd2e1433e1d3a2fd859054bc86a97b4f12b9afba5b2937de58b1110e58",
+    "dimensions": [
+      800,
+      1233
+    ],
+    "model": "rapid-auto",
+    "run": 1,
+    "repeat_penalty": 1.0,
+    "blocks": [
+      {
+        "x": 167,
+        "y": 159,
+        "width": 81,
+        "height": 24,
+        "source": "NOTHNG.."
+      },
+      {
+        "x": 678,
+        "y": 150,
+        "width": 54,
+        "height": 25,
+        "source": "LOOK"
+      },
+      {
+        "x": 332,
+        "y": 163,
+        "width": 51,
+        "height": 22,
+        "source": "WHAT"
+      },
+      {
+        "x": 671,
+        "y": 165,
+        "width": 65,
+        "height": 25,
+        "source": "AT YOU,"
+      },
+      {
+        "x": 325,
+        "y": 178,
+        "width": 65,
+        "height": 21,
+        "source": "ARE YOU"
+      },
+      {
+        "x": 77,
+        "y": 189,
+        "width": 58,
+        "height": 21,
+        "source": "IMNOT"
+      },
+      {
+        "x": 674,
+        "y": 181,
+        "width": 62,
+        "height": 22,
+        "source": "ACTING"
+      },
+      {
+        "x": 332,
+        "y": 188,
+        "width": 50,
+        "height": 25,
+        "source": "MADE"
+      },
+      {
+        "x": 70,
+        "y": 204,
+        "width": 72,
+        "height": 20,
+        "source": "ANGRY AT"
+      },
+      {
+        "x": 331,
+        "y": 204,
+        "width": 54,
+        "height": 21,
+        "source": "ABOUT,"
+      },
+      {
+        "x": 660,
+        "y": 195,
+        "width": 91,
+        "height": 23,
+        "source": "LIKE SUCH"
+      },
+      {
+        "x": 660,
+        "y": 205,
+        "width": 90,
+        "height": 31,
+        "source": "ADORK."
+      },
+      {
+        "x": 72,
+        "y": 216,
+        "width": 70,
+        "height": 21,
+        "source": "ALL THAT"
+      },
+      {
+        "x": 333,
+        "y": 217,
+        "width": 47,
+        "height": 22,
+        "source": "RAN?"
+      },
+      {
+        "x": 71,
+        "y": 229,
+        "width": 71,
+        "height": 21,
+        "source": "IT'S YOLR"
+      },
+      {
+        "x": 69,
+        "y": 243,
+        "width": 73,
+        "height": 21,
+        "source": "FALLTMY"
+      },
+      {
+        "x": 65,
+        "y": 254,
+        "width": 79,
+        "height": 26,
+        "source": "FATHER..."
+      },
+      {
+        "x": 633,
+        "y": 386,
+        "width": 98,
+        "height": 27,
+        "source": "MOURIRAN"
+      },
+      {
+        "x": 631,
+        "y": 403,
+        "width": 102,
+        "height": 24,
+        "source": "TEITAN HIGH"
+      },
+      {
+        "x": 650,
+        "y": 417,
+        "width": 67,
+        "height": 24,
+        "source": "JUNIOR"
+      },
+      {
+        "x": 145,
+        "y": 478,
+        "width": 97,
+        "height": 24,
+        "source": "WHAT?YOUR"
+      },
+      {
+        "x": 367,
+        "y": 477,
+        "width": 48,
+        "height": 22,
+        "source": "CAN'T"
+      },
+      {
+        "x": 145,
+        "y": 493,
+        "width": 98,
+        "height": 21,
+        "source": "DAD'S STLL A"
+      },
+      {
+        "x": 357,
+        "y": 489,
+        "width": 66,
+        "height": 23,
+        "source": "GET ANY"
+      },
+      {
+        "x": 149,
+        "y": 507,
+        "width": 87,
+        "height": 21,
+        "source": "DETECTNE?"
+      },
+      {
+        "x": 282,
+        "y": 502,
+        "width": 38,
+        "height": 22,
+        "source": "da!"
+      },
+      {
+        "x": 358,
+        "y": 503,
+        "width": 63,
+        "height": 21,
+        "source": "WORK!!"
+      },
+      {
+        "x": 62,
+        "y": 693,
+        "width": 36,
+        "height": 42,
+        "source": "$H$"
+      },
+      {
+        "x": 282,
+        "y": 691,
+        "width": 117,
+        "height": 23,
+        "source": "BUT IT'S NOT MY"
+      },
+      {
+        "x": 283,
+        "y": 705,
+        "width": 116,
+        "height": 21,
+        "source": "FALLTHE'S NOT"
+      },
+      {
+        "x": 57,
+        "y": 719,
+        "width": 45,
+        "height": 28,
+        "source": "HO.."
+      },
+      {
+        "x": 269,
+        "y": 719,
+        "width": 142,
+        "height": 21,
+        "source": "GETTING ANY WORK,"
+      },
+      {
+        "x": 279,
+        "y": 731,
+        "width": 124,
+        "height": 24,
+        "source": "IT'S BECALSE HE"
+      },
+      {
+        "x": 285,
+        "y": 742,
+        "width": 111,
+        "height": 28,
+        "source": "SUCKS ATIT..."
+      },
+      {
+        "x": 185,
+        "y": 881,
+        "width": 72,
+        "height": 27,
+        "source": "T.THATS"
+      },
+      {
+        "x": 176,
+        "y": 898,
+        "width": 91,
+        "height": 21,
+        "source": "THE CAPTAIN"
+      },
+      {
+        "x": 164,
+        "y": 908,
+        "width": 113,
+        "height": 26,
+        "source": "OF THE KARATE"
+      },
+      {
+        "x": 185,
+        "y": 925,
+        "width": 74,
+        "height": 21,
+        "source": "TEAM FOR"
+      },
+      {
+        "x": 195,
+        "y": 935,
+        "width": 52,
+        "height": 26,
+        "source": "YOu...."
+      },
+      {
+        "x": 310,
+        "y": 929,
+        "width": 92,
+        "height": 24,
+        "source": "ISAIDIM"
+      },
+      {
+        "x": 314,
+        "y": 943,
+        "width": 82,
+        "height": 24,
+        "source": "NOT MAD"
+      },
+      {
+        "x": 47,
+        "y": 945,
+        "width": 124,
+        "height": 53,
+        "source": "Hohoho"
+      },
+      {
+        "x": 327,
+        "y": 958,
+        "width": 60,
+        "height": 22,
+        "source": "ABOUT"
+      },
+      {
+        "x": 308,
+        "y": 972,
+        "width": 96,
+        "height": 24,
+        "source": "ANYTHING!!"
+      },
+      {
+        "x": 746,
+        "y": 1213,
+        "width": 54,
+        "height": 18,
+        "source": "ader.net"
+      }
+    ],
+    "stages": {
+      "detection_inference_ms": 130.49660000251606,
+      "detection_postprocess_ms": 9.334900008980185,
+      "crop_ms": 1.5808999887667596,
+      "multilingual_preprocess_ms": 5.582000012509525,
+      "korean_preprocess_ms": 5.450599943287671,
+      "korean_inference_ms": 573.4102000133134,
+      "korean_decode_ms": 17.54069997696206,
+      "multilingual_inference_ms": 603.807000152301,
+      "multilingual_decode_ms": 23.333199962507933
+    },
+    "metrics": {
+      "detect_ms": 168.37109997868538,
+      "recognize_ms": 646.5380999725312,
+      "line_cache_hits": 0,
+      "detector": "neural"
+    },
+    "elapsed_ms": 819.2046000040136,
+    "text": "NOTHNG..\nLOOK\nWHAT\nAT YOU,\nARE YOU\nIMNOT\nACTING\nMADE\nANGRY AT\nABOUT,\nLIKE SUCH\nADORK.\nALL THAT\nRAN?\nIT'S YOLR\nFALLTMY\nFATHER...\nMOURIRAN\nTEITAN HIGH\nJUNIOR\nWHAT?YOUR\nCAN'T\nDAD'S STLL A\nGET ANY\nDETECTNE?\nda!\nWORK!!\n$H$\nBUT IT'S NOT MY\nFALLTHE'S NOT\nHO..\nGETTING ANY WORK,\nIT'S BECALSE HE\nSUCKS ATIT...\nT.THATS\nTHE CAPTAIN\nOF THE KARATE\nTEAM FOR\nYOu....\nISAIDIM\nNOT MAD\nHohoho\nABOUT\nANYTHING!!\nader.net"
+  },
+  {
+    "file": "ying2.jpg",
+    "sha256": "ff9dc8fd2e1433e1d3a2fd859054bc86a97b4f12b9afba5b2937de58b1110e58",
+    "dimensions": [
+      800,
+      1233
+    ],
+    "model": "rapid-fixed",
+    "run": 1,
+    "repeat_penalty": 1.0,
+    "blocks": [
+      {
+        "x": 167,
+        "y": 159,
+        "width": 81,
+        "height": 24,
+        "source": "NOTHNG.."
+      },
+      {
+        "x": 678,
+        "y": 150,
+        "width": 54,
+        "height": 25,
+        "source": "LOOK"
+      },
+      {
+        "x": 332,
+        "y": 163,
+        "width": 51,
+        "height": 22,
+        "source": "WHAT"
+      },
+      {
+        "x": 671,
+        "y": 165,
+        "width": 65,
+        "height": 25,
+        "source": "AT YOU,"
+      },
+      {
+        "x": 325,
+        "y": 178,
+        "width": 65,
+        "height": 21,
+        "source": "ARE YOU"
+      },
+      {
+        "x": 77,
+        "y": 189,
+        "width": 58,
+        "height": 21,
+        "source": "IMNOT"
+      },
+      {
+        "x": 674,
+        "y": 181,
+        "width": 62,
+        "height": 22,
+        "source": "ACTING"
+      },
+      {
+        "x": 332,
+        "y": 188,
+        "width": 50,
+        "height": 25,
+        "source": "MADE"
+      },
+      {
+        "x": 70,
+        "y": 204,
+        "width": 72,
+        "height": 20,
+        "source": "ANGRY AT"
+      },
+      {
+        "x": 331,
+        "y": 204,
+        "width": 54,
+        "height": 21,
+        "source": "ABOUT,"
+      },
+      {
+        "x": 660,
+        "y": 195,
+        "width": 91,
+        "height": 23,
+        "source": "LIKE SUCH"
+      },
+      {
+        "x": 660,
+        "y": 205,
+        "width": 90,
+        "height": 31,
+        "source": "ADORK."
+      },
+      {
+        "x": 72,
+        "y": 216,
+        "width": 70,
+        "height": 21,
+        "source": "ALL THAT"
+      },
+      {
+        "x": 333,
+        "y": 217,
+        "width": 47,
+        "height": 22,
+        "source": "RAN?"
+      },
+      {
+        "x": 71,
+        "y": 229,
+        "width": 71,
+        "height": 21,
+        "source": "IT'S YOLR"
+      },
+      {
+        "x": 69,
+        "y": 243,
+        "width": 73,
+        "height": 21,
+        "source": "FALLTMY"
+      },
+      {
+        "x": 65,
+        "y": 254,
+        "width": 79,
+        "height": 26,
+        "source": "FATHER..."
+      },
+      {
+        "x": 633,
+        "y": 386,
+        "width": 98,
+        "height": 27,
+        "source": "MOURIRAN"
+      },
+      {
+        "x": 631,
+        "y": 403,
+        "width": 102,
+        "height": 24,
+        "source": "TEITAN HIGH"
+      },
+      {
+        "x": 650,
+        "y": 417,
+        "width": 67,
+        "height": 24,
+        "source": "JUNIOR"
+      },
+      {
+        "x": 145,
+        "y": 478,
+        "width": 97,
+        "height": 24,
+        "source": "WHAT?YOUR"
+      },
+      {
+        "x": 367,
+        "y": 477,
+        "width": 48,
+        "height": 22,
+        "source": "CAN'T"
+      },
+      {
+        "x": 145,
+        "y": 493,
+        "width": 98,
+        "height": 21,
+        "source": "DAD'S STLL A"
+      },
+      {
+        "x": 357,
+        "y": 489,
+        "width": 66,
+        "height": 23,
+        "source": "GET ANY"
+      },
+      {
+        "x": 149,
+        "y": 507,
+        "width": 87,
+        "height": 21,
+        "source": "DETECTNE?"
+      },
+      {
+        "x": 282,
+        "y": 502,
+        "width": 38,
+        "height": 22,
+        "source": "da!"
+      },
+      {
+        "x": 358,
+        "y": 503,
+        "width": 63,
+        "height": 21,
+        "source": "WORK!!"
+      },
+      {
+        "x": 62,
+        "y": 693,
+        "width": 36,
+        "height": 42,
+        "source": "$H$"
+      },
+      {
+        "x": 282,
+        "y": 691,
+        "width": 117,
+        "height": 23,
+        "source": "BUT IT'S NOT MY"
+      },
+      {
+        "x": 283,
+        "y": 705,
+        "width": 116,
+        "height": 21,
+        "source": "FALLTHE'S NOT"
+      },
+      {
+        "x": 57,
+        "y": 719,
+        "width": 45,
+        "height": 28,
+        "source": "HO.."
+      },
+      {
+        "x": 269,
+        "y": 719,
+        "width": 142,
+        "height": 21,
+        "source": "GETTING ANY WORK,"
+      },
+      {
+        "x": 279,
+        "y": 731,
+        "width": 124,
+        "height": 24,
+        "source": "IT'S BECALSE HE"
+      },
+      {
+        "x": 285,
+        "y": 742,
+        "width": 111,
+        "height": 28,
+        "source": "SUCKS ATIT..."
+      },
+      {
+        "x": 185,
+        "y": 881,
+        "width": 72,
+        "height": 27,
+        "source": "T.THATS"
+      },
+      {
+        "x": 176,
+        "y": 898,
+        "width": 91,
+        "height": 21,
+        "source": "THE CAPTAIN"
+      },
+      {
+        "x": 164,
+        "y": 908,
+        "width": 113,
+        "height": 26,
+        "source": "OF THE KARATE"
+      },
+      {
+        "x": 185,
+        "y": 925,
+        "width": 74,
+        "height": 21,
+        "source": "TEAM FOR"
+      },
+      {
+        "x": 195,
+        "y": 935,
+        "width": 52,
+        "height": 26,
+        "source": "YOu...."
+      },
+      {
+        "x": 310,
+        "y": 929,
+        "width": 92,
+        "height": 24,
+        "source": "ISAIDIM"
+      },
+      {
+        "x": 314,
+        "y": 943,
+        "width": 82,
+        "height": 24,
+        "source": "NOT MAD"
+      },
+      {
+        "x": 47,
+        "y": 945,
+        "width": 124,
+        "height": 53,
+        "source": "Hohoho"
+      },
+      {
+        "x": 327,
+        "y": 958,
+        "width": 60,
+        "height": 22,
+        "source": "ABOUT"
+      },
+      {
+        "x": 308,
+        "y": 972,
+        "width": 96,
+        "height": 24,
+        "source": "ANYTHING!!"
+      },
+      {
+        "x": 746,
+        "y": 1213,
+        "width": 54,
+        "height": 18,
+        "source": "ader.net"
+      }
+    ],
+    "stages": {
+      "detection_inference_ms": 141.68380002956837,
+      "detection_postprocess_ms": 9.286899992730469,
+      "crop_ms": 1.7018999787978828,
+      "multilingual_preprocess_ms": 4.193000146187842,
+      "multilingual_inference_ms": 491.1233999882825,
+      "multilingual_decode_ms": 18.6089999624528
+    },
+    "metrics": {
+      "detect_ms": 180.8798999991268,
+      "recognize_ms": 525.3295000293292,
+      "line_cache_hits": 0,
+      "detector": "neural"
+    },
+    "elapsed_ms": 710.3805999504402,
+    "text": "NOTHNG..\nLOOK\nWHAT\nAT YOU,\nARE YOU\nIMNOT\nACTING\nMADE\nANGRY AT\nABOUT,\nLIKE SUCH\nADORK.\nALL THAT\nRAN?\nIT'S YOLR\nFALLTMY\nFATHER...\nMOURIRAN\nTEITAN HIGH\nJUNIOR\nWHAT?YOUR\nCAN'T\nDAD'S STLL A\nGET ANY\nDETECTNE?\nda!\nWORK!!\n$H$\nBUT IT'S NOT MY\nFALLTHE'S NOT\nHO..\nGETTING ANY WORK,\nIT'S BECALSE HE\nSUCKS ATIT...\nT.THATS\nTHE CAPTAIN\nOF THE KARATE\nTEAM FOR\nYOu....\nISAIDIM\nNOT MAD\nHohoho\nABOUT\nANYTHING!!\nader.net"
+  },
+  {
+    "file": "han1.jpg",
+    "sha256": "b1f00e0bac7e22107d22b67e4fd67cdf6eb5ff9c34f68dfb9278993b63577e97",
+    "dimensions": [
+      2099,
+      1740
+    ],
+    "model": "rapid-auto",
+    "run": 2,
+    "repeat_penalty": 1.0,
+    "blocks": [
+      {
+        "x": 38,
+        "y": 37,
+        "width": 192,
+        "height": 41,
+        "source": "21화 미끼(1)"
+      },
+      {
+        "x": 38,
+        "y": 78,
+        "width": 104,
+        "height": 24,
+        "source": "2023.12.21."
+      },
+      {
+        "x": 40,
+        "y": 148,
+        "width": 479,
+        "height": 36,
+        "source": "이번 던전의 출현 몬스터는 코볼트였다."
+      },
+      {
+        "x": 38,
+        "y": 228,
+        "width": 751,
+        "height": 36,
+        "source": "그동안 상대해 온 고블린보다는 명백히 전투력이 강한 괴수종."
+      },
+      {
+        "x": 39,
+        "y": 349,
+        "width": 250,
+        "height": 38,
+        "source": "[남은 코볼트: 5마리]"
+      },
+      {
+        "x": 39,
+        "y": 470,
+        "width": 918,
+        "height": 36,
+        "source": "칼리아 대륙에서 상대해 본 적이 없는 종이지만, 이론적으로는 잘 알고 있다."
+      },
+      {
+        "x": 39,
+        "y": 550,
+        "width": 832,
+        "height": 36,
+        "source": "성인 남성 정도 되는 사이즈에 피부 가죽이 질긴 것이 대표적인 특징."
+      },
+      {
+        "x": 40,
+        "y": 631,
+        "width": 1848,
+        "height": 37,
+        "source": "나름 지능도 갖춘 데다 내구력이 뛰어난 녀석들이기에 E급 던전에서 나오는 몬스터치고는 까다로운 편이지만,개체 수가 많지는 않기에 큰 부담은 없었다."
+      },
+      {
+        "x": 38,
+        "y": 711,
+        "width": 367,
+        "height": 36,
+        "source": "\"형은 나서지 말고 구경만 해.\""
+      },
+      {
+        "x": 38,
+        "y": 792,
+        "width": 616,
+        "height": 36,
+        "source": "\"알고 있다.코볼트 따위에 내가 나설 이유는 없지.\""
+      },
+      {
+        "x": 38,
+        "y": 872,
+        "width": 958,
+        "height": 36,
+        "source": "오늘 그의 역할은 나의 해원검법이 실전에서 어떻게 적용되는지를 평가하는 것."
+      },
+      {
+        "x": 40,
+        "y": 953,
+        "width": 678,
+        "height": 36,
+        "source": "이라고 서지원은 알고 있지만 사실은 더 중요한 게 있다."
+      },
+      {
+        "x": 40,
+        "y": 1033,
+        "width": 611,
+        "height": 36,
+        "source": "나중에 등장할 살수를 제압하는 일.그게 메인이다."
+      },
+      {
+        "x": 38,
+        "y": 1114,
+        "width": 190,
+        "height": 36,
+        "source": "\"오빠,저는요?\""
+      },
+      {
+        "x": 38,
+        "y": 1195,
+        "width": 615,
+        "height": 36,
+        "source": "\"내가 셋을 잡을 거고 네 몫은 두 마리.불만 없지?\""
+      },
+      {
+        "x": 38,
+        "y": 1275,
+        "width": 660,
+        "height": 36,
+        "source": "\"뭐, 이 던전은 해원검가에서 입찰을 따낸 것이니까요.\""
+      },
+      {
+        "x": 38,
+        "y": 1356,
+        "width": 858,
+        "height": 36,
+        "source": "오늘 중요한 건 던전 보상이 아니니, 애먼 데에 힘을 다 뺄 이유는 없다."
+      },
+      {
+        "x": 38,
+        "y": 1436,
+        "width": 976,
+        "height": 36,
+        "source": "서지원이 있긴 하지만 혹시 모를 상황에 대비해 마나를 비축해 놓을 필요도 있고."
+      },
+      {
+        "x": 38,
+        "y": 1517,
+        "width": 241,
+        "height": 36,
+        "source": "“모자나 똑바로 써.\""
+      },
+      {
+        "x": 38,
+        "y": 1597,
+        "width": 546,
+        "height": 36,
+        "source": "\"알겠어요! 그런데 도대체 이 모자가 뭐라고.\""
+      },
+      {
+        "x": 38,
+        "y": 1678,
+        "width": 590,
+        "height": 36,
+        "source": "한예지를 이 파티에 넣는 건 그리 어렵지 않았다."
+      }
+    ],
+    "stages": {
+      "crop_ms": 1.9691999768838286,
+      "multilingual_preprocess_ms": 10.318399989046156,
+      "korean_preprocess_ms": 12.267099984455854,
+      "korean_inference_ms": 1338.6808999930508,
+      "korean_decode_ms": 25.693100003991276,
+      "multilingual_inference_ms": 1367.0464000315405,
+      "multilingual_decode_ms": 42.78050007997081
+    },
+    "metrics": {
+      "detect_ms": 25.617800012696534,
+      "recognize_ms": 1439.653899986297,
+      "line_cache_hits": 0,
+      "detector": "projection"
+    },
+    "elapsed_ms": 1470.296999963466,
+    "text": "21화 미끼(1)\n2023.12.21.\n이번 던전의 출현 몬스터는 코볼트였다.\n그동안 상대해 온 고블린보다는 명백히 전투력이 강한 괴수종.\n[남은 코볼트: 5마리]\n칼리아 대륙에서 상대해 본 적이 없는 종이지만, 이론적으로는 잘 알고 있다.\n성인 남성 정도 되는 사이즈에 피부 가죽이 질긴 것이 대표적인 특징.\n나름 지능도 갖춘 데다 내구력이 뛰어난 녀석들이기에 E급 던전에서 나오는 몬스터치고는 까다로운 편이지만,개체 수가 많지는 않기에 큰 부담은 없었다.\n\"형은 나서지 말고 구경만 해.\"\n\"알고 있다.코볼트 따위에 내가 나설 이유는 없지.\"\n오늘 그의 역할은 나의 해원검법이 실전에서 어떻게 적용되는지를 평가하는 것.\n이라고 서지원은 알고 있지만 사실은 더 중요한 게 있다.\n나중에 등장할 살수를 제압하는 일.그게 메인이다.\n\"오빠,저는요?\"\n\"내가 셋을 잡을 거고 네 몫은 두 마리.불만 없지?\"\n\"뭐, 이 던전은 해원검가에서 입찰을 따낸 것이니까요.\"\n오늘 중요한 건 던전 보상이 아니니, 애먼 데에 힘을 다 뺄 이유는 없다.\n서지원이 있긴 하지만 혹시 모를 상황에 대비해 마나를 비축해 놓을 필요도 있고.\n“모자나 똑바로 써.\"\n\"알겠어요! 그런데 도대체 이 모자가 뭐라고.\"\n한예지를 이 파티에 넣는 건 그리 어렵지 않았다."
+  },
+  {
+    "file": "han1.jpg",
+    "sha256": "b1f00e0bac7e22107d22b67e4fd67cdf6eb5ff9c34f68dfb9278993b63577e97",
+    "dimensions": [
+      2099,
+      1740
+    ],
+    "model": "rapid-fixed",
+    "run": 2,
+    "repeat_penalty": 1.0,
+    "blocks": [
+      {
+        "x": 38,
+        "y": 37,
+        "width": 192,
+        "height": 41,
+        "source": "21화 미끼(1)"
+      },
+      {
+        "x": 38,
+        "y": 78,
+        "width": 104,
+        "height": 24,
+        "source": "2023.12.21."
+      },
+      {
+        "x": 40,
+        "y": 148,
+        "width": 479,
+        "height": 36,
+        "source": "이번 던전의 출현 몬스터는 코볼트였다."
+      },
+      {
+        "x": 38,
+        "y": 228,
+        "width": 751,
+        "height": 36,
+        "source": "그동안 상대해 온 고블린보다는 명백히 전투력이 강한 괴수종."
+      },
+      {
+        "x": 39,
+        "y": 349,
+        "width": 250,
+        "height": 38,
+        "source": "[남은 코볼트: 5마리]"
+      },
+      {
+        "x": 39,
+        "y": 470,
+        "width": 918,
+        "height": 36,
+        "source": "칼리아 대륙에서 상대해 본 적이 없는 종이지만, 이론적으로는 잘 알고 있다."
+      },
+      {
+        "x": 39,
+        "y": 550,
+        "width": 832,
+        "height": 36,
+        "source": "성인 남성 정도 되는 사이즈에 피부 가죽이 질긴 것이 대표적인 특징."
+      },
+      {
+        "x": 40,
+        "y": 631,
+        "width": 1848,
+        "height": 37,
+        "source": "나름 지능도 갖춘 데다 내구력이 뛰어난 녀석들이기에 E급 던전에서 나오는 몬스터치고는 까다로운 편이지만,개체 수가 많지는 않기에 큰 부담은 없었다."
+      },
+      {
+        "x": 38,
+        "y": 711,
+        "width": 367,
+        "height": 36,
+        "source": "\"형은 나서지 말고 구경만 해.\""
+      },
+      {
+        "x": 38,
+        "y": 792,
+        "width": 616,
+        "height": 36,
+        "source": "\"알고 있다.코볼트 따위에 내가 나설 이유는 없지.\""
+      },
+      {
+        "x": 38,
+        "y": 872,
+        "width": 958,
+        "height": 36,
+        "source": "오늘 그의 역할은 나의 해원검법이 실전에서 어떻게 적용되는지를 평가하는 것."
+      },
+      {
+        "x": 40,
+        "y": 953,
+        "width": 678,
+        "height": 36,
+        "source": "이라고 서지원은 알고 있지만 사실은 더 중요한 게 있다."
+      },
+      {
+        "x": 40,
+        "y": 1033,
+        "width": 611,
+        "height": 36,
+        "source": "나중에 등장할 살수를 제압하는 일.그게 메인이다."
+      },
+      {
+        "x": 38,
+        "y": 1114,
+        "width": 190,
+        "height": 36,
+        "source": "\"오빠,저는요?\""
+      },
+      {
+        "x": 38,
+        "y": 1195,
+        "width": 615,
+        "height": 36,
+        "source": "\"내가 셋을 잡을 거고 네 몫은 두 마리.불만 없지?\""
+      },
+      {
+        "x": 38,
+        "y": 1275,
+        "width": 660,
+        "height": 36,
+        "source": "\"뭐, 이 던전은 해원검가에서 입찰을 따낸 것이니까요.\""
+      },
+      {
+        "x": 38,
+        "y": 1356,
+        "width": 858,
+        "height": 36,
+        "source": "오늘 중요한 건 던전 보상이 아니니, 애먼 데에 힘을 다 뺄 이유는 없다."
+      },
+      {
+        "x": 38,
+        "y": 1436,
+        "width": 976,
+        "height": 36,
+        "source": "서지원이 있긴 하지만 혹시 모를 상황에 대비해 마나를 비축해 놓을 필요도 있고."
+      },
+      {
+        "x": 38,
+        "y": 1517,
+        "width": 241,
+        "height": 36,
+        "source": "“모자나 똑바로 써.\""
+      },
+      {
+        "x": 38,
+        "y": 1597,
+        "width": 546,
+        "height": 36,
+        "source": "\"알겠어요! 그런데 도대체 이 모자가 뭐라고.\""
+      },
+      {
+        "x": 38,
+        "y": 1678,
+        "width": 590,
+        "height": 36,
+        "source": "한예지를 이 파티에 넣는 건 그리 어렵지 않았다."
+      }
+    ],
+    "stages": {
+      "crop_ms": 2.017799997702241,
+      "korean_preprocess_ms": 9.619700082112104,
+      "korean_inference_ms": 999.026799981948,
+      "korean_decode_ms": 19.518300017807633
+    },
+    "metrics": {
+      "detect_ms": 26.30719996523112,
+      "recognize_ms": 1044.0004999982193,
+      "line_cache_hits": 0,
+      "detector": "projection"
+    },
+    "elapsed_ms": 1075.5130000179633,
+    "text": "21화 미끼(1)\n2023.12.21.\n이번 던전의 출현 몬스터는 코볼트였다.\n그동안 상대해 온 고블린보다는 명백히 전투력이 강한 괴수종.\n[남은 코볼트: 5마리]\n칼리아 대륙에서 상대해 본 적이 없는 종이지만, 이론적으로는 잘 알고 있다.\n성인 남성 정도 되는 사이즈에 피부 가죽이 질긴 것이 대표적인 특징.\n나름 지능도 갖춘 데다 내구력이 뛰어난 녀석들이기에 E급 던전에서 나오는 몬스터치고는 까다로운 편이지만,개체 수가 많지는 않기에 큰 부담은 없었다.\n\"형은 나서지 말고 구경만 해.\"\n\"알고 있다.코볼트 따위에 내가 나설 이유는 없지.\"\n오늘 그의 역할은 나의 해원검법이 실전에서 어떻게 적용되는지를 평가하는 것.\n이라고 서지원은 알고 있지만 사실은 더 중요한 게 있다.\n나중에 등장할 살수를 제압하는 일.그게 메인이다.\n\"오빠,저는요?\"\n\"내가 셋을 잡을 거고 네 몫은 두 마리.불만 없지?\"\n\"뭐, 이 던전은 해원검가에서 입찰을 따낸 것이니까요.\"\n오늘 중요한 건 던전 보상이 아니니, 애먼 데에 힘을 다 뺄 이유는 없다.\n서지원이 있긴 하지만 혹시 모를 상황에 대비해 마나를 비축해 놓을 필요도 있고.\n“모자나 똑바로 써.\"\n\"알겠어요! 그런데 도대체 이 모자가 뭐라고.\"\n한예지를 이 파티에 넣는 건 그리 어렵지 않았다."
+  },
+  {
+    "file": "han2.jpg",
+    "sha256": "efd8478115a23ecf136ab60386f43914b602f90f536d0f9009695cadb7ede959",
+    "dimensions": [
+      852,
+      1823
+    ],
+    "model": "rapid-auto",
+    "run": 2,
+    "repeat_penalty": 1.0,
+    "blocks": [
+      {
+        "x": 253,
+        "y": 108,
+        "width": 218,
+        "height": 38,
+        "source": "이 여자는 백서정."
+      },
+      {
+        "x": 217,
+        "y": 146,
+        "width": 291,
+        "height": 40,
+        "source": "나와는 고등학생 때부터"
+      },
+      {
+        "x": 283,
+        "y": 185,
+        "width": 159,
+        "height": 42,
+        "source": "알던사이다."
+      },
+      {
+        "x": 388,
+        "y": 1164,
+        "width": 261,
+        "height": 42,
+        "source": "현재는 남자친구에게"
+      },
+      {
+        "x": 353,
+        "y": 1205,
+        "width": 330,
+        "height": 40,
+        "source": "천만 원 가량의 돈을 뜯기고"
+      },
+      {
+        "x": 391,
+        "y": 1244,
+        "width": 254,
+        "height": 40,
+        "source": "잠수 이별 당한 상태."
+      },
+      {
+        "x": 215,
+        "y": 1456,
+        "width": 162,
+        "height": 42,
+        "source": "수진아.너도"
+      },
+      {
+        "x": 211,
+        "y": 1495,
+        "width": 170,
+        "height": 41,
+        "source": "생각좀해봐"
+      },
+      {
+        "x": 373,
+        "y": 1607,
+        "width": 178,
+        "height": 41,
+        "source": "내가 아빠한테"
+      },
+      {
+        "x": 329,
+        "y": 1647,
+        "width": 266,
+        "height": 40,
+        "source": "뭐라고 말해야 적당히"
+      },
+      {
+        "x": 348,
+        "y": 1686,
+        "width": 226,
+        "height": 41,
+        "source": "넘어갈 수 있을까?"
+      }
+    ],
+    "stages": {
+      "detection_inference_ms": 218.0800000205636,
+      "detection_postprocess_ms": 8.257300010882318,
+      "crop_ms": 1.1526999878697097,
+      "korean_preprocess_ms": 3.3814999042078853,
+      "multilingual_preprocess_ms": 2.1127000800333917,
+      "korean_inference_ms": 233.48379996605217,
+      "korean_decode_ms": 5.383799958508462,
+      "multilingual_inference_ms": 251.54129992006347,
+      "multilingual_decode_ms": 7.917399925645441
+    },
+    "metrics": {
+      "detect_ms": 274.03560001403093,
+      "recognize_ms": 265.661200042814,
+      "line_cache_hits": 0,
+      "detector": "neural"
+    },
+    "elapsed_ms": 542.1696999692358,
+    "text": "이 여자는 백서정.\n나와는 고등학생 때부터\n알던사이다.\n현재는 남자친구에게\n천만 원 가량의 돈을 뜯기고\n잠수 이별 당한 상태.\n수진아.너도\n생각좀해봐\n내가 아빠한테\n뭐라고 말해야 적당히\n넘어갈 수 있을까?"
+  },
+  {
+    "file": "han2.jpg",
+    "sha256": "efd8478115a23ecf136ab60386f43914b602f90f536d0f9009695cadb7ede959",
+    "dimensions": [
+      852,
+      1823
+    ],
+    "model": "rapid-fixed",
+    "run": 2,
+    "repeat_penalty": 1.0,
+    "blocks": [
+      {
+        "x": 253,
+        "y": 108,
+        "width": 218,
+        "height": 38,
+        "source": "이 여자는 백서정."
+      },
+      {
+        "x": 217,
+        "y": 146,
+        "width": 291,
+        "height": 40,
+        "source": "나와는 고등학생 때부터"
+      },
+      {
+        "x": 283,
+        "y": 185,
+        "width": 159,
+        "height": 42,
+        "source": "알던사이다."
+      },
+      {
+        "x": 388,
+        "y": 1164,
+        "width": 261,
+        "height": 42,
+        "source": "현재는 남자친구에게"
+      },
+      {
+        "x": 353,
+        "y": 1205,
+        "width": 330,
+        "height": 40,
+        "source": "천만 원 가량의 돈을 뜯기고"
+      },
+      {
+        "x": 391,
+        "y": 1244,
+        "width": 254,
+        "height": 40,
+        "source": "잠수 이별 당한 상태."
+      },
+      {
+        "x": 215,
+        "y": 1456,
+        "width": 162,
+        "height": 42,
+        "source": "수진아.너도"
+      },
+      {
+        "x": 211,
+        "y": 1495,
+        "width": 170,
+        "height": 41,
+        "source": "생각좀해봐"
+      },
+      {
+        "x": 373,
+        "y": 1607,
+        "width": 178,
+        "height": 41,
+        "source": "내가 아빠한테"
+      },
+      {
+        "x": 329,
+        "y": 1647,
+        "width": 266,
+        "height": 40,
+        "source": "뭐라고 말해야 적당히"
+      },
+      {
+        "x": 348,
+        "y": 1686,
+        "width": 226,
+        "height": 41,
+        "source": "넘어갈 수 있을까?"
+      }
+    ],
+    "stages": {
+      "detection_inference_ms": 240.97820004681125,
+      "detection_postprocess_ms": 7.549899979494512,
+      "crop_ms": 1.149799965787679,
+      "korean_preprocess_ms": 1.3720999704673886,
+      "korean_inference_ms": 148.4861000208184,
+      "korean_decode_ms": 3.4236000501550734
+    },
+    "metrics": {
+      "detect_ms": 307.7460000058636,
+      "recognize_ms": 156.28920000744984,
+      "line_cache_hits": 0,
+      "detector": "neural"
+    },
+    "elapsed_ms": 466.4727000053972,
+    "text": "이 여자는 백서정.\n나와는 고등학생 때부터\n알던사이다.\n현재는 남자친구에게\n천만 원 가량의 돈을 뜯기고\n잠수 이별 당한 상태.\n수진아.너도\n생각좀해봐\n내가 아빠한테\n뭐라고 말해야 적당히\n넘어갈 수 있을까?"
+  },
+  {
+    "file": "ri1.jpg",
+    "sha256": "64d4c66372ccad9065a29add9d3e7d4a2d7656361fbf4198faac29c415ab5ce6",
+    "dimensions": [
+      1459,
+      1459
+    ],
+    "model": "rapid-auto",
+    "run": 2,
+    "repeat_penalty": 1.0,
+    "blocks": [
+      {
+        "x": 511,
+        "y": 9,
+        "width": 275,
+        "height": 39,
+        "source": "俺のスキルは《会員》"
+      },
+      {
+        "x": 58,
+        "y": 79,
+        "width": 1223,
+        "height": 53,
+        "source": "《剣聖》になった弟に追放された俺のスキルは《会員》で"
+      },
+      {
+        "x": 34,
+        "y": 155,
+        "width": 1250,
+        "height": 46,
+        "source": "した〜ハズレスキルだと思っていたら、ポイントで好きな"
+      },
+      {
+        "x": 416,
+        "y": 225,
+        "width": 476,
+        "height": 50,
+        "source": "能力を買えるらしい～"
+      },
+      {
+        "x": 1026,
+        "y": 327,
+        "width": 274,
+        "height": 34,
+        "source": "作者：アカメノコバチ"
+      },
+      {
+        "x": 853,
+        "y": 381,
+        "width": 449,
+        "height": 32,
+        "source": "最新ピソド掲載：2026/09/20"
+      },
+      {
+        "x": 10,
+        "y": 461,
+        "width": 286,
+        "height": 36,
+        "source": "五歳の「授与の儀」。"
+      },
+      {
+        "x": 9,
+        "y": 559,
+        "width": 1256,
+        "height": 36,
+        "source": "騎士の名門・ヴァルディス侯爵家の長男アレンが授かったのは、誰も聞いたことのない固有スキル《会"
+      },
+      {
+        "x": 8,
+        "y": 604,
+        "width": 156,
+        "height": 40,
+        "source": "員》だった。"
+      },
+      {
+        "x": 11,
+        "y": 707,
+        "width": 1126,
+        "height": 32,
+        "source": "方、双子の弟カイルが授かったのは、剣士なら誰もが憧れる最高位の固有スキル《剣聖》。"
+      },
+      {
+        "x": 10,
+        "y": 805,
+        "width": 940,
+        "height": 33,
+        "source": "昨日まで一度も負けたことのなかった弟に、アレンは手も足も出ず敗北する。"
+      },
+      {
+        "x": 10,
+        "y": 903,
+        "width": 1130,
+        "height": 33,
+        "source": "次期当主の座を奪われ、父から告げられたのは、「今日中に屋敷を出ろ」という言葉だった。"
+      },
+      {
+        "x": 10,
+        "y": 1000,
+        "width": 695,
+        "height": 35,
+        "source": "傷だらけの身体で家を追い出され、街道で倒れたアレン。"
+      },
+      {
+        "x": 10,
+        "y": 1097,
+        "width": 587,
+        "height": 35,
+        "source": "そこで初めて、《会員》の本当の力が発動する。"
+      },
+      {
+        "x": 26,
+        "y": 1196,
+        "width": 327,
+        "height": 31,
+        "source": "【会員登録が完了しました】"
+      },
+      {
+        "x": 25,
+        "y": 1243,
+        "width": 283,
+        "height": 36,
+        "source": "【初回登録特典：100P】"
+      },
+      {
+        "x": 25,
+        "y": 1291,
+        "width": 218,
+        "height": 37,
+        "source": "【筋強化30P】"
+      },
+      {
+        "x": 25,
+        "y": 1340,
+        "width": 217,
+        "height": 38,
+        "source": "【耐久強化30P】"
+      },
+      {
+        "x": 24,
+        "y": 1390,
+        "width": 357,
+        "height": 35,
+        "source": "【敏捷強化>>続きを読む"
+      }
+    ],
+    "stages": {
+      "detection_inference_ms": 326.4847999671474,
+      "detection_postprocess_ms": 8.664200024213642,
+      "crop_ms": 1.6996999620459974,
+      "multilingual_preprocess_ms": 11.037599993869662,
+      "korean_preprocess_ms": 10.623299924191087,
+      "korean_inference_ms": 1176.578700018581,
+      "korean_decode_ms": 21.11709991004318,
+      "multilingual_inference_ms": 1202.0890000276268,
+      "multilingual_decode_ms": 33.814100024756044
+    },
+    "metrics": {
+      "detect_ms": 399.69140000175685,
+      "recognize_ms": 1265.2200000011362,
+      "line_cache_hits": 0,
+      "detector": "neural"
+    },
+    "elapsed_ms": 1670.2351999701932,
+    "text": "俺のスキルは《会員》\n《剣聖》になった弟に追放された俺のスキルは《会員》で\nした〜ハズレスキルだと思っていたら、ポイントで好きな\n能力を買えるらしい～\n作者：アカメノコバチ\n最新ピソド掲載：2026/09/20\n五歳の「授与の儀」。\n騎士の名門・ヴァルディス侯爵家の長男アレンが授かったのは、誰も聞いたことのない固有スキル《会\n員》だった。\n方、双子の弟カイルが授かったのは、剣士なら誰もが憧れる最高位の固有スキル《剣聖》。\n昨日まで一度も負けたことのなかった弟に、アレンは手も足も出ず敗北する。\n次期当主の座を奪われ、父から告げられたのは、「今日中に屋敷を出ろ」という言葉だった。\n傷だらけの身体で家を追い出され、街道で倒れたアレン。\nそこで初めて、《会員》の本当の力が発動する。\n【会員登録が完了しました】\n【初回登録特典：100P】\n【筋強化30P】\n【耐久強化30P】\n【敏捷強化>>続きを読む"
+  },
+  {
+    "file": "ri1.jpg",
+    "sha256": "64d4c66372ccad9065a29add9d3e7d4a2d7656361fbf4198faac29c415ab5ce6",
+    "dimensions": [
+      1459,
+      1459
+    ],
+    "model": "rapid-fixed",
+    "run": 2,
+    "repeat_penalty": 1.0,
+    "blocks": [
+      {
+        "x": 511,
+        "y": 9,
+        "width": 275,
+        "height": 39,
+        "source": "俺のスキルは《会員》"
+      },
+      {
+        "x": 58,
+        "y": 79,
+        "width": 1223,
+        "height": 53,
+        "source": "《剣聖》になった弟に追放された俺のスキルは《会員》で"
+      },
+      {
+        "x": 34,
+        "y": 155,
+        "width": 1250,
+        "height": 46,
+        "source": "した〜ハズレスキルだと思っていたら、ポイントで好きな"
+      },
+      {
+        "x": 416,
+        "y": 225,
+        "width": 476,
+        "height": 50,
+        "source": "能力を買えるらしい～"
+      },
+      {
+        "x": 1026,
+        "y": 327,
+        "width": 274,
+        "height": 34,
+        "source": "作者：アカメノコバチ"
+      },
+      {
+        "x": 853,
+        "y": 381,
+        "width": 449,
+        "height": 32,
+        "source": "最新ピソド掲載：2026/09/20"
+      },
+      {
+        "x": 10,
+        "y": 461,
+        "width": 286,
+        "height": 36,
+        "source": "五歳の「授与の儀」。"
+      },
+      {
+        "x": 9,
+        "y": 559,
+        "width": 1256,
+        "height": 36,
+        "source": "騎士の名門・ヴァルディス侯爵家の長男アレンが授かったのは、誰も聞いたことのない固有スキル《会"
+      },
+      {
+        "x": 8,
+        "y": 604,
+        "width": 156,
+        "height": 40,
+        "source": "員》だった。"
+      },
+      {
+        "x": 11,
+        "y": 707,
+        "width": 1126,
+        "height": 32,
+        "source": "方、双子の弟カイルが授かったのは、剣士なら誰もが憧れる最高位の固有スキル《剣聖》。"
+      },
+      {
+        "x": 10,
+        "y": 805,
+        "width": 940,
+        "height": 33,
+        "source": "昨日まで一度も負けたことのなかった弟に、アレンは手も足も出ず敗北する。"
+      },
+      {
+        "x": 10,
+        "y": 903,
+        "width": 1130,
+        "height": 33,
+        "source": "次期当主の座を奪われ、父から告げられたのは、「今日中に屋敷を出ろ」という言葉だった。"
+      },
+      {
+        "x": 10,
+        "y": 1000,
+        "width": 695,
+        "height": 35,
+        "source": "傷だらけの身体で家を追い出され、街道で倒れたアレン。"
+      },
+      {
+        "x": 10,
+        "y": 1097,
+        "width": 587,
+        "height": 35,
+        "source": "そこで初めて、《会員》の本当の力が発動する。"
+      },
+      {
+        "x": 26,
+        "y": 1196,
+        "width": 327,
+        "height": 31,
+        "source": "【会員登録が完了しました】"
+      },
+      {
+        "x": 25,
+        "y": 1243,
+        "width": 283,
+        "height": 36,
+        "source": "【初回登録特典：100P】"
+      },
+      {
+        "x": 25,
+        "y": 1291,
+        "width": 218,
+        "height": 37,
+        "source": "【筋強化30P】"
+      },
+      {
+        "x": 25,
+        "y": 1340,
+        "width": 217,
+        "height": 38,
+        "source": "【耐久強化30P】"
+      },
+      {
+        "x": 24,
+        "y": 1390,
+        "width": 357,
+        "height": 35,
+        "source": "【敏捷強化>>続きを読む"
+      }
+    ],
+    "stages": {
+      "detection_inference_ms": 306.4369999920018,
+      "detection_postprocess_ms": 9.0776999713853,
+      "crop_ms": 2.5787000195123255,
+      "multilingual_preprocess_ms": 9.598199918400496,
+      "multilingual_inference_ms": 786.5555000025779,
+      "multilingual_decode_ms": 22.783700027503073
+    },
+    "metrics": {
+      "detect_ms": 377.52959999488667,
+      "recognize_ms": 833.2674000412226,
+      "line_cache_hits": 0,
+      "detector": "neural"
+    },
+    "elapsed_ms": 1216.323399974499,
+    "text": "俺のスキルは《会員》\n《剣聖》になった弟に追放された俺のスキルは《会員》で\nした〜ハズレスキルだと思っていたら、ポイントで好きな\n能力を買えるらしい～\n作者：アカメノコバチ\n最新ピソド掲載：2026/09/20\n五歳の「授与の儀」。\n騎士の名門・ヴァルディス侯爵家の長男アレンが授かったのは、誰も聞いたことのない固有スキル《会\n員》だった。\n方、双子の弟カイルが授かったのは、剣士なら誰もが憧れる最高位の固有スキル《剣聖》。\n昨日まで一度も負けたことのなかった弟に、アレンは手も足も出ず敗北する。\n次期当主の座を奪われ、父から告げられたのは、「今日中に屋敷を出ろ」という言葉だった。\n傷だらけの身体で家を追い出され、街道で倒れたアレン。\nそこで初めて、《会員》の本当の力が発動する。\n【会員登録が完了しました】\n【初回登録特典：100P】\n【筋強化30P】\n【耐久強化30P】\n【敏捷強化>>続きを読む"
+  },
+  {
+    "file": "ri2.jpg",
+    "sha256": "068edef068c48fdd813b689189b17a95c5374ed3412eb5562c99e687a58765a3",
+    "dimensions": [
+      2154,
+      1529
+    ],
+    "model": "rapid-auto",
+    "run": 2,
+    "repeat_penalty": 1.0,
+    "blocks": [
+      {
+        "x": 1130,
+        "y": 556,
+        "width": 516,
+        "height": 208,
+        "source": "Qno"
+      },
+      {
+        "x": 1049,
+        "y": 1169,
+        "width": 635,
+        "height": 360,
+        "source": "うわさ"
+      },
+      {
+        "x": 887,
+        "y": 590,
+        "width": 39,
+        "height": 39,
+        "source": "何"
+      },
+      {
+        "x": 850,
+        "y": 99,
+        "width": 91,
+        "height": 92,
+        "source": "あ"
+      },
+      {
+        "x": 90,
+        "y": 1014,
+        "width": 41,
+        "height": 59,
+        "source": "!!"
+      },
+      {
+        "x": 132,
+        "y": 83,
+        "width": 61,
+        "height": 385,
+        "source": "やいいす"
+      },
+      {
+        "x": 1785,
+        "y": 110,
+        "width": 175,
+        "height": 283,
+        "source": "マグロ漁船てヤバイフとつながてるて言われてるよ"
+      },
+      {
+        "x": 1301,
+        "y": 290,
+        "width": 213,
+        "height": 281,
+        "source": "借金した男どもがムリヤリ詰め込まれ狭くてキツくて臭くて"
+      },
+      {
+        "x": 799,
+        "y": 587,
+        "width": 47,
+        "height": 110,
+        "source": "お前!?"
+      },
+      {
+        "x": 845,
+        "y": 588,
+        "width": 41,
+        "height": 211,
+        "source": "言てるんだ"
+      },
+      {
+        "x": 1811,
+        "y": 642,
+        "width": 164,
+        "height": 266,
+        "source": "使えない奴は捨てられて"
+      },
+      {
+        "x": 1869,
+        "y": 647,
+        "width": 52,
+        "height": 95,
+        "source": "海に"
+      },
+      {
+        "x": 981,
+        "y": 782,
+        "width": 32,
+        "height": 650,
+        "source": "物語は実在す企業体人物等とは一切関ん"
+      },
+      {
+        "x": 746,
+        "y": 927,
+        "width": 218,
+        "height": 208,
+        "source": "一貫性のない奴だなこれだから最近の若工奴はつ"
+      },
+      {
+        "x": 305,
+        "y": 940,
+        "width": 156,
+        "height": 179,
+        "source": "ちっと漁労長！"
+      },
+      {
+        "x": 1180,
+        "y": 950,
+        "width": 184,
+        "height": 244,
+        "source": "エサにだから……"
+      },
+      {
+        "x": 1243,
+        "y": 953,
+        "width": 173,
+        "height": 197,
+        "source": "サメのされるん"
+      },
+      {
+        "x": 455,
+        "y": 986,
+        "width": 40,
+        "height": 141,
+        "source": "…ちょっと"
+      },
+      {
+        "x": 485,
+        "y": 1277,
+        "width": 109,
+        "height": 175,
+        "source": "ごめんなさいちと"
+      },
+      {
+        "x": 518,
+        "y": 1279,
+        "width": 104,
+        "height": 173,
+        "source": "ごんなさいサメのエサは"
+      }
+    ],
+    "stages": {
+      "detection_inference_ms": 394.02040001004934,
+      "detection_postprocess_ms": 14.419300016015768,
+      "crop_ms": 3.6763999960385263,
+      "korean_preprocess_ms": 6.209999846760184,
+      "multilingual_preprocess_ms": 7.1792000671848655,
+      "korean_inference_ms": 700.9574000840075,
+      "multilingual_inference_ms": 723.0856999522075,
+      "korean_decode_ms": 16.10789989354089,
+      "multilingual_decode_ms": 24.58579995436594
+    },
+    "metrics": {
+      "detect_ms": 496.54720001854,
+      "recognize_ms": 769.6808999753557,
+      "line_cache_hits": 0,
+      "detector": "neural"
+    },
+    "elapsed_ms": 1282.9889000277035,
+    "text": "Qno\nうわさ\n何\nあ\n!!\nやいいす\nマグロ漁船てヤバイフとつながてるて言われてるよ\n借金した男どもがムリヤリ詰め込まれ狭くてキツくて臭くて\nお前!?\n言てるんだ\n使えない奴は捨てられて\n海に\n物語は実在す企業体人物等とは一切関ん\n一貫性のない奴だなこれだから最近の若工奴はつ\nちっと漁労長！\nエサにだから……\nサメのされるん\n…ちょっと\nごめんなさいちと\nごんなさいサメのエサは"
+  },
+  {
+    "file": "ri2.jpg",
+    "sha256": "068edef068c48fdd813b689189b17a95c5374ed3412eb5562c99e687a58765a3",
+    "dimensions": [
+      2154,
+      1529
+    ],
+    "model": "rapid-fixed",
+    "run": 2,
+    "repeat_penalty": 1.0,
+    "blocks": [
+      {
+        "x": 1130,
+        "y": 556,
+        "width": 516,
+        "height": 208,
+        "source": "Qno"
+      },
+      {
+        "x": 1049,
+        "y": 1169,
+        "width": 635,
+        "height": 360,
+        "source": "うわさ"
+      },
+      {
+        "x": 887,
+        "y": 590,
+        "width": 39,
+        "height": 39,
+        "source": "何"
+      },
+      {
+        "x": 850,
+        "y": 99,
+        "width": 91,
+        "height": 92,
+        "source": "あ"
+      },
+      {
+        "x": 90,
+        "y": 1014,
+        "width": 41,
+        "height": 59,
+        "source": "!!"
+      },
+      {
+        "x": 132,
+        "y": 83,
+        "width": 61,
+        "height": 385,
+        "source": "やいいす"
+      },
+      {
+        "x": 1785,
+        "y": 110,
+        "width": 175,
+        "height": 283,
+        "source": "マグロ漁船てヤバイフとつながてるて言われてるよ"
+      },
+      {
+        "x": 1301,
+        "y": 290,
+        "width": 213,
+        "height": 281,
+        "source": "借金した男どもがムリヤリ詰め込まれ狭くてキツくて臭くて"
+      },
+      {
+        "x": 799,
+        "y": 587,
+        "width": 47,
+        "height": 110,
+        "source": "お前!?"
+      },
+      {
+        "x": 845,
+        "y": 588,
+        "width": 41,
+        "height": 211,
+        "source": "言てるんだ"
+      },
+      {
+        "x": 1811,
+        "y": 642,
+        "width": 164,
+        "height": 266,
+        "source": "使えない奴は捨てられて"
+      },
+      {
+        "x": 1869,
+        "y": 647,
+        "width": 52,
+        "height": 95,
+        "source": "海に"
+      },
+      {
+        "x": 981,
+        "y": 782,
+        "width": 32,
+        "height": 650,
+        "source": "物語は実在す企業体人物等とは一切関ん"
+      },
+      {
+        "x": 746,
+        "y": 927,
+        "width": 218,
+        "height": 208,
+        "source": "一貫性のない奴だなこれだから最近の若工奴はつ"
+      },
+      {
+        "x": 305,
+        "y": 940,
+        "width": 156,
+        "height": 179,
+        "source": "ちっと漁労長！"
+      },
+      {
+        "x": 1180,
+        "y": 950,
+        "width": 184,
+        "height": 244,
+        "source": "エサにだから……"
+      },
+      {
+        "x": 1243,
+        "y": 953,
+        "width": 173,
+        "height": 197,
+        "source": "サメのされるん"
+      },
+      {
+        "x": 455,
+        "y": 986,
+        "width": 40,
+        "height": 141,
+        "source": "…ちょっと"
+      },
+      {
+        "x": 485,
+        "y": 1277,
+        "width": 109,
+        "height": 175,
+        "source": "ごめんなさいちと"
+      },
+      {
+        "x": 518,
+        "y": 1279,
+        "width": 104,
+        "height": 173,
+        "source": "ごんなさいサメのエサは"
+      }
+    ],
+    "stages": {
+      "detection_inference_ms": 396.9243000028655,
+      "detection_postprocess_ms": 17.191799997817725,
+      "crop_ms": 4.369900038000196,
+      "multilingual_preprocess_ms": 5.808199930470437,
+      "multilingual_inference_ms": 610.7960999361239,
+      "multilingual_decode_ms": 20.20160004030913
+    },
+    "metrics": {
+      "detect_ms": 506.0339000192471,
+      "recognize_ms": 650.2746000187472,
+      "line_cache_hits": 0,
+      "detector": "neural"
+    },
+    "elapsed_ms": 1172.5272000185214,
+    "text": "Qno\nうわさ\n何\nあ\n!!\nやいいす\nマグロ漁船てヤバイフとつながてるて言われてるよ\n借金した男どもがムリヤリ詰め込まれ狭くてキツくて臭くて\nお前!?\n言てるんだ\n使えない奴は捨てられて\n海に\n物語は実在す企業体人物等とは一切関ん\n一貫性のない奴だなこれだから最近の若工奴はつ\nちっと漁労長！\nエサにだから……\nサメのされるん\n…ちょっと\nごめんなさいちと\nごんなさいサメのエサは"
+  },
+  {
+    "file": "ying1.jpg",
+    "sha256": "e5d1d3991ad1fc532c8e16a0e10b67a546791cee144658ecb85229296b30addb",
+    "dimensions": [
+      1592,
+      1435
+    ],
+    "model": "rapid-auto",
+    "run": 2,
+    "repeat_penalty": 1.0,
+    "blocks": [
+      {
+        "x": 0,
+        "y": 1,
+        "width": 1527,
+        "height": 35,
+        "source": "Daddy Tyl's cottage was the poorest of the countryside; and it seemed even more wretched because it stood opposite a splendid"
+      },
+      {
+        "x": 1,
+        "y": 61,
+        "width": 1561,
+        "height": 36,
+        "source": "hall in which rich children lived. From the windows of the cottage you could see what went on inside the Hall when the dining-room"
+      },
+      {
+        "x": 2,
+        "y": 121,
+        "width": 1568,
+        "height": 34,
+        "source": "and drawing-rooms were lit up in the evening. And, in the daytime, you saw the little children playing on the terraces, in the gardens"
+      },
+      {
+        "x": 0,
+        "y": 180,
+        "width": 1503,
+        "height": 36,
+        "source": "and in the hot-houses which people came all the way from town to visit because they were always filled with the rarest flowers."
+      },
+      {
+        "x": 0,
+        "y": 242,
+        "width": 1573,
+        "height": 33,
+        "source": "Now, one evening which was not like other evenings, for it was Christmas Eve, Mummy Tyl put her little ones to bed and kissed them"
+      },
+      {
+        "x": 1,
+        "y": 300,
+        "width": 1531,
+        "height": 36,
+        "source": "even more lovingly than usual. She felt a little sad, because owing to the stormy weather, Daddy TyI was not able to go to work in"
+      },
+      {
+        "x": 0,
+        "y": 358,
+        "width": 1518,
+        "height": 40,
+        "source": "the forest; and so she had no money to buy presents with which to fill Tyltyl and Mytyl's stockings. The Children soon fell asleep,"
+      },
+      {
+        "x": 2,
+        "y": 421,
+        "width": 1527,
+        "height": 34,
+        "source": "everything was still and silent and not a sound was heard but the purring of the cat, the snoring of the dog and the ticking of the"
+      },
+      {
+        "x": 0,
+        "y": 479,
+        "width": 1567,
+        "height": 48,
+        "source": "great grandfather's clock. But suddenly a light as bright as day crept through the shutters 11 , the lamp upon the table lit again of"
+      },
+      {
+        "x": 0,
+        "y": 549,
+        "width": 1540,
+        "height": 33,
+        "source": "itself and the two Children awoke, yawned, rubbed their eyes, stretched out their arms in bed and Tyltyl, in a cautious voice called:"
+      },
+      {
+        "x": 1,
+        "y": 605,
+        "width": 106,
+        "height": 42,
+        "source": "\"Mytyl?\""
+      },
+      {
+        "x": 1,
+        "y": 664,
+        "width": 556,
+        "height": 42,
+        "source": "\"Yes, Tyltyl?\"' was the answer. \"Are you asleep?\""
+      },
+      {
+        "x": 1,
+        "y": 725,
+        "width": 125,
+        "height": 38,
+        "source": "\"Are you?'"
+      },
+      {
+        "x": 2,
+        "y": 785,
+        "width": 765,
+        "height": 38,
+        "source": "\"No,\" said Tyltyl. \"How can I be asleep, when I'm talking to you?\""
+      },
+      {
+        "x": 1,
+        "y": 847,
+        "width": 535,
+        "height": 37,
+        "source": "\"I say, is this Christmas Day?\"asked his sister."
+      },
+      {
+        "x": 2,
+        "y": 906,
+        "width": 990,
+        "height": 38,
+        "source": "\"Not yet; not till to-morrow. But Father Christmas won't bring us anything this year.\""
+      },
+      {
+        "x": 2,
+        "y": 963,
+        "width": 137,
+        "height": 41,
+        "source": "\"Why not?\""
+      },
+      {
+        "x": 1,
+        "y": 1025,
+        "width": 1057,
+        "height": 38,
+        "source": "\"I heard Mummy say that she couldn't go to town to tell him. But he will come next year.\""
+      },
+      {
+        "x": 2,
+        "y": 1085,
+        "width": 251,
+        "height": 39,
+        "source": "\"Is next year far off?\""
+      },
+      {
+        "x": 3,
+        "y": 1147,
+        "width": 967,
+        "height": 37,
+        "source": "\"A good long while,\" said the boy. \"But he will come to the rich children to-night.\""
+      },
+      {
+        "x": 2,
+        "y": 1206,
+        "width": 102,
+        "height": 39,
+        "source": "\"Really?\""
+      },
+      {
+        "x": 2,
+        "y": 1266,
+        "width": 1060,
+        "height": 37,
+        "source": "\"Hullo!\" cried Tyltyl of a sudden. \"Mummy's forgotten to put out the lamp!. I've an idea!\""
+      },
+      {
+        "x": 0,
+        "y": 1323,
+        "width": 103,
+        "height": 42,
+        "source": "\"What?\""
+      },
+      {
+        "x": 0,
+        "y": 1385,
+        "width": 166,
+        "height": 41,
+        "source": "\"Let's get up.\""
+      }
+    ],
+    "stages": {
+      "detection_inference_ms": 383.75019998056814,
+      "detection_postprocess_ms": 10.733500006608665,
+      "crop_ms": 3.7767000030726194,
+      "multilingual_preprocess_ms": 26.628199906554073,
+      "korean_preprocess_ms": 23.842400056309998,
+      "korean_inference_ms": 2327.373400097713,
+      "korean_decode_ms": 33.85870001511648,
+      "multilingual_inference_ms": 2395.267399959266,
+      "multilingual_decode_ms": 64.93359996238723
+    },
+    "metrics": {
+      "detect_ms": 463.8642000500113,
+      "recognize_ms": 2519.4897000328638,
+      "line_cache_hits": 0,
+      "detector": "neural"
+    },
+    "elapsed_ms": 2992.5533999921754,
+    "text": "Daddy Tyl's cottage was the poorest of the countryside; and it seemed even more wretched because it stood opposite a splendid\nhall in which rich children lived. From the windows of the cottage you could see what went on inside the Hall when the dining-room\nand drawing-rooms were lit up in the evening. And, in the daytime, you saw the little children playing on the terraces, in the gardens\nand in the hot-houses which people came all the way from town to visit because they were always filled with the rarest flowers.\nNow, one evening which was not like other evenings, for it was Christmas Eve, Mummy Tyl put her little ones to bed and kissed them\neven more lovingly than usual. She felt a little sad, because owing to the stormy weather, Daddy TyI was not able to go to work in\nthe forest; and so she had no money to buy presents with which to fill Tyltyl and Mytyl's stockings. The Children soon fell asleep,\neverything was still and silent and not a sound was heard but the purring of the cat, the snoring of the dog and the ticking of the\ngreat grandfather's clock. But suddenly a light as bright as day crept through the shutters 11 , the lamp upon the table lit again of\nitself and the two Children awoke, yawned, rubbed their eyes, stretched out their arms in bed and Tyltyl, in a cautious voice called:\n\"Mytyl?\"\n\"Yes, Tyltyl?\"' was the answer. \"Are you asleep?\"\n\"Are you?'\n\"No,\" said Tyltyl. \"How can I be asleep, when I'm talking to you?\"\n\"I say, is this Christmas Day?\"asked his sister.\n\"Not yet; not till to-morrow. But Father Christmas won't bring us anything this year.\"\n\"Why not?\"\n\"I heard Mummy say that she couldn't go to town to tell him. But he will come next year.\"\n\"Is next year far off?\"\n\"A good long while,\" said the boy. \"But he will come to the rich children to-night.\"\n\"Really?\"\n\"Hullo!\" cried Tyltyl of a sudden. \"Mummy's forgotten to put out the lamp!. I've an idea!\"\n\"What?\"\n\"Let's get up.\""
+  },
+  {
+    "file": "ying1.jpg",
+    "sha256": "e5d1d3991ad1fc532c8e16a0e10b67a546791cee144658ecb85229296b30addb",
+    "dimensions": [
+      1592,
+      1435
+    ],
+    "model": "rapid-fixed",
+    "run": 2,
+    "repeat_penalty": 1.0,
+    "blocks": [
+      {
+        "x": 0,
+        "y": 1,
+        "width": 1527,
+        "height": 35,
+        "source": "Daddy Tyl's cottage was the poorest of the countryside; and it seemed even more wretched because it stood opposite a splendid"
+      },
+      {
+        "x": 1,
+        "y": 61,
+        "width": 1561,
+        "height": 36,
+        "source": "hall in which rich children lived. From the windows of the cottage you could see what went on inside the Hall when the dining-room"
+      },
+      {
+        "x": 2,
+        "y": 121,
+        "width": 1568,
+        "height": 34,
+        "source": "and drawing-rooms were lit up in the evening. And, in the daytime, you saw the little children playing on the terraces, in the gardens"
+      },
+      {
+        "x": 0,
+        "y": 180,
+        "width": 1503,
+        "height": 36,
+        "source": "and in the hot-houses which people came all the way from town to visit because they were always filled with the rarest flowers."
+      },
+      {
+        "x": 0,
+        "y": 242,
+        "width": 1573,
+        "height": 33,
+        "source": "Now, one evening which was not like other evenings, for it was Christmas Eve, Mummy Tyl put her little ones to bed and kissed them"
+      },
+      {
+        "x": 1,
+        "y": 300,
+        "width": 1531,
+        "height": 36,
+        "source": "even more lovingly than usual. She felt a little sad, because owing to the stormy weather, Daddy TyI was not able to go to work in"
+      },
+      {
+        "x": 0,
+        "y": 358,
+        "width": 1518,
+        "height": 40,
+        "source": "the forest; and so she had no money to buy presents with which to fill Tyltyl and Mytyl's stockings. The Children soon fell asleep,"
+      },
+      {
+        "x": 2,
+        "y": 421,
+        "width": 1527,
+        "height": 34,
+        "source": "everything was still and silent and not a sound was heard but the purring of the cat, the snoring of the dog and the ticking of the"
+      },
+      {
+        "x": 0,
+        "y": 479,
+        "width": 1567,
+        "height": 48,
+        "source": "great grandfather's clock. But suddenly a light as bright as day crept through the shutters 11 , the lamp upon the table lit again of"
+      },
+      {
+        "x": 0,
+        "y": 549,
+        "width": 1540,
+        "height": 33,
+        "source": "itself and the two Children awoke, yawned, rubbed their eyes, stretched out their arms in bed and Tyltyl, in a cautious voice called:"
+      },
+      {
+        "x": 1,
+        "y": 605,
+        "width": 106,
+        "height": 42,
+        "source": "\"Mytyl?\""
+      },
+      {
+        "x": 1,
+        "y": 664,
+        "width": 556,
+        "height": 42,
+        "source": "\"Yes, Tyltyl?\"' was the answer. \"Are you asleep?\""
+      },
+      {
+        "x": 1,
+        "y": 725,
+        "width": 125,
+        "height": 38,
+        "source": "\"Are you?'"
+      },
+      {
+        "x": 2,
+        "y": 785,
+        "width": 765,
+        "height": 38,
+        "source": "\"No,\" said Tyltyl. \"How can I be asleep, when I'm talking to you?\""
+      },
+      {
+        "x": 1,
+        "y": 847,
+        "width": 535,
+        "height": 37,
+        "source": "\"I say, is this Christmas Day?\"asked his sister."
+      },
+      {
+        "x": 2,
+        "y": 906,
+        "width": 990,
+        "height": 38,
+        "source": "\"Not yet; not till to-morrow. But Father Christmas won't bring us anything this year.\""
+      },
+      {
+        "x": 2,
+        "y": 963,
+        "width": 137,
+        "height": 41,
+        "source": "\"Why not?\""
+      },
+      {
+        "x": 1,
+        "y": 1025,
+        "width": 1057,
+        "height": 38,
+        "source": "\"I heard Mummy say that she couldn't go to town to tell him. But he will come next year.\""
+      },
+      {
+        "x": 2,
+        "y": 1085,
+        "width": 251,
+        "height": 39,
+        "source": "\"Is next year far off?\""
+      },
+      {
+        "x": 3,
+        "y": 1147,
+        "width": 967,
+        "height": 37,
+        "source": "\"A good long while,\" said the boy. \"But he will come to the rich children to-night.\""
+      },
+      {
+        "x": 2,
+        "y": 1206,
+        "width": 102,
+        "height": 39,
+        "source": "\"Really?\""
+      },
+      {
+        "x": 2,
+        "y": 1266,
+        "width": 1060,
+        "height": 37,
+        "source": "\"Hullo!\" cried Tyltyl of a sudden. \"Mummy's forgotten to put out the lamp!. I've an idea!\""
+      },
+      {
+        "x": 0,
+        "y": 1323,
+        "width": 103,
+        "height": 42,
+        "source": "\"What?\""
+      },
+      {
+        "x": 0,
+        "y": 1385,
+        "width": 166,
+        "height": 41,
+        "source": "\"Let's get up.\""
+      }
+    ],
+    "stages": {
+      "detection_inference_ms": 325.56069997372106,
+      "detection_postprocess_ms": 10.194399976171553,
+      "crop_ms": 2.970999979879707,
+      "multilingual_preprocess_ms": 18.268899992108345,
+      "multilingual_inference_ms": 1575.4092000424862,
+      "multilingual_decode_ms": 38.13689999515191
+    },
+    "metrics": {
+      "detect_ms": 403.3247000188567,
+      "recognize_ms": 1656.639399996493,
+      "line_cache_hits": 0,
+      "detector": "neural"
+    },
+    "elapsed_ms": 2066.9526999699883,
+    "text": "Daddy Tyl's cottage was the poorest of the countryside; and it seemed even more wretched because it stood opposite a splendid\nhall in which rich children lived. From the windows of the cottage you could see what went on inside the Hall when the dining-room\nand drawing-rooms were lit up in the evening. And, in the daytime, you saw the little children playing on the terraces, in the gardens\nand in the hot-houses which people came all the way from town to visit because they were always filled with the rarest flowers.\nNow, one evening which was not like other evenings, for it was Christmas Eve, Mummy Tyl put her little ones to bed and kissed them\neven more lovingly than usual. She felt a little sad, because owing to the stormy weather, Daddy TyI was not able to go to work in\nthe forest; and so she had no money to buy presents with which to fill Tyltyl and Mytyl's stockings. The Children soon fell asleep,\neverything was still and silent and not a sound was heard but the purring of the cat, the snoring of the dog and the ticking of the\ngreat grandfather's clock. But suddenly a light as bright as day crept through the shutters 11 , the lamp upon the table lit again of\nitself and the two Children awoke, yawned, rubbed their eyes, stretched out their arms in bed and Tyltyl, in a cautious voice called:\n\"Mytyl?\"\n\"Yes, Tyltyl?\"' was the answer. \"Are you asleep?\"\n\"Are you?'\n\"No,\" said Tyltyl. \"How can I be asleep, when I'm talking to you?\"\n\"I say, is this Christmas Day?\"asked his sister.\n\"Not yet; not till to-morrow. But Father Christmas won't bring us anything this year.\"\n\"Why not?\"\n\"I heard Mummy say that she couldn't go to town to tell him. But he will come next year.\"\n\"Is next year far off?\"\n\"A good long while,\" said the boy. \"But he will come to the rich children to-night.\"\n\"Really?\"\n\"Hullo!\" cried Tyltyl of a sudden. \"Mummy's forgotten to put out the lamp!. I've an idea!\"\n\"What?\"\n\"Let's get up.\""
+  },
+  {
+    "file": "ying2.jpg",
+    "sha256": "ff9dc8fd2e1433e1d3a2fd859054bc86a97b4f12b9afba5b2937de58b1110e58",
+    "dimensions": [
+      800,
+      1233
+    ],
+    "model": "rapid-auto",
+    "run": 2,
+    "repeat_penalty": 1.0,
+    "blocks": [
+      {
+        "x": 167,
+        "y": 159,
+        "width": 81,
+        "height": 24,
+        "source": "NOTHNG.."
+      },
+      {
+        "x": 678,
+        "y": 150,
+        "width": 54,
+        "height": 25,
+        "source": "LOOK"
+      },
+      {
+        "x": 332,
+        "y": 163,
+        "width": 51,
+        "height": 22,
+        "source": "WHAT"
+      },
+      {
+        "x": 671,
+        "y": 165,
+        "width": 65,
+        "height": 25,
+        "source": "AT YOU,"
+      },
+      {
+        "x": 325,
+        "y": 178,
+        "width": 65,
+        "height": 21,
+        "source": "ARE YOU"
+      },
+      {
+        "x": 77,
+        "y": 189,
+        "width": 58,
+        "height": 21,
+        "source": "IMNOT"
+      },
+      {
+        "x": 674,
+        "y": 181,
+        "width": 62,
+        "height": 22,
+        "source": "ACTING"
+      },
+      {
+        "x": 332,
+        "y": 188,
+        "width": 50,
+        "height": 25,
+        "source": "MADE"
+      },
+      {
+        "x": 70,
+        "y": 204,
+        "width": 72,
+        "height": 20,
+        "source": "ANGRY AT"
+      },
+      {
+        "x": 331,
+        "y": 204,
+        "width": 54,
+        "height": 21,
+        "source": "ABOUT,"
+      },
+      {
+        "x": 660,
+        "y": 195,
+        "width": 91,
+        "height": 23,
+        "source": "LIKE SUCH"
+      },
+      {
+        "x": 660,
+        "y": 205,
+        "width": 90,
+        "height": 31,
+        "source": "ADORK."
+      },
+      {
+        "x": 72,
+        "y": 216,
+        "width": 70,
+        "height": 21,
+        "source": "ALL THAT"
+      },
+      {
+        "x": 333,
+        "y": 217,
+        "width": 47,
+        "height": 22,
+        "source": "RAN?"
+      },
+      {
+        "x": 71,
+        "y": 229,
+        "width": 71,
+        "height": 21,
+        "source": "IT'S YOLR"
+      },
+      {
+        "x": 69,
+        "y": 243,
+        "width": 73,
+        "height": 21,
+        "source": "FALLTMY"
+      },
+      {
+        "x": 65,
+        "y": 254,
+        "width": 79,
+        "height": 26,
+        "source": "FATHER..."
+      },
+      {
+        "x": 633,
+        "y": 386,
+        "width": 98,
+        "height": 27,
+        "source": "MOURIRAN"
+      },
+      {
+        "x": 631,
+        "y": 403,
+        "width": 102,
+        "height": 24,
+        "source": "TEITAN HIGH"
+      },
+      {
+        "x": 650,
+        "y": 417,
+        "width": 67,
+        "height": 24,
+        "source": "JUNIOR"
+      },
+      {
+        "x": 145,
+        "y": 478,
+        "width": 97,
+        "height": 24,
+        "source": "WHAT?YOUR"
+      },
+      {
+        "x": 367,
+        "y": 477,
+        "width": 48,
+        "height": 22,
+        "source": "CAN'T"
+      },
+      {
+        "x": 145,
+        "y": 493,
+        "width": 98,
+        "height": 21,
+        "source": "DAD'S STLL A"
+      },
+      {
+        "x": 357,
+        "y": 489,
+        "width": 66,
+        "height": 23,
+        "source": "GET ANY"
+      },
+      {
+        "x": 149,
+        "y": 507,
+        "width": 87,
+        "height": 21,
+        "source": "DETECTNE?"
+      },
+      {
+        "x": 282,
+        "y": 502,
+        "width": 38,
+        "height": 22,
+        "source": "da!"
+      },
+      {
+        "x": 358,
+        "y": 503,
+        "width": 63,
+        "height": 21,
+        "source": "WORK!!"
+      },
+      {
+        "x": 62,
+        "y": 693,
+        "width": 36,
+        "height": 42,
+        "source": "$H$"
+      },
+      {
+        "x": 282,
+        "y": 691,
+        "width": 117,
+        "height": 23,
+        "source": "BUT IT'S NOT MY"
+      },
+      {
+        "x": 283,
+        "y": 705,
+        "width": 116,
+        "height": 21,
+        "source": "FALLTHE'S NOT"
+      },
+      {
+        "x": 57,
+        "y": 719,
+        "width": 45,
+        "height": 28,
+        "source": "HO.."
+      },
+      {
+        "x": 269,
+        "y": 719,
+        "width": 142,
+        "height": 21,
+        "source": "GETTING ANY WORK,"
+      },
+      {
+        "x": 279,
+        "y": 731,
+        "width": 124,
+        "height": 24,
+        "source": "IT'S BECALSE HE"
+      },
+      {
+        "x": 285,
+        "y": 742,
+        "width": 111,
+        "height": 28,
+        "source": "SUCKS ATIT..."
+      },
+      {
+        "x": 185,
+        "y": 881,
+        "width": 72,
+        "height": 27,
+        "source": "T.THATS"
+      },
+      {
+        "x": 176,
+        "y": 898,
+        "width": 91,
+        "height": 21,
+        "source": "THE CAPTAIN"
+      },
+      {
+        "x": 164,
+        "y": 908,
+        "width": 113,
+        "height": 26,
+        "source": "OF THE KARATE"
+      },
+      {
+        "x": 185,
+        "y": 925,
+        "width": 74,
+        "height": 21,
+        "source": "TEAM FOR"
+      },
+      {
+        "x": 195,
+        "y": 935,
+        "width": 52,
+        "height": 26,
+        "source": "YOu...."
+      },
+      {
+        "x": 310,
+        "y": 929,
+        "width": 92,
+        "height": 24,
+        "source": "ISAIDIM"
+      },
+      {
+        "x": 314,
+        "y": 943,
+        "width": 82,
+        "height": 24,
+        "source": "NOT MAD"
+      },
+      {
+        "x": 47,
+        "y": 945,
+        "width": 124,
+        "height": 53,
+        "source": "Hohoho"
+      },
+      {
+        "x": 327,
+        "y": 958,
+        "width": 60,
+        "height": 22,
+        "source": "ABOUT"
+      },
+      {
+        "x": 308,
+        "y": 972,
+        "width": 96,
+        "height": 24,
+        "source": "ANYTHING!!"
+      },
+      {
+        "x": 746,
+        "y": 1213,
+        "width": 54,
+        "height": 18,
+        "source": "ader.net"
+      }
+    ],
+    "stages": {
+      "detection_inference_ms": 134.51489998260513,
+      "detection_postprocess_ms": 8.320900029502809,
+      "crop_ms": 1.7290999530814588,
+      "multilingual_preprocess_ms": 5.207999900449067,
+      "korean_preprocess_ms": 5.202099971938878,
+      "korean_inference_ms": 561.0288000316359,
+      "korean_decode_ms": 14.23550007166341,
+      "multilingual_inference_ms": 594.2097001243383,
+      "multilingual_decode_ms": 23.54600006947294
+    },
+    "metrics": {
+      "detect_ms": 170.95749999862164,
+      "recognize_ms": 636.3254000316374,
+      "line_cache_hits": 0,
+      "detector": "neural"
+    },
+    "elapsed_ms": 811.928499955684,
+    "text": "NOTHNG..\nLOOK\nWHAT\nAT YOU,\nARE YOU\nIMNOT\nACTING\nMADE\nANGRY AT\nABOUT,\nLIKE SUCH\nADORK.\nALL THAT\nRAN?\nIT'S YOLR\nFALLTMY\nFATHER...\nMOURIRAN\nTEITAN HIGH\nJUNIOR\nWHAT?YOUR\nCAN'T\nDAD'S STLL A\nGET ANY\nDETECTNE?\nda!\nWORK!!\n$H$\nBUT IT'S NOT MY\nFALLTHE'S NOT\nHO..\nGETTING ANY WORK,\nIT'S BECALSE HE\nSUCKS ATIT...\nT.THATS\nTHE CAPTAIN\nOF THE KARATE\nTEAM FOR\nYOu....\nISAIDIM\nNOT MAD\nHohoho\nABOUT\nANYTHING!!\nader.net"
+  },
+  {
+    "file": "ying2.jpg",
+    "sha256": "ff9dc8fd2e1433e1d3a2fd859054bc86a97b4f12b9afba5b2937de58b1110e58",
+    "dimensions": [
+      800,
+      1233
+    ],
+    "model": "rapid-fixed",
+    "run": 2,
+    "repeat_penalty": 1.0,
+    "blocks": [
+      {
+        "x": 167,
+        "y": 159,
+        "width": 81,
+        "height": 24,
+        "source": "NOTHNG.."
+      },
+      {
+        "x": 678,
+        "y": 150,
+        "width": 54,
+        "height": 25,
+        "source": "LOOK"
+      },
+      {
+        "x": 332,
+        "y": 163,
+        "width": 51,
+        "height": 22,
+        "source": "WHAT"
+      },
+      {
+        "x": 671,
+        "y": 165,
+        "width": 65,
+        "height": 25,
+        "source": "AT YOU,"
+      },
+      {
+        "x": 325,
+        "y": 178,
+        "width": 65,
+        "height": 21,
+        "source": "ARE YOU"
+      },
+      {
+        "x": 77,
+        "y": 189,
+        "width": 58,
+        "height": 21,
+        "source": "IMNOT"
+      },
+      {
+        "x": 674,
+        "y": 181,
+        "width": 62,
+        "height": 22,
+        "source": "ACTING"
+      },
+      {
+        "x": 332,
+        "y": 188,
+        "width": 50,
+        "height": 25,
+        "source": "MADE"
+      },
+      {
+        "x": 70,
+        "y": 204,
+        "width": 72,
+        "height": 20,
+        "source": "ANGRY AT"
+      },
+      {
+        "x": 331,
+        "y": 204,
+        "width": 54,
+        "height": 21,
+        "source": "ABOUT,"
+      },
+      {
+        "x": 660,
+        "y": 195,
+        "width": 91,
+        "height": 23,
+        "source": "LIKE SUCH"
+      },
+      {
+        "x": 660,
+        "y": 205,
+        "width": 90,
+        "height": 31,
+        "source": "ADORK."
+      },
+      {
+        "x": 72,
+        "y": 216,
+        "width": 70,
+        "height": 21,
+        "source": "ALL THAT"
+      },
+      {
+        "x": 333,
+        "y": 217,
+        "width": 47,
+        "height": 22,
+        "source": "RAN?"
+      },
+      {
+        "x": 71,
+        "y": 229,
+        "width": 71,
+        "height": 21,
+        "source": "IT'S YOLR"
+      },
+      {
+        "x": 69,
+        "y": 243,
+        "width": 73,
+        "height": 21,
+        "source": "FALLTMY"
+      },
+      {
+        "x": 65,
+        "y": 254,
+        "width": 79,
+        "height": 26,
+        "source": "FATHER..."
+      },
+      {
+        "x": 633,
+        "y": 386,
+        "width": 98,
+        "height": 27,
+        "source": "MOURIRAN"
+      },
+      {
+        "x": 631,
+        "y": 403,
+        "width": 102,
+        "height": 24,
+        "source": "TEITAN HIGH"
+      },
+      {
+        "x": 650,
+        "y": 417,
+        "width": 67,
+        "height": 24,
+        "source": "JUNIOR"
+      },
+      {
+        "x": 145,
+        "y": 478,
+        "width": 97,
+        "height": 24,
+        "source": "WHAT?YOUR"
+      },
+      {
+        "x": 367,
+        "y": 477,
+        "width": 48,
+        "height": 22,
+        "source": "CAN'T"
+      },
+      {
+        "x": 145,
+        "y": 493,
+        "width": 98,
+        "height": 21,
+        "source": "DAD'S STLL A"
+      },
+      {
+        "x": 357,
+        "y": 489,
+        "width": 66,
+        "height": 23,
+        "source": "GET ANY"
+      },
+      {
+        "x": 149,
+        "y": 507,
+        "width": 87,
+        "height": 21,
+        "source": "DETECTNE?"
+      },
+      {
+        "x": 282,
+        "y": 502,
+        "width": 38,
+        "height": 22,
+        "source": "da!"
+      },
+      {
+        "x": 358,
+        "y": 503,
+        "width": 63,
+        "height": 21,
+        "source": "WORK!!"
+      },
+      {
+        "x": 62,
+        "y": 693,
+        "width": 36,
+        "height": 42,
+        "source": "$H$"
+      },
+      {
+        "x": 282,
+        "y": 691,
+        "width": 117,
+        "height": 23,
+        "source": "BUT IT'S NOT MY"
+      },
+      {
+        "x": 283,
+        "y": 705,
+        "width": 116,
+        "height": 21,
+        "source": "FALLTHE'S NOT"
+      },
+      {
+        "x": 57,
+        "y": 719,
+        "width": 45,
+        "height": 28,
+        "source": "HO.."
+      },
+      {
+        "x": 269,
+        "y": 719,
+        "width": 142,
+        "height": 21,
+        "source": "GETTING ANY WORK,"
+      },
+      {
+        "x": 279,
+        "y": 731,
+        "width": 124,
+        "height": 24,
+        "source": "IT'S BECALSE HE"
+      },
+      {
+        "x": 285,
+        "y": 742,
+        "width": 111,
+        "height": 28,
+        "source": "SUCKS ATIT..."
+      },
+      {
+        "x": 185,
+        "y": 881,
+        "width": 72,
+        "height": 27,
+        "source": "T.THATS"
+      },
+      {
+        "x": 176,
+        "y": 898,
+        "width": 91,
+        "height": 21,
+        "source": "THE CAPTAIN"
+      },
+      {
+        "x": 164,
+        "y": 908,
+        "width": 113,
+        "height": 26,
+        "source": "OF THE KARATE"
+      },
+      {
+        "x": 185,
+        "y": 925,
+        "width": 74,
+        "height": 21,
+        "source": "TEAM FOR"
+      },
+      {
+        "x": 195,
+        "y": 935,
+        "width": 52,
+        "height": 26,
+        "source": "YOu...."
+      },
+      {
+        "x": 310,
+        "y": 929,
+        "width": 92,
+        "height": 24,
+        "source": "ISAIDIM"
+      },
+      {
+        "x": 314,
+        "y": 943,
+        "width": 82,
+        "height": 24,
+        "source": "NOT MAD"
+      },
+      {
+        "x": 47,
+        "y": 945,
+        "width": 124,
+        "height": 53,
+        "source": "Hohoho"
+      },
+      {
+        "x": 327,
+        "y": 958,
+        "width": 60,
+        "height": 22,
+        "source": "ABOUT"
+      },
+      {
+        "x": 308,
+        "y": 972,
+        "width": 96,
+        "height": 24,
+        "source": "ANYTHING!!"
+      },
+      {
+        "x": 746,
+        "y": 1213,
+        "width": 54,
+        "height": 18,
+        "source": "ader.net"
+      }
+    ],
+    "stages": {
+      "detection_inference_ms": 131.94539997493848,
+      "detection_postprocess_ms": 8.107999979984015,
+      "crop_ms": 1.8910000217147171,
+      "multilingual_preprocess_ms": 4.199500021059066,
+      "multilingual_inference_ms": 471.49440011708066,
+      "multilingual_decode_ms": 17.82070001354441
+    },
+    "metrics": {
+      "detect_ms": 169.8100999929011,
+      "recognize_ms": 505.04180003190413,
+      "line_cache_hits": 0,
+      "detector": "neural"
+    },
+    "elapsed_ms": 679.5233000302687,
+    "text": "NOTHNG..\nLOOK\nWHAT\nAT YOU,\nARE YOU\nIMNOT\nACTING\nMADE\nANGRY AT\nABOUT,\nLIKE SUCH\nADORK.\nALL THAT\nRAN?\nIT'S YOLR\nFALLTMY\nFATHER...\nMOURIRAN\nTEITAN HIGH\nJUNIOR\nWHAT?YOUR\nCAN'T\nDAD'S STLL A\nGET ANY\nDETECTNE?\nda!\nWORK!!\n$H$\nBUT IT'S NOT MY\nFALLTHE'S NOT\nHO..\nGETTING ANY WORK,\nIT'S BECALSE HE\nSUCKS ATIT...\nT.THATS\nTHE CAPTAIN\nOF THE KARATE\nTEAM FOR\nYOu....\nISAIDIM\nNOT MAD\nHohoho\nABOUT\nANYTHING!!\nader.net"
+  }
+]

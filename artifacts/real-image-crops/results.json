@@ -1,0 +1,38 @@
+[
+  {
+    "file": "han1.jpg",
+    "box": [
+      36,
+      144,
+      523,
+      188
+    ],
+    "rapid_text": "이번 던전의 출현 몬스터는 코볼트였다.",
+    "error": "RuntimeError: GLM recognition incomplete",
+    "elapsed_ms": 6968.099699995946
+  },
+  {
+    "file": "ri1.jpg",
+    "box": [
+      507,
+      5,
+      790,
+      52
+    ],
+    "rapid_text": "俺のスキルは《会員》",
+    "error": "RuntimeError: GLM recognition incomplete",
+    "elapsed_ms": 3843.1091000093147
+  },
+  {
+    "file": "ying2.jpg",
+    "box": [
+      674,
+      146,
+      736,
+      179
+    ],
+    "rapid_text": "LOOK",
+    "error": "RuntimeError: GLM recognition incomplete",
+    "elapsed_ms": 10651.383200020064
+  }
+]

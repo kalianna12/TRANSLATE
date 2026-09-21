@@ -1,0 +1,23 @@
+[
+  {
+    "model": "v5-general",
+    "short_median_ms": 32.23349998006597,
+    "short_errors": 0,
+    "page_ms": 1537.733999954071,
+    "page_errors": 0
+  },
+  {
+    "model": "v4-general",
+    "short_median_ms": 76.88350000535138,
+    "short_errors": 0,
+    "page_ms": 3156.112500000745,
+    "page_errors": 0
+  },
+  {
+    "model": "v5-korean",
+    "short_median_ms": 30.885100015439093,
+    "short_errors": 0,
+    "page_ms": 1410.215399984736,
+    "page_errors": 0
+  }
+]

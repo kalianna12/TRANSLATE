@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "error": null,
+  "messages": [
+    "正在识别文字…",
+    "正在翻译 1 行文字…",
+    "实时监测中 · 日语 · 1 行 · 0.45 秒"
+  ],
+  "latency_ms": 503.1298000103561,
+  "blocks": [
+    {
+      "source": "思えば高のとき三者面談でいきなり東大を目指しだして以来",
+      "translated": "想到这里，我在高中时的一次三通面试中突然开始以东京大学为目标。",
+      "box": [
+        39,
+        1,
+        355,
+        457
+      ]
+    }
+  ],
+  "paint_latency_ms": 508.8231999980053,
+  "metrics": [
+    {
+      "ocr_ms": 256.1,
+      "translate_ms": 153.5,
+      "total_ms": 453.0,
+      "translation_cache_hits": 0,
+      "network_calls": 1,
+      "detect_ms": 122.67769999743905,
+      "recognize_ms": 131.62699999520555,
+      "line_cache_hits": 0
+    }
+  ],
+  "source_mode": "ja",
+  "prewarmed": true,
+  "fixture": "Synthetic vertical Japanese in isolated Edge app window, not the user's original image."
+}

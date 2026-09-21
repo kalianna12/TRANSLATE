@@ -1,0 +1,5 @@
+PySide6>=6.8,<7
+rapidocr-onnxruntime==1.4.4
+mss>=10,<11
+requests>=2.32,<3
+windows-capture==2.0.1; sys_platform == 'win32'
