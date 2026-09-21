@@ -42,12 +42,14 @@ class TranslationWorker(QThread):
     def run(self):
         try:
             translator = get_translator(self.options)
+            if self.options.get("provider") == "deepseek":
+                with translator.operation_lock:
+                    translator.ai_context.clear()
+                    translator.cache.clear()
             if self.cancel.is_set():
                 return
             self.status.emit(self.generation, "正在加载本地 OCR 模型…")
             from .ocr import get_ocr
-            if self.options.get("ocr_backend") == "glm":
-                from .glm_optional import get_glm as get_ocr
             ocr = get_ocr(lambda message: self.status.emit(self.generation, message), self.cancel.is_set)
             previous = None
             previous_text = None
@@ -69,7 +71,7 @@ class TranslationWorker(QThread):
                         if frame_changed(previous, rgb):
                             self.status.emit(self.generation, "正在识别文字…")
                             from .ocr import detect_document_lines
-                            document_lines = detect_document_lines(bgr) if self.options.get("progressive", True) else None
+                            document_lines = detect_document_lines(bgr) if self.options.get("progressive", True) and self.options.get("provider") != "deepseek" else None
                             if document_lines is not None and len(document_lines) >= 6:
                                 from .document import translate_document
                                 document_result = translate_document(self, capture, ocr, translator, bgr, previous_text, started)

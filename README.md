@@ -1,5 +1,7 @@
 # ScreenLingo 屏幕翻译
 
+当前源码：识别固定使用 RapidOCR；翻译可选有道、百度、Google 或 **DeepSeek-V4.1-Flash**。DeepSeek 默认关闭思考，支持上下文和严格 JSON 块映射，详见 [DeepSeek 设置](DEEPSEEK.md)。原来的 GLM-OCR 下载入口已移除。下述 1.2 ZIP 是旧版，不包含最新源码功能。
+
 Snipaste 式 Windows 翻译工具：设置窗口只负责配置；按热键框选游戏聊天窗后，在原文字位置先画阴影遮罩，再显示中文译文。游戏和翻译层共同存在，鼠标、键盘继续操作游戏。
 
 ## 快速开始
@@ -61,12 +63,12 @@ Snipaste 式 Windows 翻译工具：设置窗口只负责配置；按热键框�
 
 - 新配置默认 **有道翻译＋RapidOCR**，需填写应用 ID 和应用密钥。仍可选择百度、Google 免密钥及 Google Cloud。已有用户保留之前的翻译源选择。
 - 可切换 **Google Cloud Translation Basic 官方 API**，填写 API Key。官方服务可能计费，程序不会自动启用计费。
-- 百度 / 有道官方接口已接入可选项，需要应用 ID 和密钥。小样本实测见 [BAIDU_TESTING.md](BAIDU_TESTING.md) 和 [YOUDAO_TESTING.md](YOUDAO_TESTING.md)。有道使用应用 ID＋应用密钥，不需要额外 apikey。百度图片接口仅为开发测试入口，未接入实时首选项。
+- 百度 / 有道官方接口需要应用 ID 和密钥。有道使用应用 ID＋应用密钥，不需要额外 apikey。DeepSeek 只需 API Key，也支持 `DEEPSEEK_API_KEY` 环境变量。
 - 默认密钥仅保留当前会话；可勾选 Windows DPAPI 加密保存，按翻译工具分别存储，仅当前 Windows 账户可解密。取消勾选并应用会删除保存的密钥。也可使用环境变量 `GOOGLE_TRANSLATE_API_KEY`、`BAIDU_APP_ID` / `BAIDU_API_KEY`、`YOUDAO_APP_ID` / `YOUDAO_API_KEY`。打包文件不包含个人凭据。
 - 可填写自己的 HTTP 代理，例如 `http://127.0.0.1:7890`。留空使用 Requests 支持的环境/系统代理配置。
 - OCR 和截图在本地处理；只有识别文字发送给所选翻译服务。Google 免密钥启动预热还会发送固定公开单词 Ready。正常运行不保存截图或聊天记录，缓存仅存于内存。
 - 偏好保存在当前用户的 Qt 设置中：`HKEY_CURRENT_USER\Software\ScreenLingo\ScreenLingo`。代理地址会保存，避免在其中填写密码。
-- 基准测试保存的 PNG/JSON 仅包含代码内预先定义的合成聊天。
+- Git 仅跟踪项目源码、构建配置和使用文档；测试素材、测试脚本、测试结果、模型权重及本地凭据不上传。本地原文件保留。
 
 ## 已知限制
 
@@ -85,23 +87,8 @@ python -m venv .venv
 .\.venv\Scripts\python.exe main.py
 ```
 
-```powershell
-# 离线回归测试
-.\.venv\Scripts\python.exe -m pytest -q
-# OCR / 设置界面检查
-.\.venv\Scripts\python.exe scripts\smoke_test.py
-# 60 个日英韩样本，固定语言 / 自动识别分别测试
-.\.venv\Scripts\python.exe scripts\benchmark.py --network --source-mode fixed --output artifacts\benchmark-fixed-final.json
-.\.venv\Scripts\python.exe scripts\benchmark.py --network --source-mode auto --output artifacts\benchmark-auto-final.json
-# 真实 Edge 中 5 次框选到译文绘制，已预热、各次无本地译文缓存
-.\.venv\Scripts\python.exe scripts\browser_benchmark.py --runs 5 --source ja
-# 独立进程的动态无边框聊天窗：真实框选 + 窗口采集 + 翻译覆盖验证
-.\.venv\Scripts\python.exe scripts\game_lab.py --verify
-# 打开模拟聊天窗手动操作（另启动 main.py；空格切换消息，F10 关闭）
-.\.venv\Scripts\python.exe scripts\game_lab.py
-```
 
-测试脚本使用 Windows 自带 Arial、Yu Gothic、Malgun Gothic 字体。`--network` / `--verify` 仅发送脚本内公开的测试句子。
+
 
 目录：`ui.py` 设置与会话；`overlay.py` 框选与覆盖；`capture.py` HWND 采集；`worker.py` 实时流水线；`ocr.py` 多语言 OCR；`core.py` 翻译与变化检测；`win32.py` 热键与窗口跟踪。
 

@@ -160,18 +160,14 @@ class TranslationOverlay(QWidget):
                 mask.addRect(rect)
         if self.display_style != "blend":
             painter.fillPath(mask, QColor(6, 10, 18, round(self.shade_opacity * 2.55)))
-        for block in visible_blocks:
-            rect = QRectF(block.x * sx, block.y * sy, block.width * sx, block.height * sy)
+        from .text_layout import layout_blocks
+        for block, (rect, size) in zip(visible_blocks, layout_blocks(visible_blocks, sx, sy)):
             font = QFont("Microsoft YaHei UI")
             alignment = (Qt.AlignmentFlag.AlignCenter if block.height > block.width * 1.5 else
                          Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignVCenter)
             flags = alignment | Qt.TextFlag.TextWordWrap | Qt.TextFlag.TextWrapAnywhere
             fitted = rect.adjusted(1, 0, -1, 0)
-            for size in range(max(8, min(32, int(rect.height() * 0.82))), 6, -1):
-                font.setPixelSize(size)
-                bounds = QFontMetrics(font).boundingRect(fitted.toRect(), int(flags), block.translated)
-                if bounds.height() <= fitted.height() and bounds.width() <= fitted.width():
-                    break
+            font.setPixelSize(size)
             painter.setFont(font)
             painter.setPen(QColor(*block.foreground) if self.display_style == "blend" else QColor("#ffffff"))
             painter.save()

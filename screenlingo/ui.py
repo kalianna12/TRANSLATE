@@ -48,8 +48,6 @@ class MainWindow(QMainWindow):
         self.closing = False
         self.tray_only = False
         self.initialization_error = False
-        self.model_task = None
-        self.glm_ready = False
         self.credential_drafts = {}
         self.credential_provider = None
         self.target_hwnd = 0
@@ -93,7 +91,8 @@ class MainWindow(QMainWindow):
 
     def load_settings(self):
         for widget, key in [(self.language, "target"), (self.provider, "provider"), (self.source, "source"),
-                            (self.ocr_backend, "ocr_backend"), (self.display_style, "display_style")]:
+                            (self.ocr_backend, "ocr_backend"), (self.display_style, "display_style"),
+                            (self.reasoning_effort, "reasoning_effort")]:
             index = widget.findData(self.settings.value(key, widget.itemData(0)))
             widget.setCurrentIndex(max(0, index))
         self.api_key.setEnabled(self.provider.currentData() != "free")
@@ -139,23 +138,6 @@ class MainWindow(QMainWindow):
             self.api_key.setText(draft[1])
             self.remember_key.setChecked(draft[2])
 
-    def manage_glm(self, download):
-        if self.model_task and self.model_task.isRunning():
-            self.model_task.requestInterruption()
-            self.glm_status.setText("正在取消下载…")
-            return
-        from .glm_optional import ModelTask
-        self.model_task = ModelTask(download, self)
-        self.model_task.message.connect(self.glm_status.setText)
-        self.model_task.ready.connect(lambda ready: setattr(self, "glm_ready", ready))
-        self.model_task.finished.connect(lambda: self.glm_download.setText("下载 GLM-OCR"))
-        self.model_task.finished.connect(lambda: self.glm_check.setEnabled(True))
-        self.model_task.finished.connect(lambda: self.close() if self.closing else None)
-        self.glm_check.setEnabled(False)
-        self.glm_download.setText("取消下载" if download else "检查中…")
-        self.glm_status.setText("正在检查本机 Ollama…")
-        self.model_task.start()
-
     def save_settings(self):
         try:
             from .windows_settings import protect, set_startup, startup_enabled
@@ -187,7 +169,7 @@ class MainWindow(QMainWindow):
                 "interval": self.interval.value(), "realtime": self.realtime.isChecked(),
                 "shade_opacity": self.opacity.value(), "source": self.source.currentData(),
                 "app_id": self.app_id.text().strip(), "ocr_backend": self.ocr_backend.currentData(),
-                "display_style": self.display_style.currentData()}
+                "display_style": self.display_style.currentData(), "reasoning_effort": self.reasoning_effort.currentData()}
 
     def on_hotkey(self, key):
         if key == 3:
@@ -201,11 +183,9 @@ class MainWindow(QMainWindow):
         if self.closing:
             return
         options = self.options()
-        if options["ocr_backend"] == "glm" and not self.glm_ready:
+        if options["provider"] == "deepseek" and not (options["api_key"] or os.getenv("DEEPSEEK_API_KEY")):
             self.restore()
-            self.tabs.setCurrentIndex(1)
-            self.manage_glm(False)
-            self.status.setText("请先检查或下载 GLM 模型，准备好后重新按翻译热键。RapidOCR 无需下载。")
+            QMessageBox.warning(self, "需要 API Key", "请填写 DeepSeek API Key。")
             return
         if options["provider"] == "cloud" and not (options["api_key"] or os.getenv("GOOGLE_TRANSLATE_API_KEY")):
             self.restore()
@@ -415,10 +395,6 @@ class MainWindow(QMainWindow):
         self.closing = True
         self.stop()
         self.hotkeys.clear()
-        if self.model_task and self.model_task.isRunning():
-            self.model_task.requestInterruption()
-            event.ignore()
-            return
         preparation = getattr(self, "preparation", None)
         if preparation and preparation.isRunning():
             preparation.requestInterruption()

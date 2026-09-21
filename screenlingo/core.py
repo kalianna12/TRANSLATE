@@ -137,11 +137,14 @@ class Translator:
     _cooldowns = {}
     _cooldown_lock = threading.Lock()
 
-    def __init__(self, target="zh-CN", provider="free", api_key="", proxy="", session=None, source="auto", app_id=""):
+    def __init__(self, target="zh-CN", provider="free", api_key="", proxy="", session=None, source="auto", app_id="", reasoning_effort="none"):
         self.target = target
         self.source = source
         self.provider = provider
-        prefix = {"baidu": "BAIDU", "youdao": "YOUDAO"}.get(provider, "GOOGLE_TRANSLATE")
+        prefix = {"baidu": "BAIDU", "youdao": "YOUDAO", "deepseek": "DEEPSEEK"}.get(provider, "GOOGLE_TRANSLATE")
+        self.reasoning_effort = reasoning_effort
+        self.ai_context = []
+        self.last_usage = {}
         self.api_key = api_key or os.getenv(prefix + "_API_KEY", "")
         self.app_id = app_id or os.getenv(prefix + "_APP_ID", "")
         self.session = session or requests.Session()
@@ -188,6 +191,9 @@ class Translator:
             return self._translate(texts, cancelled)
 
     def _translate(self, texts, cancelled):
+        if self.provider == "deepseek":
+            from .ai_translation import translate
+            return translate(self, texts, cancelled)
         self.cache_hits = sum(t in self.cache for t in texts)
         missing = list(dict.fromkeys(t for t in texts if t not in self.cache))
         # Do not ask Google to infer one source language for mixed Japanese/Korean chat.
@@ -286,7 +292,15 @@ class Translator:
         except requests.RequestException as exc:
             code = getattr(getattr(exc, "response", None), "status_code", None)
             # Never expose request URLs: official API keys appear in query parameters.
-            if code in (401, 403):
+            if isinstance(exc, requests.Timeout):
+                message = "翻译请求超时，请关闭思考、缩小区域或检查网络。"
+            elif code == 402:
+                message = "翻译账户余额不足（HTTP 402），请检查账户余额。"
+            elif code in (400, 422):
+                message = f"翻译请求参数被拒绝（HTTP {code}），请检查模型及推理设置。"
+            elif code in (500, 503):
+                message = f"翻译服务暂时异常（HTTP {code}），请稍后重试。"
+            elif code in (401, 403):
                 message = "翻译服务拒绝访问，请检查密钥、API 是否启用和账户配额。"
             elif code == 429:
                 message = "翻译请求过于频繁，请增大刷新间隔或检查服务配额。"

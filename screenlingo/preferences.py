@@ -7,7 +7,7 @@ from PySide6.QtWidgets import (QWidget, QVBoxLayout, QFormLayout, QGroupBox, QCo
 from .core import LANGUAGES
 
 SOURCES = {"自动识别（日 / 英 / 韩）": "auto", "日语": "ja", "英语": "en", "韩语": "ko", "中文": "zh-CN"}
-PROVIDERS = {"有道翻译（推荐）": "youdao", "百度通用翻译": "baidu", "Google（免密钥）": "free", "Google Cloud（官方）": "cloud"}
+PROVIDERS = {"有道翻译（推荐）": "youdao", "DeepSeek-V4.1-Flash（AI 翻译）": "deepseek", "百度通用翻译": "baidu", "Google（免密钥）": "free", "Google Cloud（官方）": "cloud"}
 
 
 def build_preferences(window):
@@ -25,6 +25,11 @@ def build_preferences(window):
     for label, value in PROVIDERS.items():
         window.provider.addItem(label, value)
     form.addRow("翻译工具", window.provider)
+    window.reasoning_effort = QComboBox()
+    for label, value in [("关闭思考（默认 · 最快）", "none"), ("低", "low"), ("高", "high"), ("最高（较慢）", "max")]:
+        window.reasoning_effort.addItem(label, value)
+    form.addRow("AI 推理强度", window.reasoning_effort)
+    window.reasoning_effort.setToolTip("仅 DeepSeek 生效。使用当前区域的上下文；重新框选会清空历史上下文。")
     window.source = QComboBox()
     for label, value in SOURCES.items():
         window.source.addItem(label, value)
@@ -55,9 +60,12 @@ def build_preferences(window):
     window.proxy.setPlaceholderText("可选：http://127.0.0.1:7890")
     form.addRow("代理", window.proxy)
     def provider_changed():
+        window.reasoning_effort.setEnabled(window.provider.currentData() == "deepseek")
         window.app_id.setEnabled(window.provider.currentData() in ("baidu", "youdao"))
         window.api_key.setEnabled(window.provider.currentData() != "free")
-        window.provider_hint.setText("百度：填写开发者 APPID 和密钥（不是大模型 API Key）。本地识别后只上传文字。"
+        window.provider_hint.setText("DeepSeek：只需 API Key，无需应用 ID 或下载模型。RapidOCR 本地识别后上传文字，使用上下文保持译名一致。"
+                                     if window.provider.currentData() == "deepseek" else
+                                     "百度：填写开发者 APPID 和密钥（不是大模型 API Key）。本地识别后只上传文字。"
                                      if window.provider.currentData() == "baidu" else
                                      "有道：填写应用 ID 和应用密钥，不需要额外 apikey。识别在本地完成，只上传文字。"
                                      if window.provider.currentData() == "youdao" else "切换翻译工具后请填写对应凭据，点击应用保存。")
@@ -69,23 +77,7 @@ def build_preferences(window):
     form = QFormLayout(recognition)
     window.ocr_backend = QComboBox()
     window.ocr_backend.addItem("RapidOCR（推荐 · 已内置）", "rapid")
-    window.ocr_backend.addItem("GLM-OCR（实验性 · 本地 Ollama）", "glm")
     form.addRow("识别引擎", window.ocr_backend)
-    window.glm_status = QLabel("GLM 默认不下载、不加载；需要时安装 Ollama，再下载模型。")
-    window.glm_status.setWordWrap(True)
-    form.addRow(window.glm_status)
-    glm_buttons = QHBoxLayout()
-    window.glm_check = QPushButton("检查模型")
-    window.glm_download = QPushButton("下载 GLM-OCR")
-    install = QPushButton("Ollama 官网")
-    from PySide6.QtCore import QUrl
-    from PySide6.QtGui import QDesktopServices
-    install.clicked.connect(lambda: QDesktopServices.openUrl(QUrl("https://ollama.com/download/windows")))
-    window.glm_check.clicked.connect(lambda: window.manage_glm(False))
-    window.glm_download.clicked.connect(lambda: window.manage_glm(True))
-    for button in (window.glm_check, window.glm_download, install):
-        glm_buttons.addWidget(button)
-    form.addRow(glm_buttons)
     window.realtime = QCheckBox("持续监测框选区域")
     window.realtime.setChecked(True)
     form.addRow(window.realtime)
