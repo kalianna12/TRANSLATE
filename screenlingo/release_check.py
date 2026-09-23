@@ -23,7 +23,7 @@ def run(output):
     assert unprotect(protect("test-only")) == "test-only"
     window = MainWindow()
     window.tray_only = True
-    for edit, key in [(window.region_key, "Ctrl+Alt+F20"), (window.full_key, "Ctrl+Alt+F21"), (window.stop_key, "Ctrl+Alt+F22")]:
+    for edit, key in [(window.region_key, "Ctrl+Alt+F20"), (window.full_key, "Ctrl+Alt+F21"), (window.stop_key, "Ctrl+Alt+F22"), (window.input_key, "Ctrl+Alt+F23")]:
         edit.setKeySequence(QKeySequence(key))
     window.show()
     def finish():

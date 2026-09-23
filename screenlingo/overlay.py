@@ -107,9 +107,12 @@ class TranslationOverlay(QWidget):
         self.shade_opacity = 88
         self.display_style = "blend"
         self.reading_layout = "standard"
+        self.fixed_background = False
+        self.frozen_palette = []
         self.message = ""
 
     def prepare(self, region, logical, window_capture=False, shade_opacity=88):
+        self.frozen_palette = []
         self.region = region
         self.shade_opacity = shade_opacity
         self.blocks = []
@@ -124,6 +127,20 @@ class TranslationOverlay(QWidget):
         return True
 
     def set_blocks(self, blocks):
+        if self.fixed_background and blocks:
+            from dataclasses import replace
+            if self.blocks and [b.source for b in blocks] == [b.source for b in self.blocks]:
+                # Pending OCR updates must not erase already displayed translations.
+                if all(not b.translated or b.translated == old.translated for b, old in zip(blocks, self.blocks)) and any(b.translated for b in self.blocks):
+                    return
+            if not self.frozen_palette and any(b.translated for b in blocks):
+                self.frozen_palette = [(b.x + b.width / 2, b.y + b.height / 2, b.background, b.foreground) for b in blocks]
+            if self.frozen_palette:
+                fixed = []
+                for block in blocks:
+                    color = min(self.frozen_palette, key=lambda p: (p[0] - block.x - block.width / 2)**2 + (p[1] - block.y - block.height / 2)**2)
+                    fixed.append(replace(block, background=color[2], foreground=color[3]))
+                blocks = fixed
         self.blocks = blocks
         if any(block.translated for block in blocks):
             self.message = ""

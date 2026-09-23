@@ -183,7 +183,7 @@ class Hotkeys(QAbstractNativeEventFilter):
     def configure(self, bindings):
         parsed = {key: parse_hotkey(value) for key, value in bindings.items()}
         if len(set(parsed.values())) != len(parsed):
-            raise ValueError("三个热键不能相同。")
+            raise ValueError("热键不能相同。")
         if not IS_WINDOWS:
             raise ValueError("全局热键仅支持 Windows。")
         old = self.bindings.copy()

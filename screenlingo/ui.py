@@ -58,6 +58,10 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("ScreenLingo · 屏幕翻译")
         self.setWindowIcon(app_icon())
         self._build()
+        from .input_translation import InputTranslation
+        self.input_translation = InputTranslation(self)
+        self.input_translation.message.connect(self.input_message)
+        self.input_translation.idle.connect(lambda: QTimer.singleShot(0, self.close) if self.closing else None)
         self.hotkeys = Hotkeys(QApplication.instance(), self.on_hotkey)
         self._tray()
         self.load_settings()
@@ -87,12 +91,16 @@ class MainWindow(QMainWindow):
     def bindings(self):
         return {1: self.region_key.keySequence().toString(QKeySequence.SequenceFormat.PortableText),
                 2: self.full_key.keySequence().toString(QKeySequence.SequenceFormat.PortableText),
-                3: self.stop_key.keySequence().toString(QKeySequence.SequenceFormat.PortableText)}
+                3: self.stop_key.keySequence().toString(QKeySequence.SequenceFormat.PortableText),
+                4: self.input_key.keySequence().toString(QKeySequence.SequenceFormat.PortableText)}
 
     def load_settings(self):
+        if self.settings.value("input_mode", "replace") == "game":
+            self.settings.setValue("input_mode", "replace")
         for widget, key in [(self.language, "target"), (self.provider, "provider"), (self.source, "source"),
                             (self.ocr_backend, "ocr_backend"), (self.display_style, "display_style"),
-                            (self.reasoning_effort, "reasoning_effort"), (self.reading_layout, "reading_layout")]:
+                            (self.reasoning_effort, "reasoning_effort"), (self.reading_layout, "reading_layout"),
+                            (self.input_source, "input_source"), (self.input_target, "input_target"), (self.input_mode, "input_mode")]:
             index = widget.findData(self.settings.value(key, widget.itemData(0)))
             widget.setCurrentIndex(max(0, index))
         self.api_key.setEnabled(self.provider.currentData() != "free")
@@ -109,7 +117,8 @@ class MainWindow(QMainWindow):
             self.interval.setValue(200)
         self.realtime.setChecked(self.settings.value("realtime", True, type=bool))
         self.opacity.setValue(self.settings.value("shade_opacity", 88, type=int))
-        for key, edit in [(1, self.region_key), (2, self.full_key), (3, self.stop_key)]:
+        self.fixed_background.setChecked(self.settings.value("fixed_background", False, type=bool))
+        for key, edit in [(1, self.region_key), (2, self.full_key), (3, self.stop_key), (4, self.input_key)]:
             edit.setKeySequence(QKeySequence(self.settings.value(f"hotkey{key}", edit.keySequence().toString())))
 
     def load_credentials(self):
@@ -170,10 +179,20 @@ class MainWindow(QMainWindow):
                 "shade_opacity": self.opacity.value(), "source": self.source.currentData(),
                 "app_id": self.app_id.text().strip(), "ocr_backend": self.ocr_backend.currentData(),
                 "display_style": self.display_style.currentData(), "reasoning_effort": self.reasoning_effort.currentData(),
-                "reading_layout": self.reading_layout.currentData()}
+                "reading_layout": self.reading_layout.currentData(), "fixed_background": self.fixed_background.isChecked(), "input_source": self.input_source.currentData(),
+                "input_target": self.input_target.currentData(), "input_mode": self.input_mode.currentData()}
+
+    def input_message(self, message):
+        self.status.setText(message)
+        self.tray.setToolTip("ScreenLingo · " + message)
+        if not self.isVisible() and not self.closing and not message.endswith("…"):
+            self.tray.showMessage("输入翻译", message, QSystemTrayIcon.MessageIcon.Information, 3500)
 
     def on_hotkey(self, key):
-        if key == 3:
+        if key == 4:
+            if not self.closing:
+                self.input_translation.start(self.options())
+        elif key == 3:
             target = self.target_hwnd
             self.stop()
             focus_window(target)
@@ -261,6 +280,7 @@ class MainWindow(QMainWindow):
             return
         self.translation_active = True
         self.overlay.display_style = options.get("display_style", "blend")
+        self.overlay.fixed_background = options.get("fixed_background", False)
         self.overlay.reading_layout = options.get("reading_layout", "standard")
         options["fast_first_frame"] = exclude_from_capture(self.overlay.winId())
         token = self.generation
@@ -397,6 +417,11 @@ class MainWindow(QMainWindow):
         self.closing = True
         self.stop()
         self.hotkeys.clear()
+        if self.input_translation.busy:
+            self.input_translation.cancel()
+            if self.input_translation.busy:
+                event.ignore()
+                return
         preparation = getattr(self, "preparation", None)
         if preparation and preparation.isRunning():
             preparation.requestInterruption()
