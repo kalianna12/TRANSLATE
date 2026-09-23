@@ -111,9 +111,9 @@ class InputTranslation(QObject):
         if not self.job:
             self.idle.emit()
 
-    def select_all(self, verifying=False):
+    def select_all(self, replacing=False):
         self.send_shortcut("A")
-        self.verifying = verifying
+        self.replacing = replacing
         self.phase = "selected"
         self.deadline = time.monotonic() + .06
 
@@ -133,6 +133,9 @@ class InputTranslation(QObject):
                 elif now > self.deadline:
                     self.cancel("按键未松开，已取消输入翻译。")
             elif self.phase == "selected" and now >= self.deadline:
+                if self.replacing:
+                    self.paste()
+                    return
                 self.copy_marker = "ScreenLingo-copy-" + uuid.uuid4().hex
                 self.clipboard.setText(self.copy_marker)
                 self.owned_sequence = native.sequence()
@@ -143,7 +146,7 @@ class InputTranslation(QObject):
             elif self.phase == "copy":
                 seq = native.sequence()
                 if seq != self.observed_sequence:
-                    self.trace("clipboard_changed", owner_pid=native.clipboard_pid(), verifying=self.verifying)
+                    self.trace("clipboard_changed", owner_pid=native.clipboard_pid(), replacing=self.replacing)
                     owner = native.clipboard_pid()
                     if owner != self.target[1] and owner != 0:
                         self.cancel("复制来源无法核实（剪贴板可能无所有者或由其他进程提供），已取消替换。请使用手动剪贴板模式。")
@@ -154,17 +157,11 @@ class InputTranslation(QObject):
                         if now > self.deadline:
                             self.cancel("游戏未复制聊天文字，已恢复剪贴板。请改用手动模式。")
                         return
-                    if self.verifying:
-                        if text != self.original:
-                            self.cancel("输入文字已修改，保留新文字；请重新按翻译热键。")
-                        else:
-                            self.paste()
-                    else:
-                        self.original = text
-                        self.launch()
+                    self.original = text
+                    self.launch()
                 elif now > self.deadline:
                     self.cancel("未复制到聊天文字。请确认聊天框已打开，或改用手动复制粘贴模式。")
-            elif self.phase == "translating" and native.sequence() != self.observed_sequence:
+            elif self.phase == "translating" and self.manual and not self.clipboard_unchanged():
                 self.cancel("剪贴板内容已变化，已取消自动替换。")
         except RuntimeError as exc:
             self.cancel(str(exc))
@@ -175,6 +172,7 @@ class InputTranslation(QObject):
             self.cancel("请输入 1–2000 字符；空内容不会提交翻译。")
             return
         self.phase = "translating"
+        self.clipboard_snapshot = self.snapshot()
         self.timer.start()
         self.message.emit("正在翻译输入文字…")
         self.job = InputJob(self.original, self.options, self)
@@ -187,7 +185,7 @@ class InputTranslation(QObject):
         self.trace("translation_returned", chars=len(text))
         if self.phase != "translating":
             return
-        if native.sequence() != self.observed_sequence:
+        if self.manual and not self.clipboard_unchanged():
             self.cancel("剪贴板内容已变化，已取消替换。")
             return
         # A paste must not contain line breaks/control characters that some games submit.
@@ -202,7 +200,7 @@ class InputTranslation(QObject):
             elif native.focus_identity() != self.target:
                 self.cancel("窗口或输入焦点已切换，已取消替换。")
             else:
-                self.select_all(verifying=True)
+                self.select_all(replacing=True)
         except RuntimeError as exc:
             self.cancel(str(exc))
 
@@ -214,6 +212,22 @@ class InputTranslation(QObject):
         self.owned_sequence = native.sequence()
         self.send_shortcut("V")
         self.complete("已请求粘贴译文，请在聊天框确认后自行发送。译文保留在剪贴板。")
+
+    def snapshot(self):
+        mime = self.clipboard.mimeData()
+        return tuple(sorted((fmt, bytes(mime.data(fmt))) for fmt in mime.formats())) if mime else ()
+
+    def clipboard_unchanged(self):
+        sequence = native.sequence()
+        if sequence == self.observed_sequence:
+            return True
+        # Reading delayed-rendered clipboard data can itself change its sequence.
+        # Only permit an identical payload; real external changes still cancel.
+        if self.snapshot() != self.clipboard_snapshot:
+            return False
+        self.observed_sequence = native.sequence()
+        self.trace("clipboard_sequence_only")
+        return True
 
     def complete(self, message):
         self.trace("complete")

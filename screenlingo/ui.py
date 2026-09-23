@@ -44,6 +44,7 @@ class MainWindow(QMainWindow):
         self.worker = None
         self.selector = None
         self.pending = None
+        self.deferred_capture = None
         self.generation = 0
         self.closing = False
         self.tray_only = False
@@ -62,6 +63,7 @@ class MainWindow(QMainWindow):
         self.input_translation = InputTranslation(self)
         self.input_translation.message.connect(self.input_message)
         self.input_translation.idle.connect(lambda: QTimer.singleShot(0, self.close) if self.closing else None)
+        self.input_translation.idle.connect(self.resume_capture)
         self.hotkeys = Hotkeys(QApplication.instance(), self.on_hotkey)
         self._tray()
         self.load_settings()
@@ -191,6 +193,9 @@ class MainWindow(QMainWindow):
     def on_hotkey(self, key):
         if key == 4:
             if not self.closing:
+                if self.selector is not None or self.pending is not None:
+                    self.status.setText("请先完成或取消框选，再按输入翻译热键；屏幕翻译运行中可正常输入翻译。")
+                    return
                 self.input_translation.start(self.options())
         elif key == 3:
             target = self.target_hwnd
@@ -201,6 +206,10 @@ class MainWindow(QMainWindow):
 
     def request_start(self, mode):
         if self.closing:
+            return
+        if self.input_translation.busy:
+            self.deferred_capture = mode
+            self.status.setText("输入替换完成后开始框选；现有屏幕翻译继续运行。")
             return
         options = self.options()
         if options["provider"] == "deepseek" and not (options["api_key"] or os.getenv("DEEPSEEK_API_KEY")):
@@ -245,6 +254,11 @@ class MainWindow(QMainWindow):
         if mode == "full":
             selector = self.selector
             QTimer.singleShot(120, lambda: selector.finish(selector.rect()) if self.selector is selector else None)
+
+    def resume_capture(self):
+        if self.deferred_capture and not self.closing:
+            mode, self.deferred_capture = self.deferred_capture, None
+            QTimer.singleShot(0, lambda: self.request_start(mode))
 
     def start_worker(self, region, logical, options):
         selected_hwnd = self.selector.target_hwnd if self.selector else 0
