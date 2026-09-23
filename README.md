@@ -2,7 +2,7 @@
 
 游戏背景不断变化时，可在首选项 → 识别与显示勾选 **固定背景（文字不变时保持覆盖层）**，应用后重新框选。首次译文采样的背景色保持到本次框选结束；文字相同则忽略识别框抖动，不清除或重绘译文。文字变化时正常更新，重新框选重新取色。检测仍继续运行；此模式也会固定相同文字的位置，不适合需要跟随文字移动的场景。
 
-当前源码：识别固定使用 RapidOCR；翻译可选有道、百度、Google 或 **DeepSeek-V4.1-Flash**。DeepSeek 默认关闭思考，支持上下文和严格 JSON 块映射，详见 [DeepSeek 设置](DEEPSEEK.md)。原来的 GLM-OCR 下载入口已移除。下述 1.2 ZIP 是旧版，不包含最新源码功能。
+当前源码：识别固定使用 RapidOCR；翻译可选有道、百度、Google 或 **DeepSeek-V4.1-Flash**。DeepSeek 默认关闭思考，支持上下文和严格 JSON 块映射，详见 [DeepSeek 设置](DEEPSEEK.md)。原来的 GLM-OCR 下载入口已移除。最新发行版为 **1.3.0**，包含以下功能。
 
 漫画可在首选项 → 识别与显示 → 文字排版，选择 **日文漫画竖排（上→下，右→左）**。应用后重新框选，建议选单个分镜或气泡。常规横排仍为默认设置。
 
@@ -12,7 +12,7 @@ Snipaste 式 Windows 翻译工具：设置窗口只负责配置；按热键框�
 
 ## 快速开始
 
-打包版：解压 `dist/ScreenLingo-1.2-Windows-x64.zip` 到固定目录，双击 `ScreenLingo.exe`，无需 Python，已含 OCR 模型。保留整个 `_internal` 目录。首次右键托盘 → 首选项，填写所选服务的 APPID 和密钥并应用。可勾选 Windows 账户加密保存密钥、登录 Windows 自动启动；自启动默认关闭。删除程序前先取消自启动，移动目录后重新应用自启动设置。本版默认 RapidOCR＋有道，新增背景融合及可选 GLM，详见 [RELEASE_1.2.md](RELEASE_1.2.md)。已有用户保留原翻译源。
+打包版：解压 [ScreenLingo-1.3.0-Windows-x64.zip](https://github.com/kalianna12/TRANSLATE/releases/tag/v1.3.0) 到固定目录，双击 `ScreenLingo.exe`，无需 Python，已含 OCR 模型。保留整个 `_internal` 目录。首次右键托盘 → 首选项，填写所选服务的 APPID 和密钥并应用。可勾选 Windows 账户加密保存密钥、登录 Windows 自动启动；自启动默认关闭。删除程序前先取消自启动，移动目录后重新应用自启动设置。本版使用 RapidOCR，详见 [1.3.0 更新说明](RELEASE_1.3.0.md)。已有用户保留原翻译源。
 
 双击 **`start.bat`**。本目录已经安装好开发环境及日韩识别模型。
 

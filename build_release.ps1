@@ -1,6 +1,8 @@
+param([ValidatePattern('^\d+\.\d+(\.\d+)?$')][string]$Version = '1.3.0')
 $ErrorActionPreference = 'Stop'
 Set-Location $PSScriptRoot
-& .venv\Scripts\python.exe -m PyInstaller --noconfirm --distpath dist\release-1.2 ScreenLingo.spec
+& .venv\Scripts\python.exe -m PyInstaller --noconfirm --distpath "dist\release-$Version" ScreenLingo.spec
 if ($LASTEXITCODE -ne 0) { throw 'Build failed' }
-Copy-Item -LiteralPath 'RELEASE_README.txt' -Destination 'dist\release-1.2\ScreenLingo\README.txt' -Force
-Compress-Archive -Path 'dist\release-1.2\ScreenLingo' -DestinationPath 'dist\ScreenLingo-1.2-Windows-x64.zip' -Force
+Copy-Item -LiteralPath 'RELEASE_README.txt' -Destination "dist\release-$Version\ScreenLingo\README.txt" -Force
+& .venv\Scripts\python.exe -c "import shutil; shutil.make_archive('dist/ScreenLingo-$Version-Windows-x64', 'zip', 'dist/release-$Version', 'ScreenLingo')"
+if ($LASTEXITCODE -ne 0) { throw 'Archive failed' }
