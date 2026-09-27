@@ -19,7 +19,17 @@ _recognition_pool = ThreadPoolExecutor(max_workers=2, thread_name_prefix="ocr-sc
 
 def recognize_three(engine, crops, positions=False):
     """Join every model before returning, including when another model raises."""
-    invoke = recognize_with_positions if positions else lambda model, images: model(images)
+    ratios = [p.shape[1] / max(1, p.shape[0]) for p in crops if p is not None]
+    long_batch = len(ratios) >= 3 and max(ratios) > 20
+    def invoke(model, images):
+        previous = getattr(model, "rec_batch_num", None)
+        if long_batch and previous is not None:
+            model.rec_batch_num = min(previous, 2)
+        try:
+            return recognize_with_positions(model, images) if positions else model(images)
+        finally:
+            if previous is not None:
+                model.rec_batch_num = previous
     if not getattr(engine, "parallel_auto", False):
         return [invoke(model, crops)[0] for model in (engine.engine.text_rec, engine.korean, engine.russian)]
     korean = _recognition_pool.submit(invoke, engine.korean, crops)
@@ -196,8 +206,8 @@ def detect_document_lines(bgr):
             return None
         left, right = int(xs[0]), int(xs[-1]) + 1
         ratios.append((right - left) / line_height)
-        if ratios[-1] < 4:
-            return None
+        # A short heading should not send an otherwise clean document to the
+        # downscaled neural detector. The page-wide median guard remains below.
         left, right = max(0, left - 3), min(width - 1, right + 3)
         top, bottom = max(0, top - 3), min(height - 1, bottom + 3)
         boxes.append([[left, top], [right, top], [right, bottom], [left, bottom]])
