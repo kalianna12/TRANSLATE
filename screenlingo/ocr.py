@@ -14,7 +14,24 @@ from rapidocr_onnxruntime.ch_ppocr_rec import TextRecognizer
 from .models import ensure_models
 from .languages import script_of
 
-_recognition_pool = ThreadPoolExecutor(max_workers=1, thread_name_prefix="ocr-korean")
+_recognition_pool = ThreadPoolExecutor(max_workers=2, thread_name_prefix="ocr-script")
+
+
+def recognize_three(engine, crops, positions=False):
+    """Join every model before returning, including when another model raises."""
+    invoke = recognize_with_positions if positions else lambda model, images: model(images)
+    if not getattr(engine, "parallel_auto", False):
+        return [invoke(model, crops)[0] for model in (engine.engine.text_rec, engine.korean, engine.russian)]
+    korean = _recognition_pool.submit(invoke, engine.korean, crops)
+    russian = _recognition_pool.submit(invoke, engine.russian, crops)
+    try:
+        multi = invoke(engine.engine.text_rec, crops)[0]
+    finally:
+        try:
+            ko = korean.result()[0]
+        finally:
+            ru = russian.result()[0]
+    return multi, ko, ru
 
 
 def choose_reading(multilingual, korean):
@@ -205,6 +222,7 @@ class MultilingualOCR:
             "use_cuda": False, "use_dml": False, "rec_batch_num": 6, "rec_img_shape": [3, 48, 320],
         })
         self.cache = OrderedDict()
+        self.part_cache = OrderedDict()
         self.russian = TextRecognizer({
             "model_path": paths["russian"], "intra_op_num_threads": threads, "inter_op_num_threads": 1,
             "use_cuda": False, "use_dml": False, "rec_batch_num": 6, "rec_img_shape": [3, 48, 320],
@@ -233,6 +251,8 @@ class MultilingualOCR:
         keys = [(source, crop_key(crop)) for crop in crops]
         missing = [i for i, key in enumerate(keys) if key not in self.cache]
         recognition_start = time.perf_counter()
+        coarse_ms = refine_ms = 0.0
+        part_hits = 0
         chunks = [missing]
         if on_chunk and detector == "projection" and len(boxes) >= 6:
             chunks = [missing[:1]] + [missing[i:i + 4] for i in range(1, len(missing), 4)]
@@ -249,24 +269,14 @@ class MultilingualOCR:
             elif source != "auto":
                 readings, _ = self.engine.text_rec(pending)
             else:
-                if getattr(self, "parallel_auto", False):
-                    future = _recognition_pool.submit(recognize_with_positions, self.korean, pending)
-                    try:
-                        multi, _ = recognize_with_positions(self.engine.text_rec, pending)
-                    finally:
-                        # Join even on failure: the next frame must not race this model.
-                        korean, _ = future.result()
-                else:
-                    multi, _ = recognize_with_positions(self.engine.text_rec, pending)
-                    if cancelled():
-                        return []
-                    korean, _ = recognize_with_positions(self.korean, pending)
+                stage_start = time.perf_counter()
+                multi, korean, russian = recognize_three(self, pending, positions=True)
+                coarse_ms += (time.perf_counter() - stage_start) * 1000
                 if cancelled():
                     return []
                 readings = [choose_reading(a, b) for a, b in zip(multi, korean)]
                 if cancelled():
                     return []
-                russian, _ = recognize_with_positions(self.russian, pending)
                 readings = [r[:2] if script_of(r[0]) == "ru" and r[1] > a[1] else a
                             for a, r in zip(readings, russian)]
                 # Arbitrate each word with ALL script models, including Korean.
@@ -285,16 +295,28 @@ class MultilingualOCR:
                     plans.append((index, len(all_parts), len(parts)))
                     all_parts.extend(parts)
                 if all_parts:
-                    mr, _ = self.engine.text_rec(all_parts)
-                    if cancelled():
-                        return []
-                    rr, _ = self.russian(all_parts)
-                    if cancelled():
-                        return []
-                    kr, _ = self.korean(all_parts)
-                    selected = [choose_reading(a, b) for a, b in zip(mr, kr)]
-                    selected = [b[:2] if script_of(b[0]) == "ru" and b[1] > a[1] else a[:2]
-                                for a, b in zip(selected, rr)]
+                    stage_start = time.perf_counter()
+                    if not hasattr(self, "part_cache"):
+                        self.part_cache = OrderedDict()
+                    part_keys = [(p.shape, hashlib.blake2b(p.tobytes(), digest_size=16).digest()) for p in all_parts]
+                    unique = {}
+                    for key, part in zip(part_keys, all_parts):
+                        if key not in self.part_cache:
+                            unique.setdefault(key, part)
+                        else:
+                            part_hits += 1
+                    if unique:
+                        mr, kr, rr = recognize_three(self, list(unique.values()))
+                        candidates = [choose_reading(a, b) for a, b in zip(mr, kr)]
+                        candidates = [b[:2] if script_of(b[0]) == "ru" and b[1] > a[1] else a[:2]
+                                      for a, b in zip(candidates, rr)]
+                        self.part_cache.update(zip(unique, candidates))
+                    selected = [self.part_cache[key] for key in part_keys]
+                    for key in part_keys:
+                        self.part_cache.move_to_end(key)
+                    while len(self.part_cache) > 1024:
+                        self.part_cache.popitem(last=False)
+                    refine_ms += (time.perf_counter() - stage_start) * 1000
                     for index, offset, count in plans:
                         fused = selected[offset:offset+count]
                         if len({script_of(t) for t, s in fused if t}) > 1:
@@ -317,6 +339,7 @@ class MultilingualOCR:
         while len(self.cache) > 512:
             self.cache.popitem(last=False)
         self.last_metrics = {"detect_ms": detection_ms,
+                             "coarse_ms": coarse_ms, "refine_ms": refine_ms, "part_cache_hits": part_hits,
                              "recognize_ms": (time.perf_counter() - recognition_start) * 1000,
                              "line_cache_hits": len(keys) - len(missing), "detector": detector}
         return result
