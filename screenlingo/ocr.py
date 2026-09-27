@@ -264,8 +264,8 @@ class MultilingualOCR:
         coarse_ms = refine_ms = 0.0
         part_hits = 0
         chunks = [missing]
-        if on_chunk and detector == "projection" and len(boxes) >= 6:
-            chunks = [missing[:1]] + [missing[i:i + 4] for i in range(1, len(missing), 4)]
+        if on_chunk and len(boxes) >= 3:
+            chunks = [missing[:2]] + [missing[i:i + 4] for i in range(2, len(missing), 4)]
         for indices in chunks:
             if cancelled():
                 return []

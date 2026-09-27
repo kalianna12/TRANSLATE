@@ -10,6 +10,7 @@ from .core import frame_changed, make_blocks
 
 def translate_document(worker, capture, ocr, translator, bgr, previous_text, started):
     from .worker import same_text, text_signature
+    compare_text = (lambda a, b: [v[0] for v in a] == [v[0] for v in b]) if worker.options.get("fixed_background") else same_text
     local_cancel = threading.Event()
     cancelled = lambda: local_cancel.is_set() or worker.cancel.is_set()
     updates = queue.Queue()
@@ -39,7 +40,7 @@ def translate_document(worker, capture, ocr, translator, bgr, previous_text, sta
             verify_ms += (time.perf_counter() - begin) * 1000
             latest_signature = text_signature(latest_blocks)
             compare = latest_signature if final else latest_signature[:len(current_signature)]
-            if not same_text(current_signature, compare):
+            if not compare_text(current_signature, compare):
                 worker.result.emit(worker.generation, [])
                 worker.status.emit(worker.generation, "聊天内容已更新，正在翻译最新文字…")
                 return False
@@ -74,11 +75,12 @@ def translate_document(worker, capture, ocr, translator, bgr, previous_text, sta
                 blocks = make_blocks(detected, rgb, worker.options.get("reading_layout", "standard"))
                 signature = text_signature(blocks)
                 unchanged = (previous_text is not None and
-                             same_text(signature, previous_text[:len(signature)]))
+                             compare_text(signature, previous_text[:len(signature)]))
                 if signature and not unchanged and signature != delivered:
                     for block in blocks:
                         block.translated = translated.get(block.source, "")
-                    worker.result.emit(worker.generation, [replace(block) for block in blocks])
+                    if not translated:
+                        worker.result.emit(worker.generation, [replace(block) for block in blocks])
                     worker.status.emit(worker.generation, f"正在分段翻译正文：已识别 {len(blocks)} 行…")
                     begin = time.perf_counter()
                     # Send only newly recognized lines. DeepSeek retains prior context;
@@ -111,7 +113,7 @@ def translate_document(worker, capture, ocr, translator, bgr, previous_text, sta
                     if not still_current(signature, final=True):
                         return None
                     # A shorter new page must also clear lines removed from the previous page.
-                    if unchanged and not same_text(signature, previous_text):
+                    if unchanged and not compare_text(signature, previous_text):
                         values = translator.translate([b.source for b in blocks], cancelled)
                         for block, value in zip(blocks, values):
                             block.translated = value

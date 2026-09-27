@@ -70,9 +70,7 @@ class TranslationWorker(QThread):
                         rgb = bgr[:, :, ::-1].copy()
                         if frame_changed(previous, rgb):
                             self.status.emit(self.generation, "正在识别文字…")
-                            from .ocr import detect_document_lines
-                            document_lines = detect_document_lines(bgr) if self.options.get("progressive", True) and self.options.get("reading_layout") != "manga" and not self.options.get("fixed_background") else None
-                            if document_lines is not None and len(document_lines) >= 6:
+                            if self.options.get("progressive", True) and self.options.get("reading_layout") != "manga":
                                 from .document import translate_document
                                 document_result = translate_document(self, capture, ocr, translator, bgr, previous_text, started)
                                 if document_result is None:
