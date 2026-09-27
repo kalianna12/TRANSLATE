@@ -81,7 +81,17 @@ def translate_document(worker, capture, ocr, translator, bgr, previous_text, sta
                     worker.result.emit(worker.generation, [replace(block) for block in blocks])
                     worker.status.emit(worker.generation, f"正在分段翻译正文：已识别 {len(blocks)} 行…")
                     begin = time.perf_counter()
-                    values = translator.translate([b.source for b in blocks], cancelled)
+                    # Send only newly recognized lines. DeepSeek retains prior context;
+                    # resending each growing prefix wastes tokens and changes earlier prose.
+                    missing = list(dict.fromkeys(b.source for b in blocks if b.source not in translated))
+                    new_values = translator.translate(missing, cancelled) if missing else []
+                    if cancelled():
+                        return None
+                    if len(new_values) != len(missing):
+                        from .core import TranslationError
+                        raise TranslationError("分段译文数量不匹配，请重试。")
+                    translated.update(zip(missing, new_values))
+                    values = [translated[b.source] for b in blocks]
                     translate_ms += (time.perf_counter() - begin) * 1000
                     if cancelled():
                         return None

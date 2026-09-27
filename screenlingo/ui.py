@@ -117,6 +117,7 @@ class MainWindow(QMainWindow):
         except (ValueError, TypeError):
             self.interval.setValue(200)
         self.realtime.setChecked(self.settings.value("realtime", True, type=bool))
+        self.progressive.setChecked(self.settings.value("progressive", True, type=bool))
         self.opacity.setValue(self.settings.value("shade_opacity", 88, type=int))
         self.fixed_background.setChecked(self.settings.value("fixed_background", False, type=bool))
         for key, edit in [(1, self.region_key), (2, self.full_key), (3, self.stop_key), (4, self.input_key)]:
@@ -193,7 +194,7 @@ class MainWindow(QMainWindow):
     def options(self):
         return {"target": self.language.currentData(), "provider": self.provider.currentData(),
                 "api_key": self.api_key.text().strip(), "proxy": self.proxy.text().strip(),
-                "interval": self.interval.value(), "realtime": self.realtime.isChecked(),
+                "interval": self.interval.value(), "realtime": self.realtime.isChecked(), "progressive": self.progressive.isChecked(),
                 "shade_opacity": self.opacity.value(), "source": self.source.currentData(),
                 "app_id": self.app_id.text().strip(), "ocr_backend": self.ocr_backend.currentData(),
                 "display_style": self.display_style.currentData(), "reasoning_effort": self.reasoning_effort.currentData(),
