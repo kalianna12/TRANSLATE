@@ -9,7 +9,7 @@ from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QFormLayout, 
 
 from .core import LANGUAGES
 from .overlay import RegionSelector, TranslationOverlay
-from .win32 import (Hotkeys, exclude_from_capture, focus_window, foreground_window,
+from .win32 import (Hotkeys, flush_compositor, focus_window, foreground_window,
                     position_overlay, target_region_visible, window_at, window_minimized, window_rect)
 from .worker import TranslationWorker
 
@@ -82,7 +82,6 @@ class MainWindow(QMainWindow):
         install_tray(self)
 
     def initialize(self):
-        exclude_from_capture(self.winId())
         try:
             self.hotkeys.configure(self.bindings())
         except ValueError as exc:
@@ -172,7 +171,24 @@ class MainWindow(QMainWindow):
             QMessageBox.warning(self, "保存失败", "无法写入当前用户设置，请检查权限后重试。")
             return
         self.initialization_error = False
-        self.status.setText("设置已保存，热键已应用。翻译偏好将在下次启动翻译时生效。")
+        if self.translation_active:
+            region, logical = self.overlay.region, self.overlay.geometry()
+            options = self.options()
+            options["capture_mode"] = "region" if self.target_hwnd else "full"
+            options["restart_hwnd"] = self.target_hwnd
+            self.stop()
+            self.pending_restart = (region, logical, options)
+            if self.worker is None:
+                self.restart_translation()
+            self.status.setText("设置已应用，正在用新的翻译服务和目标语言重新翻译当前区域…")
+        else:
+            self.status.setText("设置已保存，热键和翻译偏好已应用。")
+
+    def restart_translation(self):
+        pending = getattr(self, "pending_restart", None)
+        self.pending_restart = None
+        if pending and not self.closing:
+            self.start_worker(*pending)
 
     def options(self):
         return {"target": self.language.currentData(), "provider": self.provider.currentData(),
@@ -261,7 +277,7 @@ class MainWindow(QMainWindow):
             QTimer.singleShot(0, lambda: self.request_start(mode))
 
     def start_worker(self, region, logical, options):
-        selected_hwnd = self.selector.target_hwnd if self.selector else 0
+        selected_hwnd = options.get("restart_hwnd") or (self.selector.target_hwnd if self.selector else 0)
         if self.selector:
             self.selector.deleteLater()
             self.selector = None
@@ -296,7 +312,6 @@ class MainWindow(QMainWindow):
         self.overlay.display_style = options.get("display_style", "blend")
         self.overlay.fixed_background = options.get("fixed_background", False)
         self.overlay.reading_layout = options.get("reading_layout", "standard")
-        options["fast_first_frame"] = exclude_from_capture(self.overlay.winId())
         token = self.generation
         self.worker = TranslationWorker(token, region, options, self)
         self.worker.result.connect(self.receive_result)
@@ -304,10 +319,33 @@ class MainWindow(QMainWindow):
         self.worker.fault.connect(self.receive_fault)
         self.worker.fatal.connect(self.receive_fatal)
         self.worker.metrics.connect(self.receive_metrics)
+        self.worker.screen_requested.connect(self.capture_desktop)
         self.worker.finished.connect(self.worker_finished)
-        # Both selector and overlay are excluded from capture; no fixed startup delay.
+        # Window capture reads the target surface, not the translated desktop overlay.
         self.worker.start()
         self.status.setText("正在启动翻译…")
+
+    def capture_desktop(self, token, reply):
+        """Full-screen fallback: hide, synchronize DWM, capture, restore on GUI thread."""
+        visible = False
+        try:
+            if token != self.generation or reply["cancelled"]() or reply.get("expired"):
+                return
+            from .capture import ScreenCapture
+            visible = self.overlay.isVisible()
+            self.overlay.hide()
+            flush_compositor()
+            capture = ScreenCapture(self.overlay.region)
+            try:
+                reply["frame"] = capture.grab()
+            finally:
+                capture.close()
+        except Exception as exc:
+            reply["error"] = f"桌面截图失败（{type(exc).__name__}）"
+        finally:
+            if visible and token == self.generation and self.translation_active:
+                self.overlay.show()
+            reply["ready"].set()
 
     def receive_result(self, token, blocks):
         if token == self.generation:
@@ -390,10 +428,13 @@ class MainWindow(QMainWindow):
         finished.deleteLater()
         if self.closing:
             QTimer.singleShot(0, self.close)
+        elif getattr(self, "pending_restart", None):
+            self.restart_translation()
         elif self.pending:
             self.begin_selection()
 
     def stop(self):
+        self.pending_restart = None
         self.generation += 1
         self.pending = None
         self.translation_active = False

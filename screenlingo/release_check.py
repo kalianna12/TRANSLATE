@@ -29,6 +29,10 @@ def run(output):
     def finish():
         try:
             assert window.provider.findData("baidu") >= 0
+            assert window.input_source.findData("ru") >= 0
+            assert window.source.findData("ru") >= 0
+            assert window.input_target.findData("ru") >= 0
+            assert any(value == "ru" for action, value in window.input_target_actions)
             assert window.autostart.text()
             assert window.grab().save(str(Path(output).with_suffix(".png")))
             for index in range(window.tabs.count()):

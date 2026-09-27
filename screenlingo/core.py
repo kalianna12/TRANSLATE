@@ -195,6 +195,11 @@ class Translator:
 
     def translate(self, texts, cancelled=lambda: False):
         with self.operation_lock:
+            if self.source == "auto" and self.provider != "deepseek":
+                from .mixed_translation import translate_mixed
+                mixed = translate_mixed(self, texts, cancelled)
+                if mixed is not None:
+                    return mixed
             return self._translate(texts, cancelled)
 
     def _translate(self, texts, cancelled):

@@ -6,8 +6,9 @@ from PySide6.QtWidgets import (QWidget, QVBoxLayout, QFormLayout, QGroupBox, QCo
                               QLabel, QSystemTrayIcon, QMenu, QTabWidget)
 from .core import LANGUAGES
 
-SOURCES = {"自动识别（日 / 英 / 韩）": "auto", "日语": "ja", "英语": "en", "韩语": "ko", "中文": "zh-CN"}
+SOURCES = {"自动识别（日 / 英 / 韩 / 俄）": "auto", "日语": "ja", "英语": "en", "韩语": "ko", "俄语": "ru", "中文": "zh-CN"}
 PROVIDERS = {"有道翻译（推荐）": "youdao", "DeepSeek-V4.1-Flash（AI 翻译）": "deepseek", "百度通用翻译": "baidu", "Google（免密钥）": "free", "Google Cloud（官方）": "cloud"}
+INPUT_LANGUAGES = [("韩语", "ko"), ("日语", "ja"), ("英语", "en"), ("俄语", "ru"), ("中文", "zh-CN")]
 
 
 def build_preferences(window):
@@ -128,10 +129,10 @@ def build_preferences(window):
     input_tab = QGroupBox("游戏聊天输入翻译")
     form = QFormLayout(input_tab)
     window.input_source = QComboBox()
-    for label, value in [("中文", "zh-CN"), ("自动识别", "auto"), ("日语", "ja"), ("英语", "en"), ("韩语", "ko")]:
+    for label, value in [("中文", "zh-CN"), ("自动识别", "auto")] + [(label, value) for label, value in INPUT_LANGUAGES if value != "zh-CN"]:
         window.input_source.addItem(label, value)
     window.input_target = QComboBox()
-    for label, value in [("韩语", "ko"), ("日语", "ja"), ("英语", "en"), ("中文", "zh-CN")]:
+    for label, value in INPUT_LANGUAGES:
         window.input_target.addItem(label, value)
     window.input_mode = QComboBox()
     window.input_mode.addItem("替换当前聊天输入框", "replace")
@@ -179,7 +180,7 @@ def install_tray(window):
     input_menu = menu.addMenu("输入翻译到")
     input_group = QActionGroup(input_menu)
     window.input_target_actions = []
-    for label, value in [("韩语", "ko"), ("日语", "ja"), ("英语", "en"), ("中文", "zh-CN")]:
+    for label, value in INPUT_LANGUAGES:
         action = input_menu.addAction(label)
         action.setCheckable(True)
         input_group.addAction(action)

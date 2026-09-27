@@ -7,7 +7,7 @@ from PySide6.QtCore import QThread, Signal
 
 from .core import frame_changed, make_blocks
 from .languages import LANGUAGE_NAMES, script_of
-from .capture import CaptureUnavailable, ScreenCapture, WindowCapture, PreviewThenWindowCapture
+from .capture import CaptureUnavailable, CoordinatedScreenCapture, WindowCapture, PreviewThenWindowCapture
 from .runtime import get_translator
 
 
@@ -28,6 +28,7 @@ class TranslationWorker(QThread):
     fault = Signal(int, str)
     fatal = Signal(int, str)
     metrics = Signal(int, object)
+    screen_requested = Signal(int, object)
 
     def __init__(self, generation, region, options, parent=None):
         super().__init__(parent)
@@ -56,10 +57,8 @@ class TranslationWorker(QThread):
             previous_text = None
             failures = 0
             hwnd = self.options.get("window_hwnd", 0)
-            if hwnd and self.options.get("fast_first_frame"):
-                source = PreviewThenWindowCapture(hwnd, self.region)
-            else:
-                source = WindowCapture(hwnd, self.region) if hwnd else ScreenCapture(self.region)
+            source = WindowCapture(hwnd, self.region) if hwnd else CoordinatedScreenCapture(
+                lambda reply: self.screen_requested.emit(self.generation, reply))
             with closing(source) as capture:
                 while not self.cancel.is_set():
                     started = time.monotonic()

@@ -94,6 +94,29 @@ class ScreenCapture:
         self.capture.close()
 
 
+class CoordinatedScreenCapture:
+    """Ask the GUI to hide its overlay and capture; never touch Qt from the worker."""
+    def __init__(self, request):
+        self.request = request
+
+    def grab(self, cancelled=lambda: False):
+        reply = {"ready": threading.Event(), "cancelled": cancelled}
+        self.request(reply)
+        deadline = time.monotonic() + 5
+        while not reply["ready"].wait(0.05):
+            if cancelled():
+                raise InterruptedError()
+            if time.monotonic() > deadline:
+                reply["expired"] = True
+                raise CaptureUnavailable("等待桌面截图超时，请重新框选。")
+        if "error" in reply:
+            raise CaptureUnavailable(reply["error"])
+        return reply.get("frame")
+
+    def close(self):
+        pass
+
+
 class PreviewThenWindowCapture:
     """Fast selection snapshot first; bind live HWND capture after presenting that result."""
     def __init__(self, hwnd, region):

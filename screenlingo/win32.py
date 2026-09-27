@@ -13,8 +13,6 @@ if IS_WINDOWS:
     user32.RegisterHotKey.restype = wintypes.BOOL
     user32.UnregisterHotKey.argtypes = [wintypes.HWND, ctypes.c_int]
     user32.UnregisterHotKey.restype = wintypes.BOOL
-    user32.SetWindowDisplayAffinity.argtypes = [wintypes.HWND, wintypes.DWORD]
-    user32.SetWindowDisplayAffinity.restype = wintypes.BOOL
     user32.MonitorFromWindow.argtypes = [wintypes.HWND, wintypes.DWORD]
     user32.MonitorFromWindow.restype = wintypes.HANDLE
     user32.GetForegroundWindow.restype = wintypes.HWND
@@ -142,10 +140,10 @@ def physical_monitor(hwnd):
     return r.left, r.top, r.right - r.left, r.bottom - r.top
 
 
-def exclude_from_capture(hwnd):
-    if not IS_WINDOWS or sys.getwindowsversion().build < 19041:
-        return False
-    return bool(user32.SetWindowDisplayAffinity(int(hwnd), 0x11))
+def flush_compositor():
+    """Wait until a hidden overlay has left the composed desktop before capture."""
+    if IS_WINDOWS:
+        dwmapi.DwmFlush()
 
 
 def parse_hotkey(sequence):

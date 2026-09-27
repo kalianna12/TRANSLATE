@@ -1,4 +1,4 @@
-"""One detector, two recognizers, and a bounded cache of unchanged text-line crops."""
+"""One detector, three script recognizers and cached multilingual line fusion."""
 from collections import OrderedDict
 import hashlib
 import time
@@ -33,6 +33,79 @@ def crop_key(crop):
     if np.count_nonzero(mask) > mask.size // 2:
         mask = 255 - mask
     return crop.shape, hashlib.blake2b(mask.tobytes(), digest_size=16).digest()
+
+
+def split_mixed_line(crop):
+    """Split horizontal words at whitespace so one script cannot erase another."""
+    h, w = crop.shape[:2]
+    if w < h * 2:
+        return [crop]
+    gray = cv2.cvtColor(crop, cv2.COLOR_BGR2GRAY)
+    _, mask = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)
+    if np.count_nonzero(mask) > mask.size // 2:
+        mask = 255 - mask
+    blank = np.count_nonzero(mask, axis=0) == 0
+    cuts = [0]
+    start = None
+    for x, empty in enumerate(blank):
+        if empty and start is None:
+            start = x
+        elif not empty and start is not None:
+            if start > 0 and x - start >= max(3, round(h * .28)):
+                cuts.append((start + x) // 2)
+            start = None
+    cuts.append(w)
+    return [crop[:, a:b] for a, b in zip(cuts, cuts[1:]) if b > a]
+
+
+def recognize_with_positions(recognizer, crops):
+    if isinstance(recognizer, TextRecognizer):
+        return recognizer(crops, return_word_box=True)
+    return recognizer(crops)
+
+
+def split_script_runs(crop, readings):
+    """Use confident CTC script runs to cut tightly joined multilingual text."""
+    h, w = crop.shape[:2]
+    if w < h * 2:
+        return [crop]
+    gray = cv2.cvtColor(crop, cv2.COLOR_BGR2GRAY)
+    _, mask = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)
+    if np.count_nonzero(mask) > mask.size // 2:
+        mask = 255 - mask
+    ink = np.count_nonzero(mask, axis=0)
+    cuts = [0, w]
+    for reading, script in readings:
+        if len(reading) < 3:
+            continue
+        text, score, info = reading
+        length, words, columns, states, confidence = info
+        chars = [c for word in words for c in word]
+        positions = [x * w / length for group in columns for x in group]
+        runs = []
+        for i, c in enumerate(chars):
+            valid = script_of(c) == script and confidence[i] >= .8
+            if valid:
+                if runs and runs[-1][-1] == i-1:
+                    runs[-1].append(i)
+                else:
+                    runs.append([i])
+        for run in runs:
+            if len(run) < 2:
+                continue
+            for i, j in [(run[0]-1, run[0]), (run[-1], run[-1]+1)]:
+                if i < 0 or j >= len(chars):
+                    continue
+                center = (positions[i] + positions[j]) / 2
+                left, right = max(1, int(center-h*.35)), min(w-1, int(center+h*.35))
+                if right <= left:
+                    continue
+                candidates = np.arange(left, right)
+                x = int(candidates[np.argmin(ink[left:right] * h + abs(candidates-center))])
+                if all(abs(x-c) > h*.45 for c in cuts):
+                    cuts.append(x)
+    cuts.sort()
+    return [crop[:, a:b] for a, b in zip(cuts, cuts[1:])]
 
 
 def merge_vertical_boxes(boxes):
@@ -132,6 +205,10 @@ class MultilingualOCR:
             "use_cuda": False, "use_dml": False, "rec_batch_num": 6, "rec_img_shape": [3, 48, 320],
         })
         self.cache = OrderedDict()
+        self.russian = TextRecognizer({
+            "model_path": paths["russian"], "intra_op_num_threads": threads, "inter_op_num_threads": 1,
+            "use_cuda": False, "use_dml": False, "rec_batch_num": 6, "rec_img_shape": [3, 48, 320],
+        })
         self.last_metrics = {}
         self.lock = threading.RLock()
         self.document_fast_path = document_fast_path
@@ -165,26 +242,63 @@ class MultilingualOCR:
             if not indices:
                 continue
             pending = [crops[i] for i in indices]
-            if source == "ko":
+            if source == "ru":
+                readings, _ = self.russian(pending)
+            elif source == "ko":
                 readings, _ = self.korean(pending)
             elif source != "auto":
                 readings, _ = self.engine.text_rec(pending)
             else:
                 if getattr(self, "parallel_auto", False):
-                    future = _recognition_pool.submit(self.korean, pending)
+                    future = _recognition_pool.submit(recognize_with_positions, self.korean, pending)
                     try:
-                        multi, _ = self.engine.text_rec(pending)
+                        multi, _ = recognize_with_positions(self.engine.text_rec, pending)
                     finally:
                         # Join even on failure: the next frame must not race this model.
                         korean, _ = future.result()
                 else:
-                    multi, _ = self.engine.text_rec(pending)
+                    multi, _ = recognize_with_positions(self.engine.text_rec, pending)
                     if cancelled():
                         return []
-                    korean, _ = self.korean(pending)
+                    korean, _ = recognize_with_positions(self.korean, pending)
                 if cancelled():
                     return []
                 readings = [choose_reading(a, b) for a, b in zip(multi, korean)]
+                if cancelled():
+                    return []
+                russian, _ = recognize_with_positions(self.russian, pending)
+                readings = [r[:2] if script_of(r[0]) == "ru" and r[1] > a[1] else a
+                            for a, r in zip(readings, russian)]
+                # Arbitrate each word with ALL script models, including Korean.
+                plans, all_parts = [], []
+                for index, (m, k, r) in enumerate(zip(multi, korean, russian)):
+                    if not ((script_of(r[0]) == "ru" and m[0] != r[0]) or
+                            (script_of(k[0]) == "ko" and m[0] != k[0])):
+                        continue
+                    parts = split_mixed_line(pending[index])
+                    if len(parts) < 4 and script_of(k[0]) == "ko" and script_of(r[0]) == "ru":
+                        parts = split_script_runs(pending[index], [(k, "ko"), (r, "ru")])
+                    if len(parts) < 2:
+                        continue
+                    if cancelled():
+                        return []
+                    plans.append((index, len(all_parts), len(parts)))
+                    all_parts.extend(parts)
+                if all_parts:
+                    mr, _ = self.engine.text_rec(all_parts)
+                    if cancelled():
+                        return []
+                    rr, _ = self.russian(all_parts)
+                    if cancelled():
+                        return []
+                    kr, _ = self.korean(all_parts)
+                    selected = [choose_reading(a, b) for a, b in zip(mr, kr)]
+                    selected = [b[:2] if script_of(b[0]) == "ru" and b[1] > a[1] else a[:2]
+                                for a, b in zip(selected, rr)]
+                    for index, offset, count in plans:
+                        fused = selected[offset:offset+count]
+                        if len({script_of(t) for t, s in fused if t}) > 1:
+                            readings[index] = (" ".join(t for t, s in fused), float(np.mean([s for t, s in fused])))
             for i, reading in zip(indices, readings):
                 self.cache[keys[i]] = reading[:2]
             if on_chunk:

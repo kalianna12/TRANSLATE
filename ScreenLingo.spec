@@ -2,6 +2,7 @@
 from PyInstaller.utils.hooks import collect_all, collect_dynamic_libs, collect_data_files
 
 datas = [('models/ch_PP-OCRv5_rec_mobile.onnx', 'models'),
+         ('models/cyrillic_PP-OCRv5_rec_mobile.onnx', 'models'),
          ('models/korean_PP-OCRv5_rec_mobile.onnx', 'models')]
 binaries = []
 hiddenimports = []

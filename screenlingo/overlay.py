@@ -3,7 +3,7 @@ from PySide6.QtGui import QColor, QFont, QFontMetrics, QPainter, QPen
 from PySide6.QtWidgets import QWidget
 
 from .core import Region
-from .win32 import exclude_from_capture, physical_monitor, make_overlay_nonactivating, window_at
+from .win32 import physical_monitor, make_overlay_nonactivating, window_at
 
 
 class RegionSelector(QWidget):
@@ -22,7 +22,6 @@ class RegionSelector(QWidget):
 
     def open(self):
         self.show()
-        exclude_from_capture(self.winId())
         self.raise_()
         self.activateWindow()
         self.setFocus()
@@ -120,13 +119,13 @@ class TranslationOverlay(QWidget):
         self.setGeometry(logical)
         make_overlay_nonactivating(self.winId())
         self.show()
-        # Abort if exclusion is unavailable; capturing our own translated overlay is unsafe.
-        if not exclude_from_capture(self.winId()) and not window_capture:
-            self.hide()
-            return False
+        # No capture-protection flags: these can disable NVIDIA desktop recording.
         return True
 
     def set_blocks(self, blocks):
+        # A pending OCR result must not flash the original text between translations.
+        if blocks and not any(b.translated for b in blocks) and any(b.translated for b in self.blocks):
+            return
         if self.fixed_background and blocks:
             from dataclasses import replace
             if self.blocks and [b.source for b in blocks] == [b.source for b in self.blocks]:
