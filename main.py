@@ -1,6 +1,9 @@
 """ScreenLingo desktop entry point."""
 import sys
 
+from screenlingo.ocr_runtime import prepare
+prepare()
+
 from PySide6.QtWidgets import QApplication
 
 from screenlingo.ui import MainWindow

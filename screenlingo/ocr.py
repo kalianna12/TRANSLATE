@@ -12,6 +12,7 @@ from rapidocr_onnxruntime import RapidOCR
 from rapidocr_onnxruntime.ch_ppocr_rec import TextRecognizer
 
 from .models import ensure_models
+from .cpu_recognizer import CpuTextRecognizer
 from .languages import script_of
 
 _recognition_pool = ThreadPoolExecutor(max_workers=2, thread_name_prefix="ocr-script")
@@ -23,7 +24,9 @@ def recognize_three(engine, crops, positions=False):
     long_batch = len(ratios) >= 3 and max(ratios) > 20
     def invoke(model, images):
         previous = getattr(model, "rec_batch_num", None)
-        if long_batch and previous is not None:
+        if getattr(model, "accelerated", False):
+            model.rec_batch_num = 2 if positions else 16
+        elif long_batch and previous is not None:
             model.rec_batch_num = min(previous, 2)
         try:
             return recognize_with_positions(model, images) if positions else model(images)
@@ -218,7 +221,9 @@ def detect_document_lines(bgr):
 
 
 class MultilingualOCR:
-    def __init__(self, status=lambda message: None, cancelled=lambda: False, inference_threads=None, document_fast_path=True, parallel_auto=None):
+    def __init__(self, status=lambda message: None, cancelled=lambda: False, inference_threads=None, document_fast_path=True, parallel_auto=None, device="cpu"):
+        if device not in ("cpu", "cuda", "auto"):
+            raise ValueError("Unknown OCR device")
         paths = ensure_models(status, cancelled)
         if cancelled():
             raise InterruptedError()
@@ -227,24 +232,72 @@ class MultilingualOCR:
             rec_model_path=paths["multilingual"], intra_op_num_threads=threads, inter_op_num_threads=1,
             det_limit_type="max", det_limit_side_len=1280, use_cls=False,
         )
-        self.korean = TextRecognizer({
+        self.engine.text_rec = CpuTextRecognizer({
+            "model_path": paths["multilingual"], "intra_op_num_threads": threads, "inter_op_num_threads": 1,
+            "use_cuda": False, "use_dml": False, "rec_batch_num": 2, "rec_img_shape": [3, 48, 320],
+        })
+        self.korean = CpuTextRecognizer({
             "model_path": paths["korean"], "intra_op_num_threads": threads, "inter_op_num_threads": 1,
-            "use_cuda": False, "use_dml": False, "rec_batch_num": 6, "rec_img_shape": [3, 48, 320],
+            "use_cuda": False, "use_dml": False, "rec_batch_num": 2, "rec_img_shape": [3, 48, 320],
         })
         self.cache = OrderedDict()
         self.part_cache = OrderedDict()
-        self.russian = TextRecognizer({
+        self.russian = CpuTextRecognizer({
             "model_path": paths["russian"], "intra_op_num_threads": threads, "inter_op_num_threads": 1,
-            "use_cuda": False, "use_dml": False, "rec_batch_num": 6, "rec_img_shape": [3, 48, 320],
+            "use_cuda": False, "use_dml": False, "rec_batch_num": 2, "rec_img_shape": [3, 48, 320],
         })
         self.last_metrics = {}
         self.lock = threading.RLock()
         self.document_fast_path = document_fast_path
         self.parallel_auto = (os.cpu_count() or 1) >= 8 if parallel_auto is None else parallel_auto
+        self.device = "cpu"
+        self.requested_device = device
+        self._cpu_models = (self.engine.text_rec, self.korean, self.russian, self.engine.text_det.infer)
+        if device != "cpu":
+            try:
+                from .ocr_runtime import available
+                if not available():
+                    raise RuntimeError("CUDA runtime not installed")
+                from .gpu_recognizer import GpuTextRecognizer
+                import onnxruntime as ort
+                models = [GpuTextRecognizer({"model_path": paths[name]}) for name in ("multilingual", "korean", "russian")]
+                options = ort.SessionOptions()
+                options.intra_op_num_threads = 1
+                options.inter_op_num_threads = 1
+                options.log_severity_level = 3
+                detector = ort.InferenceSession(self.engine.text_det.infer.session._model_path, options,
+                    providers=[("CUDAExecutionProvider", {"cudnn_conv_algo_search": "HEURISTIC"}), "CPUExecutionProvider"])
+                if detector.get_providers()[0] != "CUDAExecutionProvider":
+                    raise RuntimeError("CUDA detector unavailable")
+                import copy
+                wrapper = copy.copy(self.engine.text_det.infer)
+                wrapper.session = detector
+                self.engine.text_rec, self.korean, self.russian = models
+                self.engine.text_det.infer = wrapper
+                self.parallel_auto = True
+                self.device = "cuda"
+                status("OCR 已启用 NVIDIA GPU 加速。")
+            except Exception as exc:
+                import logging
+                logging.getLogger(__name__).warning("CUDA unavailable; using CPU: %s", exc)
+                status("GPU 组件不可用，已使用 CPU 识别。")
 
     def __call__(self, bgr, cancelled=lambda: False, source="auto", on_chunk=None):
         with self.lock:
-            return self.recognize(bgr, cancelled, source, on_chunk)
+            try:
+                return self.recognize(bgr, cancelled, source, on_chunk)
+            except InterruptedError:
+                raise
+            except Exception:
+                if getattr(self, "device", "cpu") != "cuda":
+                    raise
+                import logging
+                logging.getLogger(__name__).exception("CUDA inference failed; retrying on CPU")
+                self.engine.text_rec, self.korean, self.russian, self.engine.text_det.infer = self._cpu_models
+                self.device = "cpu"
+                self.cache.clear()
+                self.part_cache.clear()
+                return self.recognize(bgr, cancelled, source, on_chunk)
 
     def recognize(self, bgr, cancelled, source, on_chunk=None):
         start = time.perf_counter()
@@ -254,7 +307,8 @@ class MultilingualOCR:
             boxes, _ = self.engine.text_det(bgr)
         detection_ms = (time.perf_counter() - start) * 1000
         if boxes is None or len(boxes) == 0 or cancelled():
-            self.last_metrics = {"detect_ms": detection_ms, "recognize_ms": 0, "line_cache_hits": 0, "detector": detector}
+            self.last_metrics = {"detect_ms": detection_ms, "recognize_ms": 0, "line_cache_hits": 0, "detector": detector,
+                                 "device": getattr(self, "device", "cpu")}
             return []
         boxes = merge_vertical_boxes(boxes)
         crops = self.engine.get_crop_img_list(bgr, boxes)
@@ -349,6 +403,7 @@ class MultilingualOCR:
         while len(self.cache) > 512:
             self.cache.popitem(last=False)
         self.last_metrics = {"detect_ms": detection_ms,
+                             "device": getattr(self, "device", "cpu"),
                              "coarse_ms": coarse_ms, "refine_ms": refine_ms, "part_cache_hits": part_hits,
                              "recognize_ms": (time.perf_counter() - recognition_start) * 1000,
                              "line_cache_hits": len(keys) - len(missing), "detector": detector}
@@ -359,10 +414,10 @@ _shared_engine = None
 _init_lock = threading.Lock()
 
 
-def get_ocr(status=lambda message: None, cancelled=lambda: False):
+def get_ocr(status=lambda message: None, cancelled=lambda: False, device="cpu"):
     """Called only by the single active worker; reuse loaded models across selections."""
     global _shared_engine
     with _init_lock:
-        if _shared_engine is None:
-            _shared_engine = MultilingualOCR(status, cancelled)
+        if _shared_engine is None or _shared_engine.requested_device != device:
+            _shared_engine = MultilingualOCR(status, cancelled, device=device)
     return _shared_engine

@@ -79,6 +79,11 @@ def build_preferences(window):
     window.ocr_backend = QComboBox()
     window.ocr_backend.addItem("RapidOCR（推荐 · 已内置）", "rapid")
     form.addRow("识别引擎", window.ocr_backend)
+    window.ocr_device = QComboBox()
+    for label, value in [("软件加速（CPU，默认）", "cpu"), ("硬件加速（NVIDIA GPU）", "cuda")]:
+        window.ocr_device.addItem(label, value)
+    window.ocr_device.setToolTip("默认使用 CPU；需要时手动选择 GPU 并应用。GPU 组件通过 install_gpu.bat 单独安装；不可用时自动回退 CPU。")
+    form.addRow("识别加速", window.ocr_device)
     window.realtime = QCheckBox("持续监测框选区域")
     window.realtime.setChecked(True)
     form.addRow(window.realtime)

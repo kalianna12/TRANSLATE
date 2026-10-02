@@ -13,7 +13,7 @@ class Preparation(QThread):
             import numpy as np
             import cv2
             from .ocr import get_ocr
-            engine = get_ocr(cancelled=self.isInterruptionRequested)
+            engine = get_ocr(cancelled=self.isInterruptionRequested, device=self.options.get("ocr_device", "cpu"))
             if self.isInterruptionRequested():
                 return
             # Exercise detection and both recognition kernels on public synthetic text.
@@ -27,6 +27,6 @@ class Preparation(QThread):
             if connected is False:
                 self.ready.emit("识别已就绪，翻译连接未预热。若服务限流，将等待后重试。")
             else:
-                self.ready.emit("准备就绪。固定原文语言可进一步提速。")
+                self.ready.emit(f"准备就绪 · OCR {engine.device.upper()}。固定原文语言可进一步提速。")
         except Exception as exc:
             self.ready.emit(f"模型准备失败（{type(exc).__name__}），开始翻译时会重试。")

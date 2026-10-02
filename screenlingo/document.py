@@ -121,7 +121,8 @@ def translate_document(worker, capture, ocr, translator, bgr, previous_text, sta
                             worker.result.emit(worker.generation, blocks)
                     elapsed = (time.monotonic() - started) * 1000
                     state = "实时监测中" if worker.options["realtime"] else "单次翻译完成"
-                    worker.status.emit(worker.generation, f"{state} · 正文 {len(blocks)} 行 · {elapsed / 1000:.2f} 秒")
+                    device = getattr(ocr, "device", "cpu").upper()
+                    worker.status.emit(worker.generation, f"{state} · 正文 {len(blocks)} 行 · OCR {device} · {elapsed / 1000:.2f} 秒")
                     worker.metrics.emit(worker.generation, {
                         "ocr_ms": round(ocr_ms + verify_ms, 1), "translate_ms": round(translate_ms, 1),
                         "total_ms": round(elapsed, 1), "first_result_ms": round(first_ms, 1) if first_ms else None,

@@ -96,10 +96,13 @@ class MainWindow(QMainWindow):
                 4: self.input_key.keySequence().toString(QKeySequence.SequenceFormat.PortableText)}
 
     def load_settings(self):
+        if self.settings.value("ocr_device", "cpu") == "auto":
+            self.settings.setValue("ocr_device", "cpu")
         if self.settings.value("input_mode", "replace") == "game":
             self.settings.setValue("input_mode", "replace")
         for widget, key in [(self.language, "target"), (self.provider, "provider"), (self.source, "source"),
                             (self.ocr_backend, "ocr_backend"), (self.display_style, "display_style"),
+                            (self.ocr_device, "ocr_device"),
                             (self.reasoning_effort, "reasoning_effort"), (self.reading_layout, "reading_layout"),
                             (self.input_source, "input_source"), (self.input_target, "input_target"), (self.input_mode, "input_mode")]:
             index = widget.findData(self.settings.value(key, widget.itemData(0)))
@@ -197,6 +200,7 @@ class MainWindow(QMainWindow):
                 "interval": self.interval.value(), "realtime": self.realtime.isChecked(), "progressive": self.progressive.isChecked(),
                 "shade_opacity": self.opacity.value(), "source": self.source.currentData(),
                 "app_id": self.app_id.text().strip(), "ocr_backend": self.ocr_backend.currentData(),
+                "ocr_device": self.ocr_device.currentData(),
                 "display_style": self.display_style.currentData(), "reasoning_effort": self.reasoning_effort.currentData(),
                 "reading_layout": self.reading_layout.currentData(), "fixed_background": self.fixed_background.isChecked(), "input_source": self.input_source.currentData(),
                 "input_target": self.input_target.currentData(), "input_mode": self.input_mode.currentData()}

@@ -18,7 +18,8 @@ def run(output):
     app.setApplicationName("OfflineCheck")
     frame = np.full((120, 600, 3), 255, np.uint8)
     cv2.putText(frame, "Hello world", (20, 65), cv2.FONT_HERSHEY_SIMPLEX, 1.2, (0, 0, 0), 2)
-    readings = MultilingualOCR()(frame, source="en")
+    engine = MultilingualOCR(device="cpu")
+    readings = engine(frame, source="en")
     assert any("Hello" in row[1] for row in readings)
     assert unprotect(protect("test-only")) == "test-only"
     window = MainWindow()
@@ -29,6 +30,10 @@ def run(output):
     def finish():
         try:
             assert window.provider.findData("baidu") >= 0
+            assert window.ocr_device.findData("cpu") >= 0
+            assert window.ocr_device.findData("cuda") >= 0
+            assert window.ocr_device.count() == 2
+            assert window.options()["ocr_device"] in ("cpu", "cuda")
             assert window.input_source.findData("ru") >= 0
             assert window.source.findData("ru") >= 0
             assert window.input_target.findData("ru") >= 0
@@ -40,7 +45,7 @@ def run(output):
                 app.processEvents()
                 assert window.grab().save(str(Path(output).with_name(Path(output).stem + f"-tab{index}.png")))
             Path(output).write_text(json.dumps({"ocr": [r[1] for r in readings], "preferences": True,
-                                               "dpapi": True, "capture_import": True}), encoding="utf-8")
+                                               "dpapi": True, "capture_import": True, "ocr_device": engine.device}), encoding="utf-8")
         finally:
             window.quit_app()
     QTimer.singleShot(1000, finish)

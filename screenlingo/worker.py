@@ -52,7 +52,8 @@ class TranslationWorker(QThread):
                 return
             self.status.emit(self.generation, "正在加载本地 OCR 模型…")
             from .ocr import get_ocr
-            ocr = get_ocr(lambda message: self.status.emit(self.generation, message), self.cancel.is_set)
+            ocr = get_ocr(lambda message: self.status.emit(self.generation, message), self.cancel.is_set,
+                          device=self.options.get("ocr_device", "cpu"))
             previous = None
             previous_text = None
             failures = 0
@@ -131,7 +132,8 @@ class TranslationWorker(QThread):
                             elapsed = time.monotonic() - started
                             state = "实时监测中" if self.options["realtime"] else "单次翻译完成"
                             languages = "/".join(sorted({LANGUAGE_NAMES[script_of(b.source)] for b in blocks})) or "无文字"
-                            self.status.emit(self.generation, f"{state} · {languages} · {len(blocks)} 行 · {elapsed:.2f} 秒")
+                            device = getattr(ocr, "device", "cpu").upper()
+                            self.status.emit(self.generation, f"{state} · {languages} · {len(blocks)} 行 · OCR {device} · {elapsed:.2f} 秒")
                             self.metrics.emit(self.generation, {"ocr_ms": round(ocr_ms, 1),
                                               "translate_ms": round(translate_ms, 1), "total_ms": round(elapsed * 1000, 1),
                                               "translation_cache_hits": translator.cache_hits,

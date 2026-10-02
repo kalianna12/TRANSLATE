@@ -1,4 +1,7 @@
 .venv/
+.gpu-runtime/
+models/gpu/
+onnxruntime_profile*.json
 __pycache__/
 .pytest_cache/
 *.pyc
