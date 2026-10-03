@@ -1,6 +1,8 @@
-ScreenLingo 1.3.0 — Windows x64
+ScreenLingo 1.4.0 — Windows x64
 
 完整解压后运行 ScreenLingo.exe，无需 Python，请保留 _internal 文件夹。
+更新内容见 CHANGELOG.md：新增俄文与五语混排识别，优化 CPU 性能与长文分段，修复混排译文及翻译设置切换。
+默认软件加速（CPU）。此轻量 ZIP 不含 CUDA，硬件加速需使用源码版并安装可选组件；在此包中选择 GPU 会回退 CPU。
 右键托盘 → 首选项，填写自己的翻译服务凭据并应用。发行包不含个人密钥。
 支持有道、百度、Google、DeepSeek；RapidOCR 本地识别，文字发送给所选翻译服务。
 DeepSeek 默认关闭思考。不附带或下载 GLM-OCR 或本地大语言模型。
